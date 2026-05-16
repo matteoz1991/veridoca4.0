@@ -19,13 +19,13 @@ import {
 
 export const COUNTRIES: CountryConfig[] = [
   { id: 'SE', name: 'Sverige', flag: '🇸🇪', language: 'Svenska' },
-  { id: 'US', name: 'USA', flag: '🇺🇸', language: 'Engelska (US)' },
-  { id: 'UK', name: 'Storbritannien', flag: '🇬🇧', language: 'Engelska (UK)' },
-  { id: 'ES', name: 'Spanien', flag: '🇪🇸', language: 'Spanska' },
-  { id: 'NO', name: 'Norge', flag: '🇳🇴', language: 'Norska' },
-  { id: 'DK', name: 'Danmark', flag: '🇩🇰', language: 'Danska' },
-  { id: 'DE', name: 'Tyskland', flag: '🇩🇪', language: 'Tyska' },
-  { id: 'FR', name: 'Frankrike', flag: '🇫🇷', language: 'Franska' }
+  { id: 'US', name: 'USA', flag: '🇺🇸', language: 'English (US)' },
+  { id: 'UK', name: 'United Kingdom', flag: '🇬🇧', language: 'English (UK)' },
+  { id: 'ES', name: 'España', flag: '🇪🇸', language: 'Español' },
+  { id: 'NO', name: 'Norge', flag: '🇳🇴', language: 'Norsk' },
+  { id: 'DK', name: 'Danmark', flag: '🇩🇰', language: 'Dansk' },
+  { id: 'DE', name: 'Deutschland', flag: '🇩🇪', language: 'Deutsch' },
+  { id: 'FR', name: 'France', flag: '🇫🇷', language: 'Français' }
 ];
 
 // Common price for all documents

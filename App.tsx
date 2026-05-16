@@ -674,44 +674,48 @@ const SuccessView = ({ onReset, content, template, country }: { onReset: () => v
   );
 };
 
-const Footer = ({ country }: { country: CountryConfig }) => (
-  <footer className="bg-[#050911] border-t border-brand-border py-16 px-6">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-      <div className="col-span-1 md:col-span-2 pr-8">
-        <div className="bg-brand-card border border-brand-border/50 rounded-2xl p-6 flex flex-col items-center text-center gap-4 max-w-xs">
-          <img src="/assets/support-qr.png.png" alt="Buy me a coffee QR" className="w-32 h-32 rounded-xl bg-white p-2 select-none mx-auto" />
-          <p className="text-slate-300 text-sm leading-relaxed font-medium">
-            {t(country.id, 'footer.supportText')}
-          </p>
+const Footer = ({ country }: { country: CountryConfig }) => {
+  const templates = getLocalizedTemplates(country.id);
+  const popularTemplates = templates.filter(t => t.popular).slice(0, 4);
+
+  return (
+    <footer className="bg-[#050911] border-t border-brand-border py-16 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="col-span-1 md:col-span-2 pr-8">
+          <div className="bg-brand-card border border-brand-border/50 rounded-2xl p-6 flex flex-col items-center text-center gap-4 max-w-xs">
+            <img src="/assets/support-qr.png.png" alt="Buy me a coffee QR" className="w-32 h-32 rounded-xl bg-white p-2 select-none mx-auto" />
+            <p className="text-slate-300 text-sm leading-relaxed font-medium">
+              {t(country.id, 'footer.supportText')}
+            </p>
+          </div>
+        </div>
+        <div>
+          <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs text-amber-500">{t(country.id, 'footer.popular')}</h4>
+          <ul className="space-y-3 text-slate-400 text-sm">
+            {popularTemplates.map(t => (
+              <li key={t.id}><Link to="/" className="hover:text-white transition-colors">{t.title}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs text-amber-500">{t(country.id, 'footer.support')}</h4>
+          <ul className="space-y-3 text-slate-400 text-sm">
+            <li><Link to="/om-oss" className="hover:text-white transition-colors">{t(country.id, 'footer.faq')}</Link></li>
+            <li><Link to="/kontakt" className="hover:text-white transition-colors">{t(country.id, 'footer.contact')}</Link></li>
+            <li><Link to="/anvandarvillkor" className="hover:text-white transition-colors">{t(country.id, 'footer.terms')}</Link></li>
+            <li><Link to="/integritetspolicy" className="hover:text-white transition-colors">{t(country.id, 'footer.privacy')}</Link></li>
+          </ul>
         </div>
       </div>
-      <div>
-        <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs text-amber-500">{t(country.id, 'footer.popular')}</h4>
-        <ul className="space-y-3 text-slate-400 text-sm">
-          <li><Link to="/" className="hover:text-white transition-colors">Andrahandskontrakt</Link></li>
-          <li><Link to="/" className="hover:text-white transition-colors">Samboavtal</Link></li>
-          <li><Link to="/" className="hover:text-white transition-colors">Testamente</Link></li>
-          <li><Link to="/" className="hover:text-white transition-colors">Anställningsavtal</Link></li>
-        </ul>
+      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-brand-border/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-slate-600 text-sm">
+        <p>{t(country.id, 'footer.rights')}</p>
+        <div className="flex gap-4 mt-4 md:mt-0 items-center">
+           <Lock className="w-4 h-4" /> <span>{t(country.id, 'footer.secure')}</span>
+        </div>
       </div>
-      <div>
-        <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs text-amber-500">{t(country.id, 'footer.support')}</h4>
-        <ul className="space-y-3 text-slate-400 text-sm">
-          <li><Link to="/om-oss" className="hover:text-white transition-colors">{t(country.id, 'footer.faq')}</Link></li>
-          <li><Link to="/kontakt" className="hover:text-white transition-colors">{t(country.id, 'footer.contact')}</Link></li>
-          <li><Link to="/anvandarvillkor" className="hover:text-white transition-colors">{t(country.id, 'footer.terms')}</Link></li>
-          <li><Link to="/integritetspolicy" className="hover:text-white transition-colors">{t(country.id, 'footer.privacy')}</Link></li>
-        </ul>
-      </div>
-    </div>
-    <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-brand-border/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-slate-600 text-sm">
-      <p>{t(country.id, 'footer.rights')}</p>
-      <div className="flex gap-4 mt-4 md:mt-0 items-center">
-         <Lock className="w-4 h-4" /> <span>{t(country.id, 'footer.secure')}</span>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 // --- Main App ---
 
