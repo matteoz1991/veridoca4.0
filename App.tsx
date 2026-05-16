@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { DOCUMENT_TEMPLATES, getIcon, COUNTRIES } from './constants';
+import { getIcon, COUNTRIES } from './constants';
 import { DocumentTemplate, UserInputData, DocumentCategory, CountryConfig } from './types';
 import { generateLegalDocument } from './services/geminiService';
 import { getLocalizedTemplates } from './data/templates';
