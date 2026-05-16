@@ -795,8 +795,7 @@ export const translations: Record<string, Record<string, any>> = {
       card: "Kortbetaling (Stripe)",
       swish: "Lokalt betalingsalternativ (Kommer snart)",
       payBtn: "Gå til betaling",
-      terms: "Ved at downloade accepterer du vores brugsbetingelser.",
-      secure: "Sikre betalinger med Stripe"
+      terms: "Ved at downloade accepterer du vores brugsbetingelser."
     },
     success: {
       title: "Dit dokument er klar!",
