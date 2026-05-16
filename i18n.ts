@@ -120,6 +120,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Integritetspolicy",
       rights: "© 2024 Veridoca AB. Alla rättigheter förbehållna.",
       secure: "Säkra betalningar med Stripe"
+    },
+    document: {
+      executedOn: "Detta dokument är upprättat den {date} i enlighet med svensk lagstiftning.",
+      section1: "1. Parter och Avtalsinnehåll",
+      notSpecified: "Ej angivet",
+      section2: "2. Standardvillkor",
+      section2Desc: "Ovanstående information utgör grunden för detta avtal. Parterna förbinder sig att följa de villkor som anges. Eventuella ändringar av detta avtal måste göras skriftligen och undertecknas av båda parter.",
+      section3: "3. Tvistelösning",
+      section3Desc: "Tvist angående tolkning eller tillämpning av detta avtal ska i första hand lösas genom förhandling mellan parterna. Om parterna inte kan enas, ska tvisten avgöras av allmän domstol i Sverige.",
+      signatures: "Underskrifter",
+      signaturesDesc: "Detta avtal har upprättats i två likalydande exemplar, varav parterna tagit var sitt.",
+      placeDate: "Ort och datum",
+      signature: "Signatur",
+      printName: "Namnförtydligande"
+    },
+    errors: {
+      generation: "Något gick fel vid genereringen. Kontrollera din internetanslutning eller försök igen senare.",
+      pdf: "Kunde inte skapa PDF. Försök igen."
     }
   },
   'US': {
@@ -241,6 +259,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Privacy Policy",
       rights: "© 2024 Veridoca AB. All rights reserved.",
       secure: "Secure payments with Stripe"
+    },
+    document: {
+      executedOn: "This document is executed on {date} in accordance with the applicable laws of {country}.",
+      section1: "1. Parties and Agreement Details",
+      notSpecified: "Not specified",
+      section2: "2. General Terms",
+      section2Desc: "The provided details constitute the basis of this agreement. The parties agree to adhere to the specified terms. Any modifications must be made in writing and signed by both parties.",
+      section3: "3. Dispute Resolution",
+      section3Desc: "Any disputes arising out of or in connection with this agreement shall primarily be resolved through negotiations between the parties. If an agreement cannot be reached, the dispute shall be subject to the exclusive jurisdiction of the courts of {country}.",
+      signatures: "Signatures",
+      signaturesDesc: "This agreement has been executed in duplicate, with each party receiving one original copy.",
+      placeDate: "Place and Date",
+      signature: "Signature",
+      printName: "Print Name"
+    },
+    errors: {
+      generation: "Something went wrong during generation. Please check your internet connection or try again later.",
+      pdf: "Could not create PDF. Please try again."
     }
   },
   'UK': {
@@ -362,6 +398,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Privacy Policy",
       rights: "© 2024 Veridoca AB. All rights reserved.",
       secure: "Secure payments with Stripe"
+    },
+    document: {
+      executedOn: "This document is executed on {date} in accordance with the applicable laws of {country}.",
+      section1: "1. Parties and Agreement Details",
+      notSpecified: "Not specified",
+      section2: "2. General Terms",
+      section2Desc: "The provided details constitute the basis of this agreement. The parties agree to adhere to the specified terms. Any modifications must be made in writing and signed by both parties.",
+      section3: "3. Dispute Resolution",
+      section3Desc: "Any disputes arising out of or in connection with this agreement shall primarily be resolved through negotiations between the parties. If an agreement cannot be reached, the dispute shall be subject to the exclusive jurisdiction of the courts of {country}.",
+      signatures: "Signatures",
+      signaturesDesc: "This agreement has been executed in duplicate, with each party receiving one original copy.",
+      placeDate: "Place and Date",
+      signature: "Signature",
+      printName: "Print Name"
+    },
+    errors: {
+      generation: "Something went wrong during generation. Please check your internet connection or try again later.",
+      pdf: "Could not create PDF. Please try again."
     }
   },
   'ES': {
@@ -417,6 +471,13 @@ export const translations: Record<string, Record<string, any>> = {
       submit: "Crear vista previa",
       generatingTitle: "Generando documento",
       generatingDesc: "Tus datos están siendo analizados y estamos redactando tu {template}..."
+    },
+    categories: {
+      business: "Negocios y Corporativo",
+      private: "Privado y Otros",
+      real_estate: "Bienes Raíces y Vivienda",
+      employment: "Trabajo y RRHH",
+      family: "Familia y Relaciones"
     },
     cookie: {
       title: "Usamos cookies",
@@ -476,6 +537,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Política de privacidad",
       rights: "© 2024 Veridoca AB. Todos los derechos reservados.",
       secure: "Pagos seguros con Stripe"
+    },
+    document: {
+      executedOn: "Este documento se otorga el {date} de acuerdo con las leyes aplicables de {country}.",
+      section1: "1. Partes y detalles del acuerdo",
+      notSpecified: "No especificado",
+      section2: "2. Términos generales",
+      section2Desc: "Los detalles proporcionados constituyen la base de este acuerdo. Las partes acuerdan adherirse a los términos especificados. Cualquier modificación debe hacerse por escrito y ser firmada por ambas partes.",
+      section3: "3. Resolución de disputas",
+      section3Desc: "Cualquier disputa que surja de este acuerdo o en relación con él se resolverá principalmente mediante negociaciones entre las partes. Si no se puede llegar a un acuerdo, la disputa estará sujeta a la jurisdicción exclusiva de los tribunales de {country}.",
+      signatures: "Firmas",
+      signaturesDesc: "Este acuerdo se ha formalizado por duplicado, recibiendo cada parte un ejemplar original.",
+      placeDate: "Lugar y fecha",
+      signature: "Firma",
+      printName: "Nombre completo"
+    },
+    errors: {
+      generation: "Algo salió mal durante la generación. Por favor, comprueba tu conexión a internet o inténtalo de nuevo más tarde.",
+      pdf: "No se pudo crear el PDF. Por favor, inténtalo de nuevo."
     }
   },
   'NO': {
@@ -519,6 +598,13 @@ export const translations: Record<string, Record<string, any>> = {
       notFoundTitle: "Ingen maler funnet",
       notFoundDesc: "Prøv et annet søkeord eller bytt kategori.",
       clearFilter: "Tøm filter"
+    },
+    categories: {
+      business: "Næringsliv & Selskap",
+      private: "Privat & Annet",
+      real_estate: "Eiendom & Bolig",
+      employment: "Arbeid & HR",
+      family: "Familie & Relasjoner"
     },
     form: {
       back: "Tilbake til biblioteket",
@@ -579,7 +665,7 @@ export const translations: Record<string, Record<string, any>> = {
       receipt: "Send kvittering",
       back: "Gå tilbake til startsiden"
     },
-        footer: {
+    footer: {
       supportText: "Hvis du liker prosjektet vårt og vil at det skal fortsette å være gratis, støtt oss gjerne med en gave ved å skanne QR-koden.",
       desc: "Vi demokratiserer jussen og gjør profesjonelle avtaler tilgjengelige for alle.",
       popular: "Populære Dokumenter",
@@ -590,6 +676,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Personvernserklæring",
       rights: "© 2024 Veridoca AB. Med enerett.",
       secure: "Sikre betalinger med Stripe"
+    },
+    document: {
+      executedOn: "Dette dokumentet er opprettet den {date} i samsvar med gjeldende lover i {country}.",
+      section1: "1. Parter og avtaledetaljer",
+      notSpecified: "Ikke spesifisert",
+      section2: "2. Generelle vilkår",
+      section2Desc: "De oppgitte detaljene utgjør grunnlaget for denne avtalen. Partene er enige om å overholde de spesifiserte vilkårene. Eventuelle endringer må gjøres skriftlig og undertegnes av begge parter.",
+      section3: "3. Tvisteløsning",
+      section3Desc: "Eventuelle tvister som måtte oppstå i forbindelse med denne avtalen skal i første omgang løses gjennom forhandlinger mellom partene. Dersom man ikke kommer til enighet, skal tvisten bringes inn for domstolene i {country}.",
+      signatures: "Signaturer",
+      signaturesDesc: "Denne avtalen er opprettet i to eksemplarer, hvorav hver part har fått sitt eksemplar.",
+      placeDate: "Sted og dato",
+      signature: "Signatur",
+      printName: "Navn med blokkbokstaver"
+    },
+    errors: {
+      generation: "Noe gikk galt under genereringen. Vennligst sjekk internettforbindelsen din eller prøv igjen senere.",
+      pdf: "Kunne ikke opprette PDF. Vennligst prøv igjen."
     }
   },
   'DK': {
@@ -633,6 +737,13 @@ export const translations: Record<string, Record<string, any>> = {
       notFoundTitle: "Ingen skabeloner fundet",
       notFoundDesc: "Prøv et andet søgeord eller skift kategori.",
       clearFilter: "Ryd filter"
+    },
+    categories: {
+      business: "Erhverv & Selskab",
+      private: "Privat & Andet",
+      real_estate: "Ejendom & Bolig",
+      employment: "Arbejde & HR",
+      family: "Familie & Relationer"
     },
     form: {
       back: "Tilbage til biblioteket",
@@ -684,7 +795,8 @@ export const translations: Record<string, Record<string, any>> = {
       card: "Kortbetaling (Stripe)",
       swish: "Lokalt betalingsalternativ (Kommer snart)",
       payBtn: "Gå til betaling",
-      terms: "Ved at downloade accepterer du vores brugsbetingelser."
+      terms: "Ved at downloade accepterer du vores brugsbetingelser.",
+      secure: "Sikre betalinger med Stripe"
     },
     success: {
       title: "Dit dokument er klar!",
@@ -693,7 +805,7 @@ export const translations: Record<string, Record<string, any>> = {
       receipt: "Send kvittering",
       back: "Gå tilbage til startsiden"
     },
-        footer: {
+    footer: {
       supportText: "Hvis du kan lide vores projekt og ønsker, at det fortsat skal være gratis, så støt os gerne med en gave ved at scanne QR-koden.",
       desc: "Vi demokratiserer juraen og gør professionelle aftaler tilgængelige for alle.",
       popular: "Populære Dokumenter",
@@ -704,6 +816,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Privatlivspolitik",
       rights: "© 2024 Veridoca AB. Alle rettigheder forbeholdes.",
       secure: "Sikre betalinger med Stripe"
+    },
+    document: {
+      executedOn: "Dette dokument er udfærdiget den {date} i overensstemmelse med gældende lovgivning i {country}.",
+      section1: "1. Parter og aftaledetaljer",
+      notSpecified: "Ikke angivet",
+      section2: "2. Generelle vilkår",
+      section2Desc: "De angivne detaljer udgør grundlaget for denne aftale. Parterne er enige om at overholde de specificerede vilkår. Eventuelle ændringer skal ske skriftligt og underskrives af begge parter.",
+      section3: "3. Tvistbilæggelse",
+      section3Desc: "Enhver tvist, der måtte opstå i forbindelse med denne aftale, skal primært løses gennem forhandlinger mellem parterne. Hvis der ikke kan opnås enighed, skal tvisten afgøres ved domstolene i {country}.",
+      signatures: "Underskrifter",
+      signaturesDesc: "Denne aftale er udfærdiget i to enslydende eksemplarer, hvoraf parterne har fået hver sit.",
+      placeDate: "Sted og dato",
+      signature: "Underskrift",
+      printName: "Navn med blokbogstaver"
+    },
+    errors: {
+      generation: "Noget gik galt under genereringen. Kontroller venligst din internetforbindelse eller prøv igen senere.",
+      pdf: "Kunne ikke oprette PDF. Prøv venligst igen."
     }
   },
   'DE': {
@@ -747,6 +877,13 @@ export const translations: Record<string, Record<string, any>> = {
       notFoundTitle: "Keine Vorlagen gefunden",
       notFoundDesc: "Versuchen Sie einen anderen Suchbegriff oder wechseln Sie die Kategorie.",
       clearFilter: "Filter löschen"
+    },
+    categories: {
+      business: "Wirtschaft & Unternehmen",
+      private: "Privat & Sonstiges",
+      real_estate: "Immobilien & Wohnen",
+      employment: "Arbeit & HR",
+      family: "Familie & Beziehungen"
     },
     form: {
       back: "Zurück zur Bibliothek",
@@ -818,6 +955,24 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Datenschutzrichtlinie",
       rights: "© 2024 Veridoca AB. Alle Rechte vorbehalten.",
       secure: "Sichere Zahlungen mit Stripe"
+    },
+    document: {
+      executedOn: "Dieses Dokument wurde am {date} in Übereinstimmung mit den geltenden Gesetzen von {country} erstellt.",
+      section1: "1. Parteien und Vertragsdetails",
+      notSpecified: "Nicht angegeben",
+      section2: "2. Allgemeine Geschäftsbedingungen",
+      section2Desc: "Die gemachten Angaben bilden die Grundlage dieser Vereinbarung. Die Parteien verpflichten sich, die festgelegten Bedingungen einzuhalten. Änderungen dieser Vereinbarung bedürfen der Schriftform und müssen von beiden Parteien unterzeichnet werden.",
+      section3: "3. Streitbeilegung",
+      section3Desc: "Alle Streitigkeiten aus oder im Zusammenhang mit dieser Vereinbarung werden in erster Linie durch Verhandlungen zwischen den Parteien beigelegt. Kann keine Einigung erzielt werden, unterliegt der Streit der ausschluslichen Zuständigkeit der Gerichte von {country}.",
+      signatures: "Unterschriften",
+      signaturesDesc: "Diese Vereinbarung wurde in zweifacher Ausfertigung erstellt, wobei jede Partei ein Originalexemplar erhält.",
+      placeDate: "Ort und Datum",
+      signature: "Unterschrift",
+      printName: "Name in Druckbuchstaben"
+    },
+    errors: {
+      generation: "Bei der Generierung ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung oder versuchen Sie es später noch einmal.",
+      pdf: "PDF konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
     }
   },
   'FR': {
@@ -861,6 +1016,13 @@ export const translations: Record<string, Record<string, any>> = {
       notFoundTitle: "Aucun modèle trouvé",
       notFoundDesc: "Essayez un autre terme de recherche ou changez de catégorie.",
       clearFilter: "Effacer les filtres"
+    },
+    categories: {
+      business: "Affaires & Entreprise",
+      private: "Privé & Autre",
+      real_estate: "Immobilier & Logement",
+      employment: "Travail & RH",
+      family: "Famille & Relations"
     },
     form: {
       back: "Retour à la bibliothèque",
@@ -932,6 +1094,163 @@ export const translations: Record<string, Record<string, any>> = {
       privacy: "Politique de confidentialité",
       rights: "© 2024 Veridoca AB. Tous droits réservés.",
       secure: "Paiements sécurisés avec Stripe"
+    },
+    document: {
+      executedOn: "Ce document est établi le {date} conformément aux lois applicables de {country}.",
+      section1: "1. Parties et détails de l'accord",
+      notSpecified: "Non spécifié",
+      section2: "2. Conditions générales",
+      section2Desc: "Les détails fournis constituent la base de cet accord. Les parties conviennent de respecter les conditions spécifiées. Toute modification doit être faite par écrit et signée par les deux parties.",
+      section3: "3. Règlement des litiges",
+      section3Desc: "Tout litige découlant de cet accord ou en relation avec celui-ci sera principalement résolu par des négociations entre les parties. Si aucun accord ne peut être trouvé, le litige sera soumis à la juridiction exclusive des tribunaux de {country}.",
+      signatures: "Signatures",
+      signaturesDesc: "Cet accord a été établi en deux exemplaires, chaque partie recevant un exemplaire original.",
+      placeDate: "Lieu et date",
+      signature: "Signature",
+      printName: "Nom en lettres capitales"
+    },
+    errors: {
+      generation: "Une erreur est survenue lors de la génération. Veuillez vérifier votre connexion internet ou réessayer plus tard.",
+      pdf: "Impossible de créer le PDF. Veuillez réessayer."
+    }
+  },
+  'NL': {
+    currency: '€',
+    price: '20',
+    header: {
+      slogan: "Recht op jouw voorwaarden",
+      home: "Home",
+      templates: "Sjablonen",
+      howItWorks: "Hoe het werkt",
+      support: "Support",
+      search: "Zoek documenten"
+    },
+    howItWorks: {
+      title: "Hoe het werkt",
+      subtitle: "Drie eenvoudige stappen om een juridisch bindende overeenkomst te maken. Het duurt minder dan 5 minuten.",
+      step1Title: "1. Kies een sjabloon",
+      step1Desc: "Vind het juiste contract in onze uitgebreide bibliotheek met kwaliteitsgecontroleerde sjablonen.",
+      step2Title: "2. Vul details in",
+      step2Desc: "Beantwoord een paar eenvoudige vragen via ons formulier. Je gegevens zijn volledig veilig.",
+      step3Title: "3. Download",
+      step3Desc: "Controleer het voltooide document en download het als PDF - klaar om ondertekend te worden."
+    },
+    hero: {
+      badge: "Jouw wereldwijde juridische dienst",
+      title1: "Juridisch bindende contracten.",
+      title2: "Altijd 100% gratis.",
+      subtitle: "Maak binnen enkele minuten op maat gemaakte, juridisch correcte documenten. Geldig onder de wetgeving van {country}.",
+      btnFind: "Vind je contract",
+      btnReadMore: "Lees meer",
+      feature1: "Meer dan 20 sjablonen",
+      feature2: "Op maat gemaakt voor {country}",
+    },
+    templates: {
+      title: "Documentenbibliotheek",
+      subtitle: "Kies een categorie om te filteren tussen onze {count} juridische sjablonen.",
+      searchPlaceholder: "Zoeken...",
+      all: "Alle",
+      popular: "Populair",
+      createNow: "Maak nu",
+      notFoundTitle: "Geen sjablonen gevonden",
+      notFoundDesc: "Probeer een ander trefwoord of verander van categorie.",
+      clearFilter: "Filters wissen"
+    },
+    categories: {
+      business: "Zakelijk & Bedrijf",
+      private: "Privé & Overig",
+      real_estate: "Wonen & Vastgoed",
+      employment: "Werk & HR",
+      family: "Familie & Relaties"
+    },
+    form: {
+      back: "Terug naar bibliotheek",
+      quality: "Kwaliteit gecontroleerd",
+      tipsTitle: "Tips!",
+      tipsDesc: "Vul de details zo nauwkeurig mogelijk in. Hoe gedetailleerder je bent, hoe beter de juridische bescherming in het document.",
+      step1: "Contractinformatie",
+      selectDefault: "Kies een optie...",
+      cancel: "Annuleren",
+      submit: "Maak voorbeeld",
+      generatingTitle: "Document genereren",
+      generatingDesc: "Je gegevens worden geanalyseerd en we stellen je {template} op..."
+    },
+    cookie: {
+      title: "Wij gebruiken cookies",
+      desc: "Wij gebruiken cookies om uw ervaring te verbeteren, het verkeer te analyseren en relevante advertenties te tonen via Google AdSense. Lees meer in onze",
+      policy: "privacybeleid",
+      settings: "Instellingen",
+      necessaryOnly: "Alleen noodzakelijk",
+      acceptAll: "Alles accepteren",
+      settingsTitle: "Cookie-instellingen",
+      necessary: "Noodzakelijke cookies",
+      necessaryDesc: "Vereist voor het functioneren van de website. Kan niet worden uitgeschakeld.",
+      analytics: "Analytische cookies",
+      analyticsDesc: "Helpt ons begrijpen hoe bezoekers omgaan met de website via Google Analytics.",
+      advertising: "Advertentiecookies",
+      advertisingDesc: "Gebruikt door Google AdSense om relevante advertenties te tonen.",
+      saveSettings: "Instellingen opslaan"
+    },
+    preview: {
+      lockedTitle: "Je voltooide document",
+      lockedDesc: "Controleer je document hieronder. De service is 100% gratis.",
+      btnUnlock: "Downloaden als PDF",
+      btnEdit: "Details bewerken",
+      included: "Inbegrepen",
+      inc1: "Juridisch correcte PDF",
+      inc2: "Klaar voor printen en e-signing",
+      inc3: "Volledig gratis",
+      inc4: "Geen verborgen kosten",
+      watermark: "Einddocument",
+      lockedDoc: "Download je document",
+      lockedDocDesc: "Het document is klaar om gedownload te worden.",
+      unlockNow: "Nu downloaden"
+    },
+    checkout: {
+      title: "Bestelling afronden",
+      secure: "Veilige betaling via Stripe",
+      toPay: "Te betalen:",
+      card: "Kaartbetaling (Stripe)",
+      swish: "Lokale betaaloptie (Binnenkort beschikbaar)",
+      payBtn: "Ga naar betaling",
+      terms: "Door te downloaden ga je akkoord met onze gebruiksvoorwaarden."
+    },
+    success: {
+      title: "Je document is klaar!",
+      desc: "Je document is nu klaar. We hebben een kopie naar je e-mail gestuurd, maar je kunt het ook direct downloaden.",
+      download: "Download PDF",
+      receipt: "Stuur kwitantie",
+      back: "Ga terug naar de startpagina"
+    },
+    footer: {
+      supportText: "Als je ons project leuk vindt en wilt dat het gratis blijft, steun ons dan met een gift door de QR-code te scannen.",
+      desc: "Wij democratiseren het recht en maken professionele contracten voor iedereen toegankelijk.",
+      popular: "Populaire documenten",
+      support: "Klantenservice",
+      faq: "Veelgestelde vragen",
+      contact: "Neem contact op",
+      terms: "Gebruiksvoorwaarden",
+      privacy: "Privacybeleid",
+      rights: "© 2024 Veridoca AB. Alle rechten voorbehouden.",
+      secure: "Veilige betalingen met Stripe"
+    },
+    document: {
+      executedOn: "Dit document is opgesteld op {date} in overeenstemming met de toepasselijke wetgeving van {country}.",
+      section1: "1. Partijen en details van de overeenkomst",
+      notSpecified: "Niet gespecificeerd",
+      section2: "2. Algemene voorwaarden",
+      section2Desc: "De verstrekte gegevens vormen de basis van deze overeenkomst. De partijen komen overeen zich aan de gespecificeerde voorwaarden te houden. Eventuele wijzigingen moeten schriftelijk worden vastgelegd en door beide partijen worden ondertekend.",
+      section3: "3. Geschillenbeslechting",
+      section3Desc: "Eventuele geschillen die voortvloeien uit of verband houden met deze overeenkomst zullen in de eerste plaats worden opgelost door middel van onderhandelingen tussen de partijen. Indien geen overeenstemming kan worden bereikt, zal het geschil worden voorgelegd aan de exclusieve bevoegdheid van de rechtbanken van {country}.",
+      signatures: "Handtekeningen",
+      signaturesDesc: "Deze overeenkomst is opgesteld in tweevoud, waarbij elke partij één origineel exemplaar ontvangt.",
+      placeDate: "Plaats en datum",
+      signature: "Handtekening",
+      printName: "Naam in blokletters"
+    },
+    errors: {
+      generation: "Er is iets misgegaan tijdens het genereren. Controleer je internetverbinding of probeer het later opnieuw.",
+      pdf: "Kon PDF niet maken. Probeer het opnieuw."
     }
   }
 };

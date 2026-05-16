@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { DOCUMENT_TEMPLATES, getIcon, COUNTRIES } from './constants';
 import { DocumentTemplate, UserInputData, DocumentCategory, CountryConfig } from './types';
 import { generateLegalDocument } from './services/geminiService';
@@ -644,7 +644,7 @@ const SuccessView = ({ onReset, content, template, country }: { onReset: () => v
       doc.save(`${template.title.replace(/\s+/g, '_')}.pdf`);
     } catch (error) {
       console.error("PDF Generation failed:", error);
-      alert("Kunde inte skapa PDF. Försök igen.");
+      alert(t(country.id, 'errors.pdf'));
     }
   };
 
@@ -780,7 +780,7 @@ function HomeFlow({ country }: { country: CountryConfig }) {
       setGeneratedContent(content);
       setView('preview');
     } catch (error) {
-      alert("Något gick fel vid genereringen. Kontrollera din internetanslutning eller försök igen senare.");
+      alert(t(country.id, 'errors.generation'));
     } finally {
       setIsGenerating(false);
     }
@@ -842,6 +842,17 @@ function HomeFlow({ country }: { country: CountryConfig }) {
 
 export default function App() {
   const [selectedCountry, setSelectedCountry] = useState<CountryConfig>(COUNTRIES[0]);
+  const location = useLocation();
+
+  // Track pageviews on route change
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+        country_id: selectedCountry.id
+      });
+    }
+  }, [location, selectedCountry.id]);
 
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-100 bg-brand-dark">

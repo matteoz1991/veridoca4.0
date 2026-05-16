@@ -25,7 +25,8 @@ export const COUNTRIES: CountryConfig[] = [
   { id: 'NO', name: 'Norge', flag: '🇳🇴', language: 'Norsk' },
   { id: 'DK', name: 'Danmark', flag: '🇩🇰', language: 'Dansk' },
   { id: 'DE', name: 'Deutschland', flag: '🇩🇪', language: 'Deutsch' },
-  { id: 'FR', name: 'France', flag: '🇫🇷', language: 'Français' }
+  { id: 'FR', name: 'France', flag: '🇫🇷', language: 'Français' },
+  { id: 'NL', name: 'Nederland', flag: '🇳🇱', language: 'Nederlands' }
 ];
 
 export const getIcon = (name: string, className: string = "w-6 h-6") => {
