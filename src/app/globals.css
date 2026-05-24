@@ -1,32 +1,26 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
+  --background: #0b1120;
+  --foreground: #f8fafc;
+  --primary: #f59e0b;
+  --primary-foreground: #000000;
+  --sidebar-bg: #0f172a;
+  --card-bg: #ffffff;
+  --card-foreground: #0f172a;
+  --accent: #1e293b;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +36,294 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-foreground);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header & Mega Menu Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 50;
+  height: 80px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.nav-item:hover {
+  color: var(--primary);
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  display: none;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+  z-index: 100;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  color: #0f172a;
+  cursor: default;
+}
+
+.nav-item:hover .mega-menu {
+  display: grid;
+}
+
+.mega-sidebar {
+  background: #0f172a;
+  color: white;
+  padding: 2.5rem 2rem;
+}
+
+.mega-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.sidebar-link:hover {
+  color: white;
+}
+
+.mega-content {
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.mega-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.mega-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mega-link {
+  color: #475569;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.mega-link:hover {
+  color: var(--primary);
+}
+/* Template Generator Page */
+.template-page-container {
+  display: block;
+}
+
+.form-sidebar {
+  width: 450px;
+  background: var(--sidebar-bg);
+  color: var(--foreground);
+  border-right: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+  z-index: 10;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+}
+
+.preview-container {
+  flex: 1;
+  background: var(--background);
+  padding: 3rem;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.document-paper {
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  min-height: 1131px; /* A4 aspect ratio approximation */
+  padding: 4rem 5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+  line-height: 1.6;
+}
+
+.document-paper h1, .document-paper h2, .document-paper h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+}
+
+.document-paper h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.document-paper p {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: #1e293b;
+  color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #1e293b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+/* Print CSS for PDF Generation */
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .no-print, header, footer, .header-container, .form-sidebar {
+    display: none !important;
+  }
+  
+  .template-page-container {
+    height: auto;
+    overflow: visible;
+    display: block;
+  }
+  
+  .preview-container {
+    padding: 0;
+    background: white;
+    display: block;
+    overflow: visible;
+  }
+  
+  .document-paper {
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
   }
 }
