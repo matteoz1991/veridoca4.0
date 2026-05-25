@@ -31,6 +31,11 @@ export default async function RootLayout(props: {
   return (
     <html lang={lang} className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329226931623109"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Script id="google-consent-mode" strategy="beforeInteractive" dangerouslySetInnerHTML={{
