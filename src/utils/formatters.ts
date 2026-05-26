@@ -3,12 +3,15 @@ import { Locale } from '../i18n-config';
 export const getCurrencyForLocale = (locale: Locale): string => {
   switch (locale) {
     case 'sv': return 'SEK';
-    case 'en': return 'USD'; // generic intl
+    case 'en': return 'USD';
     case 'us': return 'USD';
     case 'uk': return 'GBP';
+    case 'no': return 'NOK';
+    case 'dk': return 'DKK';
     case 'de':
     case 'fr':
-    case 'es': return 'EUR';
+    case 'es':
+    case 'nl': return 'EUR';
     default: return 'SEK';
   }
 };
@@ -27,7 +30,10 @@ export const formatCurrency = (amount: number | string, locale: Locale): string 
     uk: 'en-GB',
     de: 'de-DE',
     fr: 'fr-FR',
-    es: 'es-ES'
+    es: 'es-ES',
+    no: 'nb-NO',
+    dk: 'da-DK',
+    nl: 'nl-NL'
   };
 
   return new Intl.NumberFormat(bcp47[locale], {
@@ -48,7 +54,10 @@ export const formatDate = (dateString: string, locale: Locale): string => {
     uk: 'en-GB',
     de: 'de-DE',
     fr: 'fr-FR',
-    es: 'es-ES'
+    es: 'es-ES',
+    no: 'nb-NO',
+    dk: 'da-DK',
+    nl: 'nl-NL'
   };
 
   return new Intl.DateTimeFormat(bcp47[locale], {

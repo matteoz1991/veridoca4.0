@@ -223,12 +223,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 <a
                   key={slug}
                   href={`/${lang}/${categoryPath}/${slug}`}
-                  style={{ display: 'block', background: 'var(--card-bg)', color: 'var(--card-foreground)', borderRadius: '0.75rem', padding: '1.5rem', textDecoration: 'none', border: '1px solid #e2e8f0', transition: 'all 0.2s' }}
+                  style={{ display: 'block', background: 'var(--card-bg)', color: 'var(--card-foreground)', borderRadius: '0.75rem', padding: '1.5rem', textDecoration: 'none', border: '1px solid var(--border)', transition: 'all 0.2s' }}
                   className="template-card"
                 >
-                  <div style={{ fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#64748b', marginBottom: '0.5rem' }}>{tmpl.category}</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{tmpl.category}</div>
                   <h3 style={{ fontSize: '1.05rem', marginBottom: '0.5rem', color: 'var(--card-foreground)', fontFamily: 'var(--font-serif)' }}>{title}</h3>
-                  <p style={{ fontSize: '0.875rem', color: '#64748b', lineHeight: 1.5 }}>{typeof desc === 'string' ? desc.slice(0, 100) : ''}...</p>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>{typeof desc === 'string' ? desc.slice(0, 100) : ''}...</p>
                   <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 600 }}>
                     {t(lang, 'Skapa gratis →', 'Create free →')}
                   </div>

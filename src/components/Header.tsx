@@ -17,9 +17,8 @@ export default function Header({ lang }: { lang: string }) {
   return (
     <header className="header-container">
       <div className="logo-section">
-        <Link href={`/${lang}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ width: '24px', height: '24px', background: 'var(--primary)', borderRadius: '4px', transform: 'rotate(45deg)' }}></div>
-          <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 600 }}>Veridoca</span>
+        <Link href={`/${lang}`} style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/assets/bild2.png" alt="Veridoca" style={{ height: '96px', width: 'auto', objectFit: 'contain', userSelect: 'none' }} />
         </Link>
       </div>
 

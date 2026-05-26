@@ -264,6 +264,138 @@ const es: Dictionary = {
   }
 };
 
+const no: Dictionary = {
+  header: {
+    business: 'Bedrift',
+    private: 'Privatperson',
+    companyOps: 'Selskap & Drift',
+    hr: 'Personal',
+    popular: 'Populære dokumenter',
+    inheritance: 'Arv',
+    family: 'Familie',
+    powers: 'Fullmakter',
+    housing: 'Bolig',
+    loans: 'Lån & Gaver',
+    moreTemplates: 'Flere maler →',
+    createDoc: 'Lag dokument',
+    free: '100% Gratis'
+  },
+  home: {
+    titleLine1: 'Profesjonelle',
+    titleLine2: 'Juridiske Dokumenter',
+    subtitle: 'Opplev Veridoca – revolusjonerer tilgangen til juss med innovative og helt gratis dokumentmaler.',
+    createNow: 'Lag nå',
+    viewTemplates: 'Se alle maler'
+  },
+  templatesPage: {
+    title: 'Alle juridiske maler',
+    subtitle: 'Bla gjennom vår komplette samling av gratis, profesjonelle juridiske dokumenter og kontrakter.',
+    searchPlaceholder: 'Søk etter maler...',
+    allCategories: 'Alle kategorier',
+    noResults: 'Ingen maler funnet.'
+  },
+  footer: {
+    description: "Gratis juridiske dokumenter og kontraktsmaler for bedrifter og privatpersoner. Ingen innlogging kreves.",
+    infoAndLegal: "Informasjon & Juridisk",
+    aboutUs: "Om oss",
+    contact: "Kontakt oss",
+    privacyPolicy: "Personvernregler",
+    termsOfService: "Brukervilkår",
+    disclaimer: "Ansvarsfraskrivelse",
+    impressum: "Impressum",
+    copyright: "Alle rettigheter forbeholdt.",
+    adSupported: "Denne nettsiden finansieres av annonser for å holde tjenesten gratis for deg."
+  }
+};
+
+const dk: Dictionary = {
+  header: {
+    business: 'Erhverv',
+    private: 'Privatperson',
+    companyOps: 'Selskab & Drift',
+    hr: 'Personale',
+    popular: 'Populære dokumenter',
+    inheritance: 'Arv',
+    family: 'Familie',
+    powers: 'Fuldmagter',
+    housing: 'Bolig',
+    loans: 'Lån & Gaver',
+    moreTemplates: 'Flere skabeloner →',
+    createDoc: 'Opret dokument',
+    free: '100% Gratis'
+  },
+  home: {
+    titleLine1: 'Professionelle',
+    titleLine2: 'Juridiske Dokumenter',
+    subtitle: 'Oplev Veridoca – revolutionerer adgangen til jura med innovative og helt gratis dokumentskabeloner.',
+    createNow: 'Opret nu',
+    viewTemplates: 'Se alle skabeloner'
+  },
+  templatesPage: {
+    title: 'Alle juridiske skabeloner',
+    subtitle: 'Gennemse vores komplette samling af gratis, professionelle juridiske dokumenter og kontrakter.',
+    searchPlaceholder: 'Søg efter skabeloner...',
+    allCategories: 'Alle kategorier',
+    noResults: 'Ingen skabeloner fundet.'
+  },
+  footer: {
+    description: "Gratis juridiske dokumenter og kontraktskabeloner til virksomheder og privatpersoner. Ingen login påkrævet.",
+    infoAndLegal: "Information & Juridisk",
+    aboutUs: "Om os",
+    contact: "Kontakt os",
+    privacyPolicy: "Privatlivspolitik",
+    termsOfService: "Brugervilkår",
+    disclaimer: "Ansvarsfraskrivelse",
+    impressum: "Impressum",
+    copyright: "Alle rettigheder forbeholdt.",
+    adSupported: "Dette websted er finansieret af annoncer for at holde tjenesten gratis for dig."
+  }
+};
+
+const nl: Dictionary = {
+  header: {
+    business: 'Bedrijf',
+    private: 'Particulier',
+    companyOps: 'Bedrijfsvoering',
+    hr: 'Personeel',
+    popular: 'Populaire documenten',
+    inheritance: 'Erfrecht',
+    family: 'Familie',
+    powers: 'Volmachten',
+    housing: 'Vastgoed',
+    loans: 'Leningen & Schenkingen',
+    moreTemplates: 'Meer sjablonen →',
+    createDoc: 'Document aanmaken',
+    free: '100% Gratis'
+  },
+  home: {
+    titleLine1: 'Professionele',
+    titleLine2: 'Juridische Documenten',
+    subtitle: 'Ontdek Veridoca – revolutioneert de toegang tot juridische diensten met innovatieve en volledig gratis documentsjablonen.',
+    createNow: 'Nu aanmaken',
+    viewTemplates: 'Bekijk sjablonen'
+  },
+  templatesPage: {
+    title: 'Alle juridische sjablonen',
+    subtitle: 'Blader door onze volledige collectie gratis, professionele juridische documenten en contracten.',
+    searchPlaceholder: 'Zoek naar sjablonen...',
+    allCategories: 'Alle categorieën',
+    noResults: 'Geen sjablonen gevonden.'
+  },
+  footer: {
+    description: "Gratis juridische documenten en contractsjablonen voor bedrijven en particulieren. Geen inloggen vereist.",
+    infoAndLegal: "Informatie & Juridisch",
+    aboutUs: "Over ons",
+    contact: "Neem contact op",
+    privacyPolicy: "Privacybeleid",
+    termsOfService: "Gebruiksvoorwaarden",
+    disclaimer: "Disclaimer",
+    impressum: "Impressum",
+    copyright: "Alle rechten voorbehouden.",
+    adSupported: "Deze website wordt gefinancierd door advertenties om de service gratis voor u te houden."
+  }
+};
+
 export const dictionaries: Record<Locale, Dictionary> = {
   sv,
   en,
@@ -271,7 +403,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
   uk: en,
   de,
   fr,
-  es
+  es,
+  no,
+  dk,
+  nl
 };
 
 export const getDictionary = (lang: Locale) => dictionaries[lang] || dictionaries['en'];

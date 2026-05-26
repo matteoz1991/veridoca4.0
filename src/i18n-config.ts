@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: 'sv',
-  locales: ['sv', 'en', 'us', 'uk', 'de', 'fr', 'es'],
+  locales: ['sv', 'en', 'us', 'uk', 'de', 'fr', 'es', 'no', 'dk', 'nl'],
 } as const;
 
 export type Locale = typeof i18n.locales[number];
@@ -13,7 +13,10 @@ export const localeRegions: Record<Locale, string> = {
   uk: 'en-GB',
   de: 'de',
   fr: 'fr',
-  es: 'es'
+  es: 'es',
+  no: 'nb-NO',
+  dk: 'da-DK',
+  nl: 'nl'
 };
 
 // Used to translate the /templates URL segment
@@ -24,5 +27,8 @@ export const categoryTranslations: Record<Locale, string> = {
   uk: 'templates',
   de: 'vorlagen',
   fr: 'modeles',
-  es: 'plantillas'
+  es: 'plantillas',
+  no: 'maler',
+  dk: 'skabeloner',
+  nl: 'sjablonen'
 };

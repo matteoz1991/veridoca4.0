@@ -6,12 +6,15 @@ import { i18n, Locale } from '../i18n-config';
 
 const flags: Record<Locale, string> = {
   sv: '🇸🇪',
-  en: '🌐', // International
+  en: '🌐',
   us: '🇺🇸',
   uk: '🇬🇧',
   de: '🇩🇪',
   fr: '🇫🇷',
-  es: '🇪🇸'
+  es: '🇪🇸',
+  no: '🇳🇴',
+  dk: '🇩🇰',
+  nl: '🇳🇱'
 };
 
 const names: Record<Locale, string> = {
@@ -21,7 +24,10 @@ const names: Record<Locale, string> = {
   uk: 'English (UK)',
   de: 'Deutsch',
   fr: 'Français',
-  es: 'Español'
+  es: 'Español',
+  no: 'Norsk',
+  dk: 'Dansk',
+  nl: 'Nederlands'
 };
 
 export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {

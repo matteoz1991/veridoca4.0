@@ -4,7 +4,7 @@ export default function Disclaimer() {
       <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Ansvarsfriskrivning (Disclaimer)</h1>
       <div style={{ lineHeight: 1.8, color: 'var(--text-muted)' }}>
         
-        <div style={{ padding: '2rem', background: '#f8fafc', borderLeft: '4px solid var(--primary)', borderRadius: '0 8px 8px 0', marginBottom: '2rem' }}>
+        <div style={{ padding: '2rem', background: 'var(--accent)', borderLeft: '4px solid var(--primary)', borderRadius: '0 8px 8px 0', marginBottom: '2rem' }}>
           <p style={{ fontWeight: 600, color: 'var(--foreground)' }}>
             Informationen och dokumenten på Veridoca är tillhandahållna i informationssyfte och utgör inte juridisk rådgivning.
           </p>

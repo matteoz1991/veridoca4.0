@@ -56,7 +56,7 @@ export default function CookieBanner({ lang }: { lang: string }) {
             <button onClick={denyAll} className="btn-outline" style={{ borderColor: '#e2e8f0', color: 'white' }}>
               Neka alla
             </button>
-            <button onClick={acceptAll} className="btn-primary" style={{ background: 'var(--accent)', color: 'black' }}>
+            <button onClick={acceptAll} className="btn-primary" style={{ background: 'var(--primary)', color: '#000' }}>
               Acceptera alla
             </button>
           </div>

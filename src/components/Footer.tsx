@@ -12,9 +12,8 @@ export default function Footer({ lang }: { lang: string }) {
       <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
         
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <div style={{ width: '24px', height: '24px', background: 'var(--primary)', borderRadius: '4px', transform: 'rotate(45deg)' }}></div>
-            <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 600 }}>Veridoca</span>
+          <div style={{ marginBottom: '1rem' }}>
+            <img src="/assets/bild2.png" alt="Veridoca" style={{ height: '80px', width: 'auto', objectFit: 'contain', userSelect: 'none' }} />
           </div>
           <p style={{ color: '#a0aec0', lineHeight: 1.6, fontSize: '0.9rem' }}>
             {dict.footer.description}

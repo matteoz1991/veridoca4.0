@@ -4,11 +4,11 @@
   --primary: #f59e0b;
   --primary-foreground: #000000;
   --sidebar-bg: #0f172a;
-  --card-bg: #ffffff;
-  --card-foreground: #0f172a;
-  --accent: #1e293b;
+  --card-bg: #151F32;
+  --card-foreground: #f8fafc;
+  --accent: #28344B;
   --text-muted: #94a3b8;
-  --border: #1e293b;
+  --border: #28344B;
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
