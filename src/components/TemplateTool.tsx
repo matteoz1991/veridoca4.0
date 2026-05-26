@@ -29,7 +29,7 @@ export default function TemplateTool({ slug, lang }: { slug: string; lang: Local
   const handleDownloadPDF = async () => {
     setIsGeneratingPdf(true);
     try {
-      const element = document.querySelector('.document-paper');
+      const element = document.querySelector('.document-paper') as HTMLElement | null;
       if (!element) return;
       
       // html2canvas blank page bug workaround: scroll to top and explicitly set windowHeight/scrollY
@@ -42,14 +42,14 @@ export default function TemplateTool({ slug, lang }: { slug: string; lang: Local
       const opt = {
         margin:       15,
         filename:     `${templateTitle.toLowerCase().replace(/[^a-z0-9]/gi, '-')}.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
+        image:        { type: 'jpeg' as const, quality: 0.98 },
         html2canvas:  { 
           scale: 2, 
           useCORS: true,
           scrollY: 0,
           windowHeight: document.documentElement.scrollHeight
         },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' as const }
       };
       
       // Generate PDF as Blob

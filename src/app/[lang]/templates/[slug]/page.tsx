@@ -23,15 +23,18 @@ export async function generateMetadata(
   const localSlug = template.slugs[lang] || template.slugs['en'];
   const fullUrl = `https://veridoca.com/${lang}/${categoryPath}/${localSlug}`;
   
+  const titleStr = typeof template.title === 'string' ? template.title : (template.title[lang] ?? template.title['sv'] ?? template.title['en'] ?? '');
+  const descStr = typeof template.description === 'string' ? template.description : (template.description[lang] ?? template.description['sv'] ?? template.description['en'] ?? '');
+
   return {
-    title: `${template.title} | Veridoca`,
-    description: template.description,
+    title: `${titleStr} | Veridoca`,
+    description: descStr,
     alternates: {
       canonical: fullUrl
     },
     openGraph: {
-      title: `${template.title} | Veridoca`,
-      description: template.description,
+      title: `${titleStr} | Veridoca`,
+      description: descStr,
       url: fullUrl,
       siteName: 'Veridoca',
       locale: localeRegions[lang],
@@ -39,8 +42,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${template.title} | Veridoca`,
-      description: template.description,
+      title: `${titleStr} | Veridoca`,
+      description: descStr,
     }
   };
 }
