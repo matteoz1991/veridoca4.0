@@ -13,6 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     de: 'Veridoca – Kostenlose Rechtsvorlagen',
     fr: 'Veridoca – Modèles Juridiques Gratuits',
     es: 'Veridoca – Plantillas Legales Gratuitas',
+    no: 'Veridoca – Gratis Juridiske Dokumentmaler',
+    dk: 'Veridoca – Gratis Juridiske Dokumentskabeloner',
+    nl: 'Veridoca – Gratis Juridische Documentsjablonen',
   };
   const descriptions: Partial<Record<Locale, string>> = {
     sv: 'Skapa gratis juridiska avtal på minuter. Samboavtal, anställningsavtal, sekretessavtal och 25+ mallar. Ladda ner som PDF. Inget konto krävs.',
@@ -20,6 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     de: 'Erstellen Sie kostenlos professionelle Rechtsdokumente in Minuten. NDA, Arbeitsverträge und 25+ Vorlagen. Als PDF herunterladen.',
     fr: 'Créez gratuitement des documents juridiques en minutes. 25+ modèles. Téléchargez en PDF.',
     es: 'Cree documentos legales gratuitos en minutos. 25+ plantillas. Descargue como PDF.',
+    no: 'Lag gratis profesjonelle juridiske dokumenter på minutter. NDA, arbeidskontrakter og 25+ maler. Last ned som PDF.',
+    dk: 'Opret gratis professionelle juridiske dokumenter på minutter. NDA, ansættelseskontrakter og 25+ skabeloner. Download som PDF.',
+    nl: 'Maak gratis professionele juridische documenten in minuten. NDA, arbeidscontracten en 25+ sjablonen. Download als PDF.',
   };
 
   const title = titles[lang] ?? titles['en']!;
