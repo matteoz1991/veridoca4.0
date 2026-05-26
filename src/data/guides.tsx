@@ -503,4 +503,294 @@ export const guides: GuideData[] = [
       { question: 'Vad kostar det att skriva äktenskapsförord med hjälp av jurist?', answer: 'En jurist tar typiskt 3 000–10 000 kr för att upprätta ett äktenskapsförord, beroende på komplexitet. Med Veridocas gratismall kan du skapa ett standardavtal kostnadsfritt och eventuellt anlita en jurist för enbart granskning (ca 1–2 timmars arvode).' },
     ],
   },
+
+  {
+    slug: 'hyresavtal-guide',
+    title: 'Hyresavtal – komplett guide för hyresvärdar och hyresgäster',
+    metaDescription: 'Allt du behöver veta om hyresavtal i Sverige. Vad som måste finnas med, hyresgästens besittningsskydd, vad hyran får vara och hur man säger upp ett hyresavtal korrekt.',
+    category: 'Boende',
+    readTime: 9,
+    publishedAt: '2026-04-01',
+    content: (
+      <div>
+        <p>Hyresavtalet är ett av de juridiskt känsligaste dokumenten du kan ingå. Fel i ett hyresavtal kan leda till att du som hyresvärd förlorar din rätt att säga upp hyresgästen, eller att du som hyresgäst saknar rätt skydd. Den här guiden går igenom allt du behöver veta – oavsett om du hyr ut eller hyr.</p>
+
+        <h2>Vad reglerar ett hyresavtal?</h2>
+        <p>Ett hyresavtal för bostad regleras primärt av <strong>Hyreslagen (12 kap. Jordabalken)</strong> och till viss del av <strong>Bostadsrättslagen</strong>. Lagen innehåller många tvingande regler till förmån för hyresgästen – regler som inte kan avtalas bort till hyresgästens nackdel.</p>
+        <p>Avtalet ska tydliggöra:</p>
+        <ul>
+          <li>Vilken bostad som hyrs (adress, lägenhetsnummer, yta)</li>
+          <li>Hyresbelopp och vad som ingår (el, vatten, bredband)</li>
+          <li>Hyrestid (tillsvidare eller tidsbegränsat)</li>
+          <li>Inflyttningsdatum</li>
+          <li>Uppsägningstid</li>
+          <li>Vilka regler som gäller för boendet</li>
+        </ul>
+
+        <h2>Besittningsskydd – hyresgästens starka skydd</h2>
+        <p>En av de viktigaste reglerna i hyreslagen är <strong>besittningsskyddet</strong>. Det innebär att en hyresgäst som bott i en bostad i mer än 2 år i princip har rätt att bo kvar – även om hyresvärden vill avsluta hyresförhållandet.</p>
+        <p>Det direkta besittningsskyddet gör det svårt för en hyresvärd att säga upp en hyresgäst utan sakliga skäl. Godkända skäl inkluderar:</p>
+        <ul>
+          <li>Hyresgästen missköter betalningarna allvarligt</li>
+          <li>Hyresgästen orsakar störningar för grannar</li>
+          <li>Hyresvärden ska använda bostaden för eget boende</li>
+          <li>Huset ska rivas eller genomgå större renovering</li>
+        </ul>
+        <p><strong>Tidsbegränsade avtal och besittningsskydd:</strong> Om du hyr ut på ett tidsbegränsat avtal och hyresgästen bott i bostaden i mer än 2 år kan besittningsskyddet ändå uppstå. Vill du undvika det måste du begära undantag från besittningsskyddet skriftligen, och detta ska godkännas av hyresnämnden.</p>
+
+        <h2>Vad får hyran vara?</h2>
+        <p>För förstahandshyresgäster i hyresrätt fastställs hyran via förhandlingar mellan hyresvärden och hyresgästföreningen. För andrahandsuthyrning gäller att hyran inte får vara <em>väsentligt</em> högre än förstahandshyran – en tumregel är max 15% över förstahandshyran plus faktiska kostnader för möbler och utrustning.</p>
+        <p>Tar du för hög hyra kan hyresnämnden kräva att du betalar tillbaka mellanskillnaden. I allvarliga fall kan det klassas som ocker.</p>
+
+        <h2>Andrahandsuthyrning – kräv alltid tillstånd</h2>
+        <p>Hyr du din hyresrätt i andra hand måste du ha tillstånd från din hyresvärd. Hyr du din bostadsrätt i andra hand måste du ha tillstånd från bostadsrättsföreningen. Saknar du tillstånd riskerar du att förlora ditt eget hyresavtal eller din bostadsrätt.</p>
+        <p>Tillstånd för andrahandsuthyrning ges normalt för max ett år åt gången, men kan förnyas.</p>
+
+        <h2>Uppsägning av hyresavtal</h2>
+        <p>Reglerna för uppsägning skiljer sig beroende på avtalstyp:</p>
+        <ul>
+          <li><strong>Tillsvidare-avtal:</strong> Hyresgästen har normalt tre månaders uppsägningstid. Hyresvärden kan ha längre uppsägningstid beroende på hur länge hyresgästen bott kvar.</li>
+          <li><strong>Tidsbegränsat avtal:</strong> Avtalet löper normalt ut utan uppsägning. Men hyresgästen kan ha rätt att kräva förlängning om besittningsskyddet uppstått.</li>
+        </ul>
+        <p>Uppsägning ska alltid ske skriftligen och med kvittens (rekommenderat brev eller e-post med bekräftelse).</p>
+
+        <h2>Vad ska ingå i ett hyresavtal för att det ska vara giltigt?</h2>
+        <p>Tekniskt sett kan ett hyresavtal vara muntligt, men det är starkt avrådt. Ett skriftligt hyresavtal ska innehålla:</p>
+        <ul>
+          <li>Parternas namn, personnummer/organisationsnummer och adresser</li>
+          <li>Hyresrättens exakta adress och eventuellt lägenhetsnummer</li>
+          <li>Hyrestid (start och eventuellt slutdatum)</li>
+          <li>Hyresbelopp per månad och vad som ingår</li>
+          <li>Eventuell hyresindexering</li>
+          <li>Uppsägningstid</li>
+          <li>Regler för underhåll och skick vid avflyttning</li>
+          <li>Eventuell deposition (max 3 månaders hyra)</li>
+          <li>Datum och underskrifter</li>
+        </ul>
+
+        <h2>Deposition – regler och fallgropar</h2>
+        <p>En deposition (säkerhet) på max 3 månaders hyra är tillåten. Depositionen ska betalas tillbaka inom rimlig tid efter avflyttning – normalt inom 2–4 veckor. Hyresvärden har rätt att dra av för dokumenterade skador som hyresgästen orsakat (utöver normalt slitage), men bevisbördan för skadorna ligger hos hyresvärden.</p>
+        <p>Tips: Gör alltid en inflyttningsbesiktning med foton dokumenterade i hyresavtalet eller i ett separat protokoll – det skyddar båda parter.</p>
+      </div>
+    ),
+    faqs: [
+      { question: 'Kan jag säga upp en hyresgäst som stör grannarna?', answer: 'Ja, störningar som väsentligt försämrar grannars boendemiljö är ett giltigt skäl för uppsägning. Men du måste först uppmana hyresgästen skriftligen att upphöra med störningarna och ge dem möjlighet att rätta till situationen. Fortsätter störningarna kan du begära avhysning via Kronofogden.' },
+      { question: 'Vad gäller om hyresgästen skadas i lägenheten?', answer: 'Som hyresvärd har du underhållsansvar för fastigheten. Om hyresgästen skadas på grund av en brist du kände till men inte åtgärdat kan du bli skadeståndsskyldig. Ha alltid korrekt hemförsäkring (gäller hyresgästen) och fastighetsförsäkring (gäller hyresvärden).' },
+      { question: 'Kan man höja hyran under avtalstiden?', answer: 'Nej, hyran kan normalt inte höjas under en löpande avtalsperiod om det inte finns en indexklausul i avtalet. Vid tillsvidare-avtal kan hyran höjas från nästa hyresperiod med rätt uppsägningstid, om hyresgästen godkänner höjningen. Vägrar hyresgästen avgör hyresnämnden.' },
+      { question: 'Vad händer om hyresgästen inte betalar hyran?', answer: 'Om hyresgästen är sen med hyran mer än en vecka har du som hyresvärd rätt att säga upp avtalet med omedelbar verkan. Du måste dock ge hyresgästen möjlighet att betala inom 12 dagar (hyresgästens "återtag"). Betalar de inom den tiden kan de inte vräkas för det specifika tillfället.' },
+      { question: 'Behöver hyresavtalet bevittnas?', answer: 'Nej, ett hyresavtal behöver inte bevittnas för att vara giltigt. Det räcker att det är skriftligt och undertecknat av hyresvärd och hyresgäst.' },
+    ],
+  },
+
+  {
+    slug: 'anstallningsavtal-guide',
+    title: 'Anställningsavtal – guide för arbetsgivare och anställda',
+    metaDescription: 'Komplett guide om anställningsavtal i Sverige. Vad som måste ingå enligt LAS, skillnaden mellan tillsvidare och visstidsanställning, provanställning och vad som gäller vid uppsägning.',
+    category: 'Arbetsrätt',
+    readTime: 10,
+    publishedAt: '2026-04-15',
+    content: (
+      <div>
+        <p>Anställningsavtalet är ett av de viktigaste juridiska dokument en arbetsgivare upprättar. Det reglerar relationen mellan arbetsgivare och anställd och är grunden för allt som händer under anställningen. Här är vad du måste veta – oavsett om du ska anställa eller bli anställd.</p>
+
+        <h2>Måste anställningsavtalet vara skriftligt?</h2>
+        <p>Tekniskt sett kan en anställning ingås muntligt – en anställning uppstår när arbetsgivare och arbetstagare kommit överens om arbete mot ersättning. Men arbetsgivaren är enligt <strong>Lagen om anställningsskydd (LAS)</strong> skyldig att senast en månad efter anställningens start lämna skriftlig information om anställningsvillkoren.</p>
+        <p>I praktiken är ett skriftligt anställningsavtal från dag ett starkt rekommenderat – det skyddar båda parter och förebygger missförstånd.</p>
+
+        <h2>Vad måste finnas med i ett anställningsavtal?</h2>
+        <p>Arbetsgivaren är skyldig att informera den anställde om:</p>
+        <ul>
+          <li>Parternas identitet (arbetsgivare och anställd)</li>
+          <li>Arbetsplatsens adress</li>
+          <li>Anställningens form (tillsvidare, tidsbegränsad eller provanställning)</li>
+          <li>Befattning/tjänstebeteckning och arbetsuppgifter</li>
+          <li>Lön och övriga ersättningar (förmåner, bonusavtal)</li>
+          <li>Arbetstid per vecka</li>
+          <li>Rätt till semester och semesterlön</li>
+          <li>Eventuella kollektivavtal som tillämpas</li>
+          <li>Uppsägningstid</li>
+          <li>Tilllämplig lag och avtal</li>
+        </ul>
+
+        <h2>Anställningsformer – tillsvidare, visstid och prov</h2>
+        <p><strong>Tillsvidareanställning</strong> ("fast jobb") är den normala anställningsformen och innebär att den anställde är anställd tills vidare, utan ett förutbestämt slutdatum. Uppsägning kräver saklig grund.</p>
+        <p><strong>Tidsbegränsad anställning (visstid)</strong> har en bestämd start- och slutdag. Från 1 oktober 2022 gäller nya regler: en anställd som arbetat sammanlagt mer än 12 månader (inom en 5-årsperiod) hos samma arbetsgivare har rätt att konvertera sin visstidsanställning till en tillsvidareanställning.</p>
+        <p><strong>Provanställning</strong> kan användas i upp till 6 månader. Under provanställningen kan arbetsgivaren avsluta anställningen utan att ange skäl (med 2 veckors varsel). Om provanställningen inte avbryts övergår den automatiskt till en tillsvidareanställning.</p>
+
+        <h2>LAS – lagen som skyddar de anställda</h2>
+        <p>Lagen om anställningsskydd (LAS) är en tvingande lag som skyddar anställda. De viktigaste reglerna:</p>
+        <ul>
+          <li><strong>Saklig grund för uppsägning:</strong> En arbetsgivare kan bara säga upp en tillsvidareanställd om det finns saklig grund – antingen personliga skäl (misskötsel, samarbetssvårigheter) eller arbetsbrist.</li>
+          <li><strong>Turordningsreglerna ("sist in, först ut"):</strong> Vid uppsägning på grund av arbetsbrist gäller turordningsregler – normalt sett ska de senast anställda sägas upp först.</li>
+          <li><strong>Företrädesrätt till återanställning:</strong> En uppsagd anställd har rätt att bli erbjuden ny anställning hos arbetsgivaren (inom samma driftsenheten) under 9 månader efter att anställningen avslutats.</li>
+        </ul>
+
+        <h2>Lön och lönevillkor</h2>
+        <p>Sverige har ingen lagstadgad minimilön – lönen bestäms av avtal. Tillhör du en bransch med kollektivavtal gäller avtalets minimilöner. I branscher utan kollektivavtal är lönen fritt förhandlingsbar.</p>
+        <p>I anställningsavtalet bör lönen specificeras som:</p>
+        <ul>
+          <li>Fast månadslön (bruttolön)</li>
+          <li>Eventuell rörlig del (bonus, provision, OB-tillägg)</li>
+          <li>Förmåner (tjänstebil, friskvård, tjänstepension utöver det lagstadgade)</li>
+        </ul>
+
+        <h2>Sekretess och konkurrensklausuler</h2>
+        <p>Anställningsavtalet kan innehålla en <strong>sekretessklausul</strong> som förbjuder den anställde att avslöja konfidentiell information – under och efter anställningen.</p>
+        <p>En <strong>konkurrensklausul</strong> (non-compete) begränsar den anställdes rätt att starta konkurrerande verksamhet eller gå till en konkurrent efter avslutad anställning. Sådana klausuler måste vara skäliga för att vara giltiga – oskäliga klausuler kan jämkas eller ogiltigförklaras av domstol.</p>
+
+        <h2>Övergång av immateriella rättigheter</h2>
+        <p>Enligt <strong>Lag om rätt till arbetstagares uppfinningar</strong> och principer i upphovsrättslagen kan arbetsgivaren göra anspråk på uppfinningar och verk som den anställde skapar inom ramen för anställningen. Det är ändå god praxis att tydliggöra detta i anställningsavtalet för att undvika tvister.</p>
+      </div>
+    ),
+    faqs: [
+      { question: 'Kan jag anställa någon utan skriftligt avtal?', answer: 'Ja, en anställning kan uppstå muntligt. Men du är som arbetsgivare skyldig att skriftligen informera den anställde om anställningsvillkoren senast en månad efter anställningens start. Det är alltid bättre att upprätta ett skriftligt avtal från dag ett.' },
+      { question: 'Vad är skillnaden mellan tjänsteman och arbetare?', answer: 'Skillnaden är historisk men fortfarande relevant för kollektivavtal. Tjänstemän (white collar) jobbar i regel med icke-manuellt arbete, arbetare (blue collar) med manuellt arbete. Kategoriseringen påverkar vilket kollektivavtal som gäller och ibland uppsägningstider och lönevillkor.' },
+      { question: 'Hur lång kan en provanställning vara?', answer: 'Maximalt 6 månader. En provanställning på mer än 6 månader är ogiltig och anses automatiskt vara en tillsvidareanställning. Provanställningen måste avbrytas med minst 2 veckors varsel om arbetsgivaren inte vill att den ska övergå till tillsvidare.' },
+      { question: 'Kan jag ha konkurrensklausul i alla anställningsavtal?', answer: 'Konkurrensklausuler är tillåtna men måste vara skäliga för att vara giltiga. Faktorer som avgör skäligheten: klausulens varaktighet (max 18–24 månader är typiskt rimligt), geografisk begränsning, om arbetsgivaren erbjuder kompensation under bindningstiden, och om den anställde faktiskt haft tillgång till skyddsvärd information.' },
+      { question: 'Vad menas med "saklig grund" för uppsägning?', answer: 'Saklig grund kan antingen vara "personliga skäl" (misskötsel, olovlig frånvaro, brott mot tystnadsplikten, samarbetssvårigheter) eller "arbetsbrist" (ekonomiska skäl, omorganisation, nedläggning). Personliga skäl kräver normalt att arbetsgivaren varnat den anställde och försökt lösa situationen innan uppsägning.' },
+    ],
+  },
+
+  {
+    slug: 'testamente-guide',
+    title: 'Testamente – komplett guide om arv och testamentsrätt i Sverige',
+    metaDescription: 'Allt om testamente i Sverige. Hur du skriver ett giltigt testamente, laglottens skydd, skillnaden mot arvsrätten och vad som händer om du dör utan testamente.',
+    category: 'Familjerätt',
+    readTime: 8,
+    publishedAt: '2026-05-01',
+    content: (
+      <div>
+        <p>De flesta av oss skjuter upp att skriva testamente. Men faktum är att ett testamente är ett av de viktigaste dokumenten du kan upprätta – för att skydda dina närmaste och säkerställa att dina sista önskemål respekteras. Den här guiden förklarar allt du behöver veta.</p>
+
+        <h2>Vad är ett testamente?</h2>
+        <p>Ett testamente är ett juridiskt dokument där du bestämmer hur dina tillgångar ska fördelas efter din död. Utan testamente fördelas arvet enligt <strong>Ärvdabalken (ÄB)</strong> – den svenska arvslagen – vilket kanske inte återspeglar dina verkliga önskemål.</p>
+        <p>Med ett testamente kan du:</p>
+        <ul>
+          <li>Ge tillgångar till en person som inte är laglig arvinge (t.ex. en vän, din partner om ni inte är gifta, eller en organisation)</li>
+          <li>Bestämma att din partner ska ärva allt (om ni inte är gifta, eftersom sambor inte har arvsrätt)</li>
+          <li>Fördela specifika tillgångar till specifika personer ("bilen till X, smycken till Y")</li>
+          <li>Skydda en arvtagares andel mot dennes eventuella framtida skulder (genom ett s.k. fidelikommisslönevillkor)</li>
+          <li>Ange att arv ska vara den begunstigades enskilda egendom (skydd vid skilsmässa)</li>
+        </ul>
+
+        <h2>Arvsordningen utan testamente</h2>
+        <p>Dör du utan testamente fördelas arvet i Sverige i tre arvsklasser:</p>
+        <ul>
+          <li><strong>1:a arvsklassen:</strong> Dina bröstarvingar (barn). Barn ärver lika delar. Är ett barn dött ärver dess barn (dina barnbarn) i det barnets ställe.</li>
+          <li><strong>2:a arvsklassen:</strong> Om du inte har barn ärver dina föräldrar. Är en förälder död ärver dina syskon i den förälderns ställe.</li>
+          <li><strong>3:e arvsklassen:</strong> Mor- och farföräldrar, och i deras ställe deras barn (dina mostrar, farbröder, kusiner).</li>
+        </ul>
+        <p><strong>Din partner ärver ingenting om ni inte är gifta</strong> – oavsett hur länge ni levt tillsammans. Sambor och ogifta partners saknar legal arvsrätt. Endast makar och registrerade partners ärver varandra.</p>
+
+        <h2>Laglotten – din arvingars skyddade del</h2>
+        <p>Det finns en gräns för hur mycket du kan testamentera bort om du har barn: <strong>laglotten</strong>. Laglotten är hälften av arvslotten (det belopp ett barn skulle fått utan testamente) och kan aldrig testamenteras bort.</p>
+        <p>Praktiskt exempel: Du har två barn. Din totala kvarlåtenskap är 1 000 000 kr. Varje barns arvslott är 500 000 kr. Varje barns laglott är 250 000 kr. Du kan testamentera bort upp till 500 000 kr (resten av kvarlåtenskapen utöver de sammanlagda laglotterna på 500 000 kr) till vem du vill.</p>
+
+        <h2>Formkraven för ett giltigt testamente</h2>
+        <p>För att ett testamente ska vara juridiskt giltigt i Sverige måste det uppfylla strikta formkrav:</p>
+        <ul>
+          <li><strong>Skriftligt:</strong> Testamentet måste vara skriftligt (handskrivet eller maskinskrivet).</li>
+          <li><strong>Undertecknat:</strong> Du måste underteckna det med ditt namn.</li>
+          <li><strong>Bevittnat av två vittnen:</strong> Två vittnen måste närvara samtidigt när du undertecknar, och vittna med sina namn. Vittnena behöver inte läsa testamentets innehåll, bara bekräfta din underskrift.</li>
+          <li><strong>Vittnen får inte vara arvtagare:</strong> Den som testamenteras till (legatarien) eller deras närmaste anhöriga (make/maka, föräldrar, syskon, barn) får inte vittna. Det ogiltigförklarar inte hela testamentet, men den berörda personens arv kan underkännas.</li>
+        </ul>
+        <p>Holografiska testamenten (helt handskrivna av testatorn, utan vittnen) är <strong>inte giltiga</strong> i Sverige.</p>
+
+        <h2>Förvaring och registrering av testamente</h2>
+        <p>Testamentet behöver inte registreras hos någon myndighet i Sverige. Men det är avgörande att dina arvtagare hittar det efter din bortgång. Rekommenderade förvaringssätt:</p>
+        <ul>
+          <li>I ett bankfack (med en nära anhörig som vet om det)</li>
+          <li>Hos en jurist eller notarie</li>
+          <li>I ett brandsäkert kassaskåp hemma</li>
+          <li>Registrerat i Sveriges Testamentsregistret (privat register som sökks av dödsboet)</li>
+        </ul>
+
+        <h2>Inbördes testamente för par</h2>
+        <p>Makar och sambo kan skriva ett gemensamt "inbördes testamente" där de testamenterar till varandra. Det är ett effektivt sätt att säkerställa att den efterlevande får ärva den bortgångne. Tänk på att laglotterna för gemensamma barn kan påverka detta – i det fallet kan barnen ha rätt att begära sin laglott direkt, men ofta väljer barn att avvakta tills den sista föräldern gått bort.</p>
+      </div>
+    ),
+    faqs: [
+      { question: 'Behöver jag ett testamente om jag är gift?', answer: 'Det beror på din situation. Gifta makar ärver varandra med fri förfoganderätt, men gemensamma barn kan begära jämkning. Om du har barn från ett tidigare förhållande, eller om du vill att arvet ska vara din makes enskilda egendom, är ett testamente viktigt. Sambor däremot ärver inte alls varandra utan testamente.' },
+      { question: 'Kan jag ändra mitt testamente?', answer: 'Ja, du kan ändra eller återkalla ditt testamente när som helst medan du lever och har kapacitet. Det enklaste sättet är att upprätta ett helt nytt testamente som uttryckligen återkallar det gamla. Du kan också förstöra det gamla originalet. Ändringar i ett befintligt testamente måste göras med samma formkrav (skriftligt + 2 vittnen).' },
+      { question: 'Vad händer om ett testamente är felformulerat?', answer: 'Ett testamente som inte uppfyller formkraven (skriftligt, undertecknat, två vittnen) är ogiltigt. Arvet fördelas då istället enligt Ärvdabalken (lagstadgad arvsordning). Det är viktigt att testamentet är tydligt och inte lämnar rum för tolkning, då oklarheter kan leda till tvister mellan arvtagarna.' },
+      { question: 'Kan jag testamentera till en välgörenhetsorganisation?', answer: 'Ja, du kan testamentera till välgörenhetsorganisationer, föreningar och stiftelser. Tänk på att ange organisationens fullständiga namn och eventuellt organisationsnummer för att undvika oklarheter. Laglotten till bröstarvingar (barn) gäller även vid sådana testamenten.' },
+      { question: 'Vad är skillnaden mellan arv och gåva?', answer: 'Arv sker efter döden och regleras av testamente och Ärvdabalken. Gåva är en frivillig överlåtelse under livstiden. Förskott på arv är pengar eller egendom som ges till en arvinge i förväg, och avräknas normalt från arvet vid bodelningen. Gåvor till barn som liknar förskott på arv kan behöva redovisas i bouppteckningen.' },
+    ],
+  },
+
+  {
+    slug: 'nda-sekretessavtal-guide',
+    title: 'NDA och sekretessavtal – när och hur du skyddar konfidentiell information',
+    metaDescription: 'Komplett guide om NDA (sekretessavtal) i Sverige. Lär dig när du behöver ett NDA, vad som ska finnas med, hur länge det gäller och vad som händer om det bryts.',
+    category: 'Företag',
+    readTime: 7,
+    publishedAt: '2026-05-15',
+    content: (
+      <div>
+        <p>Konfidentiell information är ofta ett företags mest värdefulla tillgång – affärsidéer, kundlistor, prissättning, teknologi och strategier. Ett NDA (Non-Disclosure Agreement), på svenska sekretessavtal eller tystnadspliktavtal, är ditt juridiska skydd när du behöver dela denna information med en annan part.</p>
+
+        <h2>Vad är ett NDA?</h2>
+        <p>Ett NDA är ett avtal där en eller båda parter förbinder sig att hålla angiven information konfidentiell och inte dela den med tredje part eller använda den för andra ändamål än vad som avtalats. Det skapar en juridisk skyldighet att skydda informationen och möjliggör skadestånd om den bryts.</p>
+        <p>NDA kallas också för:</p>
+        <ul>
+          <li>Sekretessavtal</li>
+          <li>Tystnadspliktavtal</li>
+          <li>Konfidentialitetsavtal</li>
+          <li>Confidentiality Agreement (CA)</li>
+        </ul>
+
+        <h2>Ensidigt vs ömsesidigt NDA</h2>
+        <p>Det finns två grundtyper:</p>
+        <ul>
+          <li><strong>Ensidigt NDA (unilateral):</strong> Bara en part avslöjar konfidentiell information och den andra parten förbinder sig att hålla den hemlig. Vanligt när du delar din affärsidé med en potentiell investerare eller anlitar en konsult.</li>
+          <li><strong>Ömsesidigt NDA (bilateral/mutual):</strong> Båda parter avslöjar konfidentiell information och förbinder sig att skydda varandras hemligheter. Vanligt vid affärsförhandlingar, fusioner och strategiska partnerskap.</li>
+        </ul>
+
+        <h2>När behöver du ett NDA?</h2>
+        <p>Du bör upprätta ett NDA innan du delar känslig information med:</p>
+        <ul>
+          <li>Potentiella investerare eller affärsänglar</li>
+          <li>Potentiella affärspartners och leverantörer</li>
+          <li>Externa konsulter, frilansare och mjukvaruutvecklare</li>
+          <li>Anställda med tillgång till affärskritisk information</li>
+          <li>Potentiella köpare vid due diligence-processer</li>
+          <li>Licenshavare av din teknologi eller immaterialrätt</li>
+        </ul>
+        <p><strong>Viktigt:</strong> Upprätta alltid NDA-et <em>innan</em> du delar informationen – ett NDA som tecknas i efterhand skyddar inte retroaktivt information som redan avslöjats.</p>
+
+        <h2>Vad ska ett NDA innehålla?</h2>
+        <p>Ett väl utformat NDA bör täcka:</p>
+        <ul>
+          <li><strong>Parterna:</strong> Fullständiga namn och kontaktuppgifter för alla parter.</li>
+          <li><strong>Definition av konfidentiell information:</strong> Var tydlig med vad som skyddas – affärsplaner, kundlistor, teknisk dokumentation, källkod, prissättning. Ju tydligare definition, desto enklare att hävda ett brott.</li>
+          <li><strong>Undantag:</strong> Information som är allmänt känd, som mottagaren redan kände till, som offentliggörs av tredje part, eller som måste avslöjas enligt lag räknas normalt inte som konfidentiell.</li>
+          <li><strong>Ändamålsbegränsning:</strong> Den konfidentiella informationen får bara användas för det specifika ändamålet (t.ex. "för att utvärdera ett möjligt samarbete").</li>
+          <li><strong>Avtalstid:</strong> Hur länge gäller sekretessförpliktelsen? Typiskt 2–5 år, men för affärshemligheter av permanent natur kan du välja "tills informationen blir allmänt känd".</li>
+          <li><strong>Konsekvenser vid brott:</strong> Skadestånd och/eller vitesklausul.</li>
+          <li><strong>Tillämplig lag:</strong> Svensk rätt och vald domstol eller skiljenämnd.</li>
+        </ul>
+
+        <h2>Lagen om företagshemligheter</h2>
+        <p>Sverige har sedan 2018 en <strong>Lag om företagshemligheter (2018:558)</strong> som skyddar konfidentiell affärsinformation som ett företag aktivt håller hemlig och som har ekonomiskt värde. Lagen gäller oberoende av om det finns ett NDA – men ett NDA stärker skyddet avsevärt och ger tydligare bevisläge vid tvist.</p>
+
+        <h2>Kan ett NDA hindra visselblåsning?</h2>
+        <p>Nej. En anställd eller konsult kan aldrig förhindras av ett NDA att rapportera oegentligheter till myndigheter (visselblåsning). Lagen om visselblåsning (2021:890) skyddar dem som rapporterar arbetsrättsliga brott eller allvarliga missförhållanden, oavsett sekretessavtal. Att inkludera klausuler som försöker hindra visselblåsning är ogiltigt.</p>
+
+        <h2>Vad händer om NDA:t bryts?</h2>
+        <p>Vid brott mot ett NDA kan den skadelidande parten kräva:</p>
+        <ul>
+          <li><strong>Skadestånd:</strong> Ersättning för ekonomisk skada orsakad av avslöjandet.</li>
+          <li><strong>Vite:</strong> Om NDA:t innehåller en vitesklausul utgår ett förutbestämt belopp per brott, utan att skadan behöver bevisas.</li>
+          <li><strong>Förbud:</strong> Domstol kan meddela ett interimistiskt förbud mot fortsatt spridning av informationen.</li>
+        </ul>
+        <p>Observera att skadestånd kan vara svårt att kvantifiera och driva igenom i domstol. En väl utformad vitesklausul ger ett starkare och mer förutsägbart skydd.</p>
+      </div>
+    ),
+    faqs: [
+      { question: 'Hur länge bör ett NDA gälla?', answer: 'Det beror på vilken typ av information som skyddas. För affärsplaner och strategier är 2–3 år vanligt. För teknisk information och källkod kan 5 år vara lämpligare. För permanent affärshemligheter (t.ex. ett unikt recept) kan du specificera att avtalet gäller tills informationen blir allmänt känd. Undvik att göra NDA-tider onödigt långa – det kan göra klausulen oskälig och svårare att hävda.' },
+      { question: 'Kan ett anställningsavtal ersätta ett NDA?', answer: 'Delvis. Anställningsavtal brukar innehålla sekretessklausuler som ger visst skydd. Men för extern personal (konsulter, frilansare), potentiella affärspartners och investerare behöver du ett separat NDA. Dessutom är ett dedikerat NDA vanligen mer detaljerat och specifikt än en standardsekretessklausul i ett anställningsavtal.' },
+      { question: 'Gäller ett NDA om motparten befinner sig i ett annat land?', answer: 'Ja, men det är viktigare att specificera vilket lands lag som gäller (vallagen) och vilken domstol eller skiljenämnd som ska lösa tvister. Att verkställa ett NDA internationellt kan vara komplicerat och kostsamt, så välj jurisdiktion med omsorg. Internationella handelskammarens (ICC) skiljedomsregler är vanliga vid internationella avtal.' },
+      { question: 'Kan man ha ett muntligt NDA?', answer: 'Tekniskt sett kan en muntlig överenskommelse om sekretess vara bindande, men det är extremt svårt att bevisa i en domstolstvist. Alltid skriftlig NDA – det är det enda sättet att ha klart bevisläge om informationen läcker.' },
+    ],
+  },
 ];
