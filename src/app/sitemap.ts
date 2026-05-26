@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { templates } from '../data/templates';
+import { guides } from '../data/guides';
 import { i18n, localeRegions, categoryTranslations, Locale } from '../i18n-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -67,6 +68,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: alternates
         }
       });
+    });
+  });
+
+  // 3. Generate Guide Routes (sv only)
+  routes.push({
+    url: `${baseUrl}/sv/guider`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  });
+  guides.forEach(guide => {
+    routes.push({
+      url: `${baseUrl}/sv/guider/${guide.slug}`,
+      lastModified: new Date(guide.publishedAt),
+      changeFrequency: 'monthly',
+      priority: 0.75,
     });
   });
 
