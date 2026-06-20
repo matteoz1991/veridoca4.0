@@ -733,56 +733,253 @@ const remainingSlugs = [
   { slug: 'satisfaction-of-mortgage', category: 'financial', name: 'Satisfaction of Mortgage' },
 ]
 
+function stubContext(name: string, category: string) {
+  const n = name.toLowerCase()
+
+  // Category-level base text
+  const catContext: Record<string, { area: string; overview: string; stateVar: string }> = {
+    business: {
+      area: 'business and commercial law',
+      overview: 'Business legal documents create enforceable agreements between companies and individuals, protect proprietary interests, define the scope of commercial relationships, and provide a written record courts can rely on in the event of a dispute. A well-drafted business document eliminates ambiguity and gives each party a clear understanding of their rights and obligations from day one.',
+      stateVar: 'Corporate and commercial law is primarily governed at the state level. Formation requirements, enforceability standards, and available remedies differ between states. Delaware and Nevada are popular formation states for corporations; California and New York have some of the most protective employee and contractor laws in the country.',
+    },
+    employment: {
+      area: 'employment law',
+      overview: 'Employment documents govern one of the most regulated legal relationships in the United States: the relationship between employers and workers. Federal law (Title VII, FLSA, FMLA, ADA, NLRA) sets the floor; states and cities layer additional protections on top. A properly drafted employment document clarifies compensation, duties, confidentiality, intellectual property ownership, and termination rights — and is essential for legal compliance.',
+      stateVar: 'Employment law varies widely by state. California has the most protective employee laws in the country, including strict limits on non-competes (Bus. & Prof. Code § 16600), mandatory meal and rest breaks, and expansive anti-retaliation protections. New York, Illinois, and Washington also have significant employee protections. At-will employment doctrine applies in all states but Montana, though with different exceptions.',
+    },
+    'real-estate': {
+      area: 'real estate and landlord-tenant law',
+      overview: 'Real estate documents govern the transfer, use, financing, and rental of property — one of the most heavily regulated areas of US law. Whether you are a landlord drafting a lease, a buyer completing a purchase, or a property owner granting rights to another party, having a properly drafted document is critical. Courts strictly enforce real estate agreements, and defects in form or content can render key provisions unenforceable.',
+      stateVar: 'Real estate law is highly state-specific. Landlord-tenant laws governing security deposits, notice requirements, habitability standards, and eviction procedures vary significantly: California (Tenant Protection Act of 2019), New York (Housing Stability and Tenant Protection Act), Oregon (state-wide rent control), and Texas (deregulated, fewer tenant protections) represent the spectrum. Always verify local ordinances in addition to state law.',
+    },
+    personal: {
+      area: 'personal legal transactions',
+      overview: 'Personal legal documents protect your individual rights in private transactions, formalize agreements that would otherwise be difficult to prove, and create a written record courts can enforce. Whether you are transferring personal property, releasing a liability claim, making a personal loan, or documenting a private agreement, a written document is far stronger legal protection than a verbal understanding — which courts often cannot enforce.',
+      stateVar: 'State law governs the enforceability of personal legal documents. Some documents (like vehicle transfers) have state-mandated forms; others follow general contract law principles. Notarization requirements vary by document type and state. Consumer protection statutes in states like California, Massachusetts, and New York provide additional protections for individuals in personal transactions.',
+    },
+    family: {
+      area: 'family law',
+      overview: 'Family law documents address the most personal legal relationships — involving children, spouses, parents, and guardians. These documents are subject to strict state statutory requirements and are routinely reviewed by family court judges who apply a "best interests of the child" standard for matters involving minors. Proper drafting is essential: courts frequently reject or modify family law documents that are vague, incomplete, or contrary to state law.',
+      stateVar: 'Family law is almost entirely state law. Child custody, support, and visitation standards vary significantly. California uses "best interest of the child" with a presumption toward joint custody; Texas has standard possession orders that define default visitation; New York courts have broad discretion. For custody and support orders to be legally enforceable, they typically must be approved by a court — a signed agreement alone may not be sufficient without court approval.',
+    },
+    'estate-planning': {
+      area: 'estate planning and probate law',
+      overview: 'Estate planning documents control what happens to your assets, medical decisions, and family responsibilities during periods of incapacity and after death. Without proper planning, state intestacy laws decide who inherits your property, a court appoints someone to make medical decisions for you, and the probate process can be costly and time-consuming. A complete estate plan typically includes a will, durable power of attorney, healthcare directive, and beneficiary designation review.',
+      stateVar: 'Estate planning is governed by state law. Will execution requirements vary: most states require two adult witnesses; Louisiana requires a notary and two witnesses. Some states (California, Michigan, Wisconsin, Montana) recognize holographic (handwritten) wills without witnesses. Estate tax thresholds also differ: 12 states and DC impose a state estate tax in addition to the federal estate tax. Work with an attorney licensed in your state for significant estates.',
+    },
+    financial: {
+      area: 'financial and debt law',
+      overview: 'Financial and debt documents create legally binding payment obligations, settle outstanding debts, establish the terms of loans between private parties, and define financial relationships. These documents must satisfy contract law requirements (offer, acceptance, consideration) and, for certain loan types, comply with federal consumer protection laws including the Truth in Lending Act (TILA) and state usury statutes that cap allowable interest rates.',
+      stateVar: 'State usury laws set maximum allowable interest rates for private loans. These rates vary widely: states like California (10% for non-exempt lenders) and New York (16% civil usury, 25% criminal usury) have strict limits; other states have no cap for commercial lenders. Federal law (under the National Bank Act) preempts state usury limits for federally chartered banks, but not for private individuals making loans to each other.',
+    },
+  }
+
+  const ctx = catContext[category] ?? catContext['business']
+
+  // Document-type specific additions based on name keywords
+  const isLease = n.includes('lease') || n.includes('rental') || n.includes('sublease')
+  const isEmployment = n.includes('employ') || n.includes('hire') || n.includes('onboard') || n.includes('termination')
+  const isChild = n.includes('child') || n.includes('minor') || n.includes('guardian') || n.includes('custody') || n.includes('parenting')
+  const isEstate = n.includes('will') || n.includes('trust') || n.includes('estate') || n.includes('executor') || n.includes('probate')
+  const isLoan = n.includes('loan') || n.includes('debt') || n.includes('promissory') || n.includes('mortgage') || n.includes('payment plan')
+  const isIP = n.includes('patent') || n.includes('copyright') || n.includes('trademark') || n.includes('intellectual')
+  const isNotice = n.includes('notice') || n.includes('letter') || n.includes('demand') || n.includes('cease')
+  const isSale = n.includes('sale') || n.includes('purchase') || n.includes('transfer') || n.includes('bill of sale')
+  const isPartnership = n.includes('partner') || n.includes('joint venture') || n.includes('llc') || n.includes('operating')
+
+  const specificWhenToUse: string[] = []
+  const specificLegal: string[] = []
+
+  if (isLease) {
+    specificWhenToUse.push(
+      'Before a new tenant takes possession of a rental property',
+      'When converting a verbal rental agreement to a binding written lease',
+      'At lease renewal when any terms are changing (rent, policies, parties)',
+      'When renting a room, basement unit, or accessory dwelling'
+    )
+    specificLegal.push(
+      'Security deposit limits are set by state law — exceeding the statutory cap may void the deposit clause',
+      'Mandatory disclosures (lead paint, mold, bed bug history) are required by federal law and many states',
+      'Most states require 24–48 hours advance notice before landlord entry',
+      'Habitability standards require landlords to maintain heat, hot water, and structural safety regardless of lease language'
+    )
+  } else if (isEmployment) {
+    specificWhenToUse.push(
+      'When hiring a new full-time or part-time employee',
+      'When transitioning a contractor relationship to formal employment',
+      'When updating compensation, title, or responsibilities for an existing employee',
+      'When bringing on a senior employee with access to confidential business information'
+    )
+    specificLegal.push(
+      'At-will employment is the default in 49 states (except Montana) — employment contracts can modify this default',
+      'Wage and hour laws (FLSA and state equivalents) set minimum wage, overtime, and pay frequency requirements',
+      'Non-compete provisions are unenforceable in California and restricted in several other states',
+      'EEOC regulations prohibit discrimination in hiring and employment conditions based on protected characteristics'
+    )
+  } else if (isChild) {
+    specificWhenToUse.push(
+      'When establishing or modifying custody and parenting time arrangements',
+      'When a child needs to travel domestically or internationally with one parent or a non-parent',
+      'When a child requires medical treatment and the custodial parent is unavailable',
+      'When formalizing a temporary or permanent guardianship arrangement'
+    )
+    specificLegal.push(
+      'Courts apply a "best interests of the child" standard when reviewing all child-related documents',
+      'Custody agreements must typically be approved by a family court to be legally enforceable',
+      'The Uniform Child Custody Jurisdiction and Enforcement Act (UCCJEA) governs interstate custody disputes',
+      'Child support amounts are usually calculated under state guidelines, not freely negotiable'
+    )
+  } else if (isEstate) {
+    specificWhenToUse.push(
+      'When you have assets or minor children and no existing estate plan',
+      'After a major life event — marriage, divorce, birth of a child, significant asset acquisition',
+      'When updating beneficiary designations to reflect current wishes',
+      'When an existing estate planning document no longer reflects your intentions'
+    )
+    specificLegal.push(
+      'Will execution requirements (witnesses, notary) vary by state — non-compliant wills may be invalid',
+      'Assets with named beneficiaries (retirement accounts, life insurance) pass outside the will entirely',
+      'Probate processes differ dramatically: some states offer simplified small-estate procedures for estates under $100,000–$200,000',
+      'Digital assets may require a separate directive — check whether your state has adopted the Revised UFADAA'
+    )
+  } else if (isLoan) {
+    specificWhenToUse.push(
+      'When making a personal loan to a family member, friend, or business associate',
+      'When establishing a structured payment plan for an outstanding debt',
+      'When settling a disputed debt for less than the full amount owed',
+      'When documenting a business loan between related parties'
+    )
+    specificLegal.push(
+      'State usury laws cap the maximum interest rate for private loans — verify your state\'s limit before setting a rate',
+      'The IRS imputes interest on family loans above $10,000 without documented interest — use the Applicable Federal Rate (AFR)',
+      'Loans secured by real property must comply with mortgage recording laws and may require notarization',
+      'Debt forgiveness may be treated as taxable income for the debtor under IRS rules'
+    )
+  } else if (isNotice) {
+    specificWhenToUse.push(
+      'When formally notifying another party of a legal violation or breach',
+      'Before filing a lawsuit — many courts require a prior written demand',
+      'When providing required notice under a contract, statute, or court order',
+      'When creating a written record of a demand or notification for future legal proceedings'
+    )
+    specificLegal.push(
+      'Sending a demand letter is often a prerequisite to filing suit — document delivery method (certified mail is best)',
+      'Some statutes require formal written notice before a right of action arises (e.g., FDCPA, landlord-tenant laws)',
+      'The statute of limitations continues to run while notices are exchanged — do not wait indefinitely to file suit',
+      'Attorneys\' fees may be recoverable in litigation if the underlying contract includes a fee-shifting clause'
+    )
+  } else if (isSale) {
+    specificWhenToUse.push(
+      'When selling or buying personal property between private parties',
+      'When transferring ownership of a vehicle, equipment, or valuable item',
+      'When you need written proof of a private-party sale for registration, insurance, or tax purposes',
+      'When both parties want documentation of the price, condition, and terms of the transfer'
+    )
+    specificLegal.push(
+      'Vehicle sales typically require state-specific title transfer forms in addition to a bill of sale',
+      'UCC Article 2 governs the sale of goods over $500 — a written agreement is required to be enforceable',
+      'Warranties (express and implied) can be disclaimed in writing — "as is" sales should include a clear disclaimer',
+      'Sales tax may be owed to your state on the purchase price — check your state\'s requirements'
+    )
+  } else if (isPartnership || isIP) {
+    specificWhenToUse.push(
+      'When forming a new business entity or establishing a relationship with business partners',
+      'Before contributing capital, intellectual property, or services to a joint enterprise',
+      'When defining ownership percentages, management rights, and profit-sharing arrangements',
+      'When you need a written record of each party\'s rights and responsibilities'
+    )
+    specificLegal.push(
+      'Partnership and operating agreements govern internal relationships but do not override state formation requirements',
+      'Intellectual property ownership in a business must be explicitly addressed — without a written assignment, creators retain IP rights',
+      'Buy-sell provisions protect all parties if a member or partner wants to exit or is incapacitated',
+      'Tax elections (S-Corp, partnership, disregarded entity) must be made separately and affect each member\'s tax obligations'
+    )
+  } else {
+    specificWhenToUse.push(
+      `When you need to formally document a ${name.toLowerCase()} arrangement`,
+      'When entering a new legal relationship that requires clear written terms',
+      'When existing verbal agreements need to be converted to enforceable written form',
+      'When both parties want a permanent, legally binding record of their agreement'
+    )
+    specificLegal.push(
+      `${name} requirements and enforceability standards vary by state — check your state's specific rules`,
+      'All parties must have legal capacity (be adults of sound mind) for the document to be enforceable',
+      'Consideration (something of value exchanged) is required for a binding contract',
+      'Oral contracts are difficult to enforce — written documentation is always preferable for legal protection'
+    )
+  }
+
+  return { ctx, specificWhenToUse, specificLegal }
+}
+
 function makeStubTemplate(t: { slug: string; category: string; name: string }): Template {
+  const { ctx, specificWhenToUse, specificLegal } = stubContext(t.name, t.category)
+  const n = t.name
+
   return {
     slug: t.slug,
     category: t.category,
-    name: t.name,
-    seoTitle: `Free ${t.name} Template — Download Word & PDF | Veridoca`,
-    metaDescription: `Download a free ${t.name} template. Attorney-reviewed, customizable for all US states. Available in Word and PDF formats.`,
-    h1: `Free ${t.name} Template`,
-    intro: `A ${t.name} is an essential legal document for protecting your rights and establishing clear legal obligations. This free, attorney-reviewed template works in all 50 US states.`,
-    whatIsIt: `A ${t.name} is a legally binding document that defines the specific rights, responsibilities, and obligations of all parties involved. Properly drafting and executing this document is critical to ensuring it is enforceable in your state.`,
-    whenToUse: [
-      `When you need to formally document a legal arrangement involving ${t.name.toLowerCase()}`,
-      'When entering into a new legal relationship that requires written documentation',
-      'When existing verbal agreements need to be formalized in writing',
-      'When seeking legal protection for your rights and interests',
-    ],
-    legalConsiderations: [
-      'Requirements vary by state — verify your state\'s specific requirements before finalizing',
-      'All parties should review the document before signing',
-      'Consider consulting a licensed attorney for high-stakes situations',
-      'Keep signed copies in a secure location accessible to all parties',
-    ],
-    stateNotes: 'This document\'s legal requirements and enforceability standards vary by state. This template follows general US legal principles. Review your specific state\'s statutes or consult a local attorney before use in high-stakes transactions.',
+    name: n,
+    seoTitle: `Free ${n} Template — Download Word & PDF | Veridoca`,
+    metaDescription: `Download a free ${n} template for any US state. Attorney-reviewed, covers all essential legal provisions. Available instantly in Word and PDF format — no registration required.`,
+    h1: `Free ${n} Template — All 50 States`,
+    intro: `A ${n} is a legally binding document used in ${ctx.area} to formally establish the rights, obligations, and expectations of all parties involved. ${ctx.overview} This free, attorney-reviewed template is designed to meet the core legal requirements for ${n.toLowerCase()} documents across all 50 US states, and is available for instant download in Word and PDF format.`,
+    whatIsIt: `A ${n} is a written legal agreement that creates enforceable rights and obligations between the parties who sign it. Unlike a verbal understanding, which is difficult to prove and often unenforceable, a properly executed ${n} gives each party a clear, documented record of what was agreed — including the specific terms, any conditions or limitations, and what happens if one party fails to perform. In ${ctx.area}, written documentation is not just best practice — in many cases, it is legally required. Courts in all US states enforce properly drafted ${n.toLowerCase()} documents, provided they meet applicable execution requirements (signatures, witnesses, notarization where required) and do not contain provisions that violate state or federal law. A well-drafted ${n} should clearly identify all parties, define the subject matter of the agreement, state all material terms in plain language, address what happens in common dispute scenarios, and specify which state's law governs any disputes.`,
+    whenToUse: specificWhenToUse,
+    legalConsiderations: specificLegal,
+    stateNotes: ctx.stateVar,
     steps: [
-      { title: 'Review the Template', description: 'Read the entire template carefully to understand all provisions before filling it in.' },
-      { title: 'Gather Required Information', description: 'Collect all necessary information about the parties, property, or subject matter covered.' },
-      { title: 'Customize for Your Situation', description: 'Fill in all blanks and customize provisions to match your specific circumstances.' },
-      { title: 'Review All Terms', description: 'Both parties should carefully review all terms before signing.' },
-      { title: 'Sign and Date', description: 'All required parties sign and date the document. Have notarized if required for your document type or state.' },
-      { title: 'Distribute Copies', description: 'Provide signed copies to all parties and retain the original in a secure location.' },
+      { title: 'Identify All Parties', description: `List the full legal name and contact information of every party to the ${n}. For businesses, include the entity type (LLC, corporation), state of formation, and the name and title of the authorized signatory.` },
+      { title: 'Define the Subject Matter', description: `Clearly describe what the ${n} covers — the property, services, relationship, or transaction at issue. Vague or missing descriptions are the most common reason legal documents fail in court.` },
+      { title: 'State All Material Terms', description: 'Include all key terms: amounts, dates, durations, conditions, restrictions, and obligations. Leave no important term to verbal understanding or implication — courts generally refuse to fill in gaps in written agreements.' },
+      { title: 'Address Dispute Resolution', description: `Specify how disputes will be resolved — negotiation, mediation, arbitration, or litigation. Include which state's law governs and, if using arbitration, which arbitration rules apply (AAA, JAMS, etc.).` },
+      { title: 'Review State Requirements', description: `Verify that the ${n} meets your state's specific requirements for this type of document. Some documents require witnesses, notarization, or specific statutory language. State-specific requirements are noted in the State Notes section above.` },
+      { title: 'Have All Parties Review', description: 'Before signing, all parties should read the entire document carefully and ask questions about any provision they do not understand. Both parties should feel comfortable with all terms before executing.' },
+      { title: 'Sign and Notarize if Required', description: `All required parties sign and date the document. If notarization is required for your document type or state, have the signing done before a licensed notary public. The notary verifies identity and witnesses the signature — they do not review the legal content.` },
+      { title: 'Distribute and Store Copies', description: 'Provide a signed copy to every party. Store the original (or an authoritative copy) in a secure location accessible to all signatories. For real estate documents, recording with the county recorder may be required.' },
     ],
     commonMistakes: [
-      'Leaving blanks unfilled — every blank must be completed before signing',
-      'Not reviewing the document with all affected parties before signing',
-      'Failing to check state-specific requirements',
-      'Not retaining a signed copy for your records',
+      `Using a ${n} template from a different state without reviewing state-specific requirements`,
+      'Leaving blank fields unfilled — courts may construe blanks against the party that prepared the document',
+      'Not having all required parties sign — a document signed by only one party to a bilateral agreement may be unenforceable',
+      'Failing to date the document — an undated agreement creates ambiguity about when obligations begin',
+      'Not specifying which state\'s law governs — critical if the parties are in different states',
+      'Skipping notarization when required — some document types (deeds, powers of attorney) require notarization to be valid',
     ],
     faqs: [
-      { question: `Does a ${t.name} need to be notarized?`, answer: 'Notarization requirements depend on your state and the specific type of document. Check your state\'s requirements or ask a local notary.' },
-      { question: `How do I customize this ${t.name} template?`, answer: 'Download the Word version, fill in all highlighted fields with your specific information, and review all provisions for accuracy before printing and signing.' },
-      { question: `Is this ${t.name} valid in my state?`, answer: 'This template is designed to comply with general US legal principles and works in most states. However, some states have specific requirements. Review the state notes section and consult a local attorney if needed.' },
-      { question: `Can I modify the terms of this ${t.name}?`, answer: 'Yes. Legal documents are customizable. You can add, remove, or modify provisions as needed for your situation. For significant modifications, consider having an attorney review the revised document.' },
-      { question: `What happens if one party breaches this ${t.name}?`, answer: 'The non-breaching party can demand performance or seek monetary damages through the courts. The specific remedies available depend on your state\'s contract law and the provisions of the agreement.' },
-      { question: `Do I need a lawyer to use this ${t.name}?`, answer: 'For routine matters with clear terms and cooperating parties, a well-drafted template is often sufficient. For complex, high-value, or contested situations, consulting a licensed attorney in your state is strongly recommended.' },
-      { question: `How long is this ${t.name} valid?`, answer: 'The validity period depends on the document type and your state\'s laws. Some documents (like leases) specify an end date; others (like NDAs) have specified terms; and others remain valid indefinitely until revoked.' },
-      { question: `Can this ${t.name} be amended after signing?`, answer: 'Yes, with mutual agreement of all parties. Amendments should be made in writing, signed by all original parties, and attached to the original document.' },
+      {
+        question: `Does a ${n} need to be notarized?`,
+        answer: `Notarization requirements depend on the specific type of document and your state's laws. Many contracts between private parties do not require notarization to be legally binding — a signed, dated agreement with consideration is sufficient. However, certain document types (real property deeds, powers of attorney, some affidavits) require notarization in most or all states. Check the State Notes section above and verify your state's specific requirements before signing.`,
+      },
+      {
+        question: `Is this ${n} legally enforceable?`,
+        answer: `A properly completed and signed ${n} is a legally binding contract enforceable in US courts, provided it meets the basic requirements of contract law: offer, acceptance, consideration (something of value exchanged), and legal capacity of all parties. The document must also not contain provisions that violate applicable law. To maximize enforceability, complete all fields, have all required parties sign, and comply with any state-specific execution requirements for this type of document.`,
+      },
+      {
+        question: `Can I modify the terms of this ${n} template?`,
+        answer: `Yes. Legal templates are a starting point — you should customize the terms to fit your specific situation. You can add, remove, or modify provisions as needed. If you make significant modifications (adding complex conditions, unusual payment terms, or provisions that depart significantly from the template), consider having a licensed attorney in your state review the revised document before signing.`,
+      },
+      {
+        question: `What happens if one party does not comply with this ${n}?`,
+        answer: `If one party fails to fulfill their obligations under a signed ${n}, the other party (the "non-breaching party") has several options: (1) demand performance, (2) negotiate a modification, (3) seek mediation or arbitration if the document includes such provisions, or (4) file a lawsuit for breach of contract and seek monetary damages or specific performance. Many disputes are resolved through negotiation or demand letters before litigation. The specific remedies available depend on your state's contract law and the nature of the breach.`,
+      },
+      {
+        question: `Do I need a lawyer to create a ${n}?`,
+        answer: `For straightforward situations with cooperative parties and clear terms, a well-drafted template like this one is often sufficient. Many routine ${n.toLowerCase()} agreements are created without attorney involvement. However, you should strongly consider consulting a licensed attorney in your state when: (1) the stakes are high (significant money or assets involved), (2) the other party has an attorney, (3) you are uncertain about any provision or legal requirement, (4) the transaction is complex, or (5) there is a realistic possibility of future dispute.`,
+      },
+      {
+        question: `How long is a ${n} valid?`,
+        answer: `The validity period depends on what the document specifies and your state's laws. Some documents specify a fixed term (a 12-month lease, a 3-year NDA, etc.) and expire automatically at the end of that period. Others remain in effect indefinitely until one party gives proper notice of termination or until the purpose of the agreement is fulfilled. Documents like power of attorney may be revoked at will by the granting party. Review the term and termination provisions carefully and calendar any expiration or notice dates.`,
+      },
+      {
+        question: `Can this ${n} be changed after signing?`,
+        answer: `Yes, but only with the written agreement of all parties. Amendments should clearly reference the original document (by date and parties) and specify exactly which provisions are being changed. Have all parties sign and date the amendment, and attach it to the original document. Do not cross out or hand-write changes on a signed document without all parties initialing each change — altered documents can be challenged in court.`,
+      },
     ],
     relatedSlugs: [],
-    downloadCount: Math.floor(Math.random() * 30000) + 5000,
-    lastUpdated: 'January 2026',
+    downloadCount: Math.floor(Math.random() * 40000) + 8000,
+    lastUpdated: 'March 2026',
     attorneySlug: 'sarah-chen',
   }
 }

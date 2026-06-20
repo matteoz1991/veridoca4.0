@@ -1,16 +1,42 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
 type Props = { slot: 'leaderboard' | 'rectangle' | 'sidebar'; className?: string }
 
-const sizes: Record<Props['slot'], { label: string; className: string }> = {
-  leaderboard: { label: '728×90', className: 'w-full max-w-[728px] h-[90px] mx-auto' },
-  rectangle: { label: '336×280', className: 'w-full max-w-[336px] h-[280px] mx-auto' },
-  sidebar: { label: '300×250', className: 'w-full max-w-[300px] h-[250px] mx-auto' },
+const AD_CLIENT = 'ca-pub-7329226931623109'
+
+const sizes: Record<Props['slot'], { minHeight: string; className: string }> = {
+  leaderboard: { minHeight: '90px', className: 'w-full max-w-[728px] mx-auto' },
+  rectangle:   { minHeight: '280px', className: 'w-full max-w-[336px] mx-auto' },
+  sidebar:     { minHeight: '250px', className: 'w-full max-w-[300px] mx-auto' },
 }
 
 export default function AdPlaceholder({ slot, className = '' }: Props) {
+  const insRef = useRef<HTMLModElement>(null)
   const size = sizes[slot]
+
+  useEffect(() => {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ;(window as any).adsbygoogle = (window as any).adsbygoogle || []
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ;(window as any).adsbygoogle.push({})
+    } catch {
+      // adsbygoogle not loaded yet — Auto Ads will handle placement
+    }
+  }, [])
+
   return (
-    <div className={`${size.className} ${className} bg-white/[0.03] border border-dashed border-white/[0.10] rounded-xl flex items-center justify-center text-slate-600 text-xs`}>
-      Advertisement {size.label}
+    <div className={`${size.className} ${className} overflow-hidden`}>
+      <ins
+        ref={insRef}
+        className="adsbygoogle"
+        style={{ display: 'block', minHeight: size.minHeight }}
+        data-ad-client={AD_CLIENT}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </div>
   )
 }
