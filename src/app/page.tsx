@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Shield, Download, Star, CheckCircle, ArrowRight, FileText, Search, MapPin, BookOpen, Building2, Users, Home, User, Heart, DollarSign } from 'lucide-react'
+import { Shield, FileText, CheckCircle, ArrowRight, Search, MapPin, BookOpen, Building2, Users, Home, User, Heart, DollarSign } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import { categories } from '@/data/categories'
 import { getPopularTemplates } from '@/data/templates'
@@ -8,7 +8,7 @@ import { getFeaturedArticles } from '@/data/articles'
 
 export const metadata: Metadata = {
   title: 'Free Legal Document Templates — Download Word & PDF | Veridoca',
-  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. Attorney-reviewed, state-specific, instantly available.',
+  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. State-specific guidance, cites primary legal sources. No registration required.',
 }
 
 const popularTemplates = getPopularTemplates(8)
@@ -16,7 +16,7 @@ const featuredArticles = getFeaturedArticles(3)
 
 const homepageFaqs = [
   { question: 'Are these legal document templates really free?', answer: 'Yes, completely free. All templates on Veridoca can be downloaded as PDF or Word (.docx) with no registration, no email required, and no hidden fees. We are supported by advertising revenue, which keeps all content free for users.' },
-  { question: 'Are the templates reviewed by real attorneys?', answer: 'Yes. Every template page on Veridoca is reviewed by a licensed US attorney with relevant practice area expertise. Reviewer credentials, bar numbers, and review dates are displayed on every template page.' },
+  { question: 'Who writes the content on Veridoca?', answer: 'Content is written by the Veridoca editorial team and researched from primary sources — state statutes, federal law, and court decisions. We cite our sources on every page. For advice specific to your situation, consult a licensed attorney in your state.' },
   { question: 'Will these templates work in my state?', answer: 'Our templates are designed for general US use and include state-specific guidance sections. We recommend reviewing the state-specific requirements section on any template page and consulting a local attorney for high-stakes transactions.' },
   { question: 'Do I need to register to download templates?', answer: 'No. You can download any template directly from the page with a single click. No account, no email address, and no personal information is required.' },
   { question: 'Are Word (.docx) templates included?', answer: 'Yes. Every template is available in both PDF format (for printing and signing) and Word (.docx) format (for editing and customizing to your specific situation).' },
@@ -25,7 +25,7 @@ const homepageFaqs = [
 
 const steps = [
   { number: '01', title: 'Browse or Search', description: 'Find your document by category, keyword, or state. 500+ templates organized across 7 legal categories.' },
-  { number: '02', title: 'Read the Guide', description: 'Our attorney-written guide explains what the document is, when to use it, and your state\'s specific requirements.' },
+  { number: '02', title: 'Read the Guide', description: 'Our plain-English guide explains what the document is, when to use it, and your state\'s specific requirements. Cites primary legal sources.' },
   { number: '03', title: 'Download Free', description: 'Instantly download PDF and Word versions — no registration, no email, no payment. Ready to customize and sign.' },
 ]
 
@@ -71,7 +71,7 @@ export default function HomePage() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.10] text-slate-300 text-sm mb-8 backdrop-blur-sm">
             <Shield className="w-3.5 h-3.5 text-emerald-400" />
-            Attorney-Reviewed · Updated 2026 · All 50 States
+            Primary Sources Cited · Updated 2026 · All 50 States
           </div>
 
           {/* H1 */}
@@ -81,7 +81,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            500+ attorney-reviewed legal forms for every US state. Business contracts, leases, wills — no account, no email, no cost.
+            500+ free legal forms for every US state. Business contracts, leases, wills — no account, no email, no cost.
           </p>
 
           {/* Search */}
@@ -122,10 +122,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-center gap-8">
             {[
-              { icon: Shield, text: 'Attorney-Reviewed' },
-              { icon: Star, text: '4.8 / 5 Rating' },
-              { icon: Download, text: '500+ Free Templates' },
+              { icon: Shield, text: 'Primary Sources Cited' },
+              { icon: FileText, text: '500+ Free Templates' },
               { icon: CheckCircle, text: 'All 50 States' },
+              { icon: BookOpen, text: 'No Registration Required' },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-slate-400 text-sm font-medium">
                 <Icon className="w-4 h-4 text-emerald-400" />
@@ -175,7 +175,7 @@ export default function HomePage() {
             <div>
               <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Most Used</p>
               <h2 className="text-3xl sm:text-5xl font-black text-white">Popular Templates</h2>
-              <p className="text-slate-400 mt-2 text-lg">Downloaded millions of times</p>
+              <p className="text-slate-400 mt-2 text-lg">Most-used legal documents across all 50 states</p>
             </div>
             <Link href="/templates" className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">
               View all 500+ <ArrowRight className="w-4 h-4" />
@@ -192,18 +192,11 @@ export default function HomePage() {
                   <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 capitalize">
                     {template.category.replace('-', ' ')}
                   </span>
-                  {template.popular && (
-                    <Star className="w-3.5 h-3.5 text-amber-400 flex-shrink-0 mt-0.5" fill="currentColor" />
-                  )}
                 </div>
                 <p className="font-bold text-white text-sm leading-snug group-hover:text-emerald-300 transition-colors">{template.name}</p>
                 <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{template.intro?.slice(0, 90)}...</p>
-                <div className="flex items-center justify-between mt-auto pt-2 border-t border-white/[0.06]">
-                  <span className="text-xs text-slate-500">
-                    <Download className="w-3 h-3 inline mr-1" />
-                    {template.downloadCount.toLocaleString()}
-                  </span>
-                  <span className="text-xs text-emerald-400 font-medium group-hover:gap-1.5 flex items-center gap-1 transition-all">
+                <div className="flex items-center justify-end mt-auto pt-2 border-t border-white/[0.06]">
+                  <span className="text-xs text-emerald-400 font-medium flex items-center gap-1 transition-all">
                     Free Download <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
@@ -280,7 +273,7 @@ export default function HomePage() {
                 <span className="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Legal Knowledge</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-black text-white mb-2">Legal Guides</h2>
-              <p className="text-slate-400 text-lg">Attorney-written guides to your legal rights</p>
+              <p className="text-slate-400 text-lg">Plain-English guides to your legal rights</p>
             </div>
             <Link href="/blog" className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">
               All guides <ArrowRight className="w-4 h-4" />
@@ -321,10 +314,10 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { icon: Shield, title: 'Attorney-Reviewed', desc: 'Every template reviewed by a licensed US attorney. Credentials and bar numbers on every page.' },
-              { icon: FileText, title: 'Cited to Law', desc: 'Every legal claim cites a primary source: state statutes, federal law, or court decisions.' },
-              { icon: Star, title: 'Always Current', desc: 'Updated within 30 days of any significant law change. Every page displays its last review date.' },
-              { icon: CheckCircle, title: '100% Free', desc: 'No subscription, no upsell, no email. Supported by advertising so legal resources stay free.' },
+              { icon: Shield, title: 'Editorial Standards', desc: 'Written by the Veridoca editorial team. Every legal claim cites a primary source: state statutes, federal law, or court decisions.' },
+              { icon: FileText, title: 'Cited to Law', desc: 'We link to primary sources — statutes, regulations, and official court decisions — so you can verify every claim yourself.' },
+              { icon: CheckCircle, title: 'Regularly Updated', desc: 'Pages are reviewed and updated to reflect changes in state and federal law. Each page shows its last-updated date.' },
+              { icon: BookOpen, title: '100% Free', desc: 'No subscription, no upsell, no email. Supported by advertising so legal resources stay free.' },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="p-6 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex flex-col gap-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
@@ -368,7 +361,7 @@ export default function HomePage() {
             Ready for your free<br />legal template?
           </h2>
           <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-            500+ attorney-reviewed templates. No account. No email. Free forever.
+            500+ free legal templates. Primary sources cited. No account. No email. Free forever.
           </p>
           <Link
             href="/templates"

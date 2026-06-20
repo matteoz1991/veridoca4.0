@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-center gap-8 text-sm">
             {[
-              { icon: Shield, text: 'Attorney-Reviewed' },
+              { icon: Shield, text: 'Primary Sources Cited' },
               { icon: FileText, text: '500+ Free Templates' },
               { icon: Users, text: 'All 50 States Covered' },
               { icon: Scale, text: 'No Registration Required' },
@@ -99,7 +99,7 @@ export default function Footer() {
             <span className="text-lg font-bold text-white tracking-tight">Veridoca</span>
           </Link>
           <p className="text-slate-500 text-sm max-w-sm leading-relaxed">
-            Free, attorney-reviewed legal document templates for every situation. Empowering Americans to handle routine legal paperwork with confidence.
+            Free legal document templates for every situation. Primary sources cited. Empowering Americans to handle routine legal paperwork with confidence.
           </p>
         </div>
 

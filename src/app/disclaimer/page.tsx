@@ -32,10 +32,10 @@ export default function DisclaimerPage() {
         <div className="bg-white/[0.04] rounded-2xl border border-white/[0.08] p-8 prose-legal">
           <h2>Not Legal Advice</h2>
           <p>The content on Veridoca.com — including all template documents, articles, guides, FAQs, and other written materials — is provided for general informational and educational purposes only. It does not constitute legal advice, legal opinions, or legal recommendations for any specific situation.</p>
-          <p>Legal advice is advice from a licensed attorney about your specific legal situation. General information about the law — even accurate, attorney-reviewed information — is not legal advice because it has not been applied to the facts of your specific situation by an attorney who represents you.</p>
+          <p>Legal advice is advice from a licensed attorney about your specific legal situation. General information about the law — even accurately researched information citing primary sources — is not legal advice because it has not been applied to the facts of your specific situation by an attorney who represents you.</p>
 
           <h2>No Attorney-Client Relationship</h2>
-          <p>No attorney-client relationship is created by your use of Veridoca.com, by downloading a template, by contacting us, or by reading attorney-reviewed content on the site. The licensed attorneys who have reviewed Veridoca's content are not your attorneys and have not evaluated your specific legal situation.</p>
+          <p>No attorney-client relationship is created by your use of Veridoca.com, by downloading a template, or by contacting us. Veridoca is a legal information resource, not a law firm, and does not provide legal representation of any kind.</p>
 
           <h2>No Representation of Accuracy or Completeness</h2>
           <p>Although we make reasonable efforts to ensure the accuracy and currency of the information on Veridoca.com, we make no warranties or representations about the accuracy, completeness, or currency of any information. Laws change frequently, legal requirements vary by jurisdiction, and the application of law to specific facts requires individualized legal analysis that this site does not provide.</p>

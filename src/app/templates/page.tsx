@@ -9,7 +9,7 @@ import { getPopularTemplates } from '@/data/templates'
 
 export const metadata: Metadata = {
   title: 'All Free Legal Document Templates — 500+ Forms',
-  description: 'Browse 500+ free attorney-reviewed legal document templates organized by category. Business, employment, real estate, family, estate planning, and more.',
+  description: 'Browse 500+ free legal document templates organized by category. Business, employment, real estate, family, estate planning, and more. Cites primary legal sources.',
 }
 
 const popularTemplates = getPopularTemplates(20)
@@ -36,7 +36,7 @@ export default function TemplatesPage() {
             </div>
             <div>
               <h1 className="text-3xl sm:text-4xl font-black text-white mb-2">Free Legal Document Templates</h1>
-              <p className="text-slate-400 text-lg">500+ attorney-reviewed templates across 7 legal categories. Free in Word and PDF.</p>
+              <p className="text-slate-400 text-lg">500+ free templates across 7 legal categories. Cites primary legal sources. Free in Word and PDF.</p>
             </div>
           </div>
         </div>

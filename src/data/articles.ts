@@ -358,7 +358,7 @@ function makeArticleStub(a: { slug: string; category: string; title: string; rel
   return {
     ...a,
     excerpt: `A comprehensive guide covering everything you need to know about ${a.title.toLowerCase().replace('the complete guide to ', '').replace('what is a ', '').replace('how to ', '')}.`,
-    content: `# ${a.title}\n\nThis comprehensive guide covers everything you need to know. Our attorney-reviewed content is updated regularly to reflect current US law.\n\nConsult the related templates below to get started with the documents you need.`,
+    content: `# ${a.title}\n\nThis comprehensive guide covers everything you need to know. Our content cites primary legal sources and is updated regularly to reflect current US law.\n\nConsult the related templates below to get started with the documents you need.`,
     author: 'sarah-chen',
     publishDate: '2026-01-01',
     readTime: 8,

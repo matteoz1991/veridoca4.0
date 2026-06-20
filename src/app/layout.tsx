@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: 'Free Legal Document Templates — Download Word & PDF | Veridoca',
     template: '%s | Veridoca',
   },
-  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. Attorney-reviewed, state-specific, instantly available.',
+  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. State-specific, cites primary legal sources. No registration required.',
   keywords: ['legal document templates', 'free legal forms', 'contract templates', 'lease agreement', 'will template', 'power of attorney'],
   authors: [{ name: 'Veridoca Editorial Team' }],
   creator: 'Veridoca',
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     url: 'https://veridoca.com',
     siteName: 'Veridoca',
     title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free attorney-reviewed legal document templates for the US.',
+    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free attorney-reviewed legal document templates for the US.',
+    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
   },
   metadataBase: new URL('https://veridoca.com'),
 }

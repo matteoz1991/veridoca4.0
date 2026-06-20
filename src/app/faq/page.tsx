@@ -16,7 +16,7 @@ const faqSections = [
     faqs: [
       { question: 'Are Veridoca templates really free?', answer: 'Yes. All templates are available for free download in PDF and Word format with no registration, email, or payment required. We are ad-supported.' },
       { question: 'Do I need a lawyer to use these templates?', answer: 'Not for routine matters with clear terms and cooperating parties. For complex transactions, significant assets, or contested situations, we recommend consulting a licensed attorney in your state.' },
-      { question: 'Are the templates reviewed by attorneys?', answer: 'Yes. Every template page is reviewed by a licensed US attorney with relevant specialty expertise. Reviewer credentials and bar numbers are displayed on every template page.' },
+      { question: 'Who writes the content on Veridoca?', answer: 'Content is written by the Veridoca editorial team and researched from primary sources — state statutes, federal law, and court decisions. We cite our sources on every page so you can verify claims independently. For advice specific to your situation, always consult a licensed attorney.' },
       { question: 'Can I edit the templates?', answer: 'Yes. Word (.docx) versions are fully editable. PDF versions are suitable for printing and filling by hand. We recommend downloading the Word version for any significant customization.' },
       { question: 'Do templates work in all 50 states?', answer: 'Our templates follow general US legal principles and include state-specific guidance sections. Some documents have unique requirements in certain states. Always review the state-specific section on the template page before use.' },
     ],

@@ -7,7 +7,6 @@ import AdPlaceholder from '@/components/AdPlaceholder'
 import TemplateCard from '@/components/TemplateCard'
 import { getArticleBySlug, allArticles } from '@/data/articles'
 import { getRelatedTemplates } from '@/data/templates'
-import { getAttorneyBySlug } from '@/data/attorneys'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -31,7 +30,6 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticleBySlug(slug)
   if (!article) notFound()
 
-  const attorney = getAttorneyBySlug(article.author)
   const relatedTemplates = getRelatedTemplates(article.relatedTemplates)
 
   const jsonLd = {
@@ -39,7 +37,7 @@ export default async function ArticlePage({ params }: Props) {
     '@type': 'Article',
     headline: article.title,
     description: article.excerpt,
-    author: attorney ? { '@type': 'Person', name: `${attorney.name}, ${attorney.credentials}` } : undefined,
+    author: { '@type': 'Organization', name: 'Veridoca Editorial Team' },
     publisher: { '@type': 'Organization', name: 'Veridoca' },
     datePublished: article.publishDate,
     mainEntityOfPage: `https://veridoca.com/blog/${slug}`,
@@ -66,7 +64,7 @@ export default async function ArticlePage({ params }: Props) {
             </span>
             <h1 className="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">{article.title}</h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-              {attorney && <span>By {attorney.name}, {attorney.credentials}</span>}
+              <span>By Veridoca Editorial Team</span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />
                 {article.readTime} min read
@@ -74,21 +72,6 @@ export default async function ArticlePage({ params }: Props) {
               <span>Published {new Date(article.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
           </div>
-
-          {attorney && (
-            <div className="bg-emerald-500/[0.07] border border-emerald-500/20 rounded-xl p-4 flex items-start gap-3 mb-8">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)' }}
-              >
-                {attorney.photoInitials}
-              </div>
-              <div>
-                <p className="font-semibold text-white text-sm">{attorney.name}, {attorney.credentials}</p>
-                <p className="text-xs text-slate-400">{attorney.specialization} · {attorney.barNumbers}</p>
-              </div>
-            </div>
-          )}
 
           <div className="prose-legal bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 sm:p-8 mb-8">
             {paragraphs.map((paragraph, i) => {

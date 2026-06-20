@@ -9,7 +9,6 @@ import AttorneyReview from '@/components/AttorneyReview'
 import TemplateCard from '@/components/TemplateCard'
 import AdPlaceholder from '@/components/AdPlaceholder'
 import { getTemplateBySlug, getRelatedTemplates, templates as allTemplates } from '@/data/templates'
-import { getAttorneyBySlug } from '@/data/attorneys'
 import { getCategoryName } from '@/lib/utils'
 import { templateSchemas } from '@/data/template-fields'
 
@@ -35,7 +34,6 @@ export default async function TemplatePage({ params }: Props) {
   const template = getTemplateBySlug(slug)
   if (!template || template.category !== category) notFound()
 
-  const attorney = getAttorneyBySlug(template.attorneySlug)
   const related = getRelatedTemplates(template.relatedSlugs)
   const categoryName = getCategoryName(template.category)
   const hasGenerator = !!templateSchemas[slug]
@@ -45,7 +43,7 @@ export default async function TemplatePage({ params }: Props) {
     '@type': 'Article',
     headline: template.h1,
     description: template.metaDescription,
-    author: attorney ? { '@type': 'Person', name: `${attorney.name}, ${attorney.credentials}` } : undefined,
+    author: { '@type': 'Organization', name: 'Veridoca Editorial Team' },
     publisher: { '@type': 'Organization', name: 'Veridoca' },
     dateModified: template.lastUpdated,
     mainEntityOfPage: `https://veridoca.com/templates/${category}/${slug}`,
@@ -98,10 +96,9 @@ export default async function TemplatePage({ params }: Props) {
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
                   <span className="flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-emerald-400" />
-                    Attorney-Reviewed
+                    Cites Primary Sources
                   </span>
                   <span>Updated {template.lastUpdated}</span>
-                  <span>{template.downloadCount.toLocaleString()} downloads</span>
                   <span>Word + PDF</span>
                 </div>
               </div>
@@ -180,11 +177,9 @@ export default async function TemplatePage({ params }: Props) {
                 <FAQAccordion faqs={template.faqs} />
               </section>
 
-              {attorney && (
-                <div className="mb-10">
-                  <AttorneyReview attorney={attorney} reviewDate={template.lastUpdated} />
-                </div>
-              )}
+              <div className="mb-10">
+                <AttorneyReview lastUpdated={template.lastUpdated} />
+              </div>
 
               {related.length > 0 && (
                 <section className="mb-10">
@@ -201,14 +196,12 @@ export default async function TemplatePage({ params }: Props) {
               <div className="sticky top-24 space-y-5">
                 <div className="bg-emerald-500/[0.08] border border-emerald-500/20 rounded-xl p-5">
                   <h3 className="font-bold text-white mb-3">Download Free Template</h3>
-                  <div className="space-y-2 mb-3">
-                    <a href={`/downloads/${slug}.pdf`} download className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl transition-colors text-sm">
-                      PDF Download
-                    </a>
-                    <a href={`/downloads/${slug}.docx`} download className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-colors text-sm">
-                      Word (.docx)
-                    </a>
-                  </div>
+                  <a
+                    href="#download"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl transition-colors text-sm mb-2"
+                  >
+                    Get Template
+                  </a>
                   <p className="text-xs text-slate-500 text-center">No registration · Instant · Free</p>
                 </div>
 
