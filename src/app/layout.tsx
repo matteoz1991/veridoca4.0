@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -44,6 +45,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-[#07090f]">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329226931623109"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
