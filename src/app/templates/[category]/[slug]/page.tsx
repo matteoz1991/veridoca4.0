@@ -172,7 +172,7 @@ export default async function TemplatePage({ params }: Props) {
               </div>
 
               <div className="mt-10 mb-10" id="download">
-                <DownloadSection templateName={template.name} downloadCount={template.downloadCount} slug={template.slug} />
+                <DownloadSection templateName={template.name} downloadCount={template.downloadCount} slug={template.slug} category={template.category} />
               </div>
 
               <section className="mb-10">
