@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, Scale, ChevronDown } from 'lucide-react'
+import { Menu, X, Scale, ChevronDown, Search } from 'lucide-react'
 
 const navItems = [
   {
@@ -90,6 +90,13 @@ export default function Header() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+          <Link
+            href="/search"
+            className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            aria-label="Search"
+          >
+            <Search className="w-4 h-4" />
+          </Link>
           <Link
             href="/about"
             className="text-sm text-slate-400 hover:text-white transition-colors"

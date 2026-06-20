@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { CheckCircle, AlertTriangle, ChevronRight } from 'lucide-react'
+import { CheckCircle, AlertTriangle, ChevronRight, FileEdit } from 'lucide-react'
 import Breadcrumb from '@/components/Breadcrumb'
 import FAQAccordion from '@/components/FAQAccordion'
 import DownloadSection from '@/components/DownloadSection'
@@ -11,6 +11,7 @@ import AdPlaceholder from '@/components/AdPlaceholder'
 import { getTemplateBySlug, getRelatedTemplates, templates as allTemplates } from '@/data/templates'
 import { getAttorneyBySlug } from '@/data/attorneys'
 import { getCategoryName } from '@/lib/utils'
+import { templateSchemas } from '@/data/template-fields'
 
 type Props = { params: Promise<{ category: string; slug: string }> }
 
@@ -37,6 +38,7 @@ export default async function TemplatePage({ params }: Props) {
   const attorney = getAttorneyBySlug(template.attorneySlug)
   const related = getRelatedTemplates(template.relatedSlugs)
   const categoryName = getCategoryName(template.category)
+  const hasGenerator = !!templateSchemas[slug]
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -84,6 +86,15 @@ export default async function TemplatePage({ params }: Props) {
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <h1 className="text-3xl sm:text-4xl font-black text-white mb-3">{template.h1}</h1>
+                {hasGenerator && (
+                  <Link
+                    href={`/templates/${category}/${slug}/generate`}
+                    className="inline-flex items-center gap-2 mt-3 mb-4 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-emerald-900/30"
+                  >
+                    <FileEdit className="w-4 h-4" />
+                    Fill in &amp; Generate Document
+                  </Link>
+                )}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
                   <span className="flex items-center gap-1.5">
                     <CheckCircle className="w-4 h-4 text-emerald-400" />
