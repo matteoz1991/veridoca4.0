@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { templates } from '@/data/templates'
 import { articles } from '@/data/articles'
 import { states } from '@/data/states'
+import { pseoPages } from '@/data/pseo'
 
 const BASE = 'https://veridoca.com'
 
@@ -53,11 +54,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }))
 
+  const pseoSitemapPages: MetadataRoute.Sitemap = pseoPages.map(p => ({
+    url: p.canonicalUrl,
+    lastModified: new Date(p.lastReviewed),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   return [
     ...staticPages,
     ...categoryPages,
     ...templatePages,
     ...articlePages,
     ...statePages,
+    ...pseoSitemapPages,
   ]
 }
