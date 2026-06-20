@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Scale, Shield, FileText, Users } from 'lucide-react'
 
@@ -151,6 +153,12 @@ export default function Footer() {
               <Link href="/privacy-policy" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Privacy</Link>
               <Link href="/terms-of-service" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Terms</Link>
               <Link href="/disclaimer" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Disclaimer</Link>
+              <button
+                onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
+                className="text-slate-600 hover:text-slate-300 text-xs transition-colors"
+              >
+                Cookie Settings
+              </button>
             </div>
           </div>
         </div>
