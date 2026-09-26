@@ -1,26 +1,44 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
-import Script from 'next/script'
+import { Lora, Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import CookieConsent from '@/components/CookieConsent'
 
-const geist = Geist({
-  variable: '--font-geist-sans',
+const lora = Lora({
+  variable: '--font-lora',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  preload: true,
+})
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  preload: true,
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Free Legal Document Templates — Download Word & PDF | Veridoca',
+    default: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
     template: '%s | Veridoca',
   },
-  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. State-specific, cites primary legal sources. No registration required.',
-  keywords: ['legal document templates', 'free legal forms', 'contract templates', 'lease agreement', 'will template', 'power of attorney'],
-  authors: [{ name: 'Veridoca Editorial Team' }],
+  description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring. Hjälper dig att jämföra och förstå dina alternativ.',
+  keywords: ['bredband', 'mobilabonnemang', 'hemförsäkring', 'fiber', 'mobilt bredband', 'operatörer', 'Sverige'],
+  authors: [{ name: 'Veridoca' }],
   creator: 'Veridoca',
   publisher: 'Veridoca',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -28,46 +46,36 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'sv_SE',
     url: 'https://veridoca.com',
     siteName: 'Veridoca',
-    title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
+    title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
+    description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Veridoca — Oberoende guider',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
+    title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
+    description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
+    images: ['/og-image.png'],
   },
   metadataBase: new URL('https://veridoca.com'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-[#07090f]">
-        {/* Google Consent Mode v2 — must fire before AdSense */}
-        <Script id="gcm-init" strategy="beforeInteractive">{`
-          window.dataLayer=window.dataLayer||[];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent','default',{
-            ad_storage:'denied',
-            ad_user_data:'denied',
-            ad_personalization:'denied',
-            analytics_storage:'denied',
-            wait_for_update:500
-          });
-        `}</Script>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329226931623109"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+    <html lang="sv" className={`${lora.variable} ${inter.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-[#FFFEF9]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <CookieConsent />
       </body>
     </html>
   )

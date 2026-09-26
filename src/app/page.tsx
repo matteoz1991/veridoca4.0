@@ -1,377 +1,293 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Shield, FileText, CheckCircle, ArrowRight, Search, MapPin, BookOpen, Building2, Users, Home, User, Heart, DollarSign } from 'lucide-react'
-import FAQAccordion from '@/components/FAQAccordion'
-import { categories } from '@/data/categories'
-import { getPopularTemplates } from '@/data/templates'
-import { getFeaturedArticles } from '@/data/articles'
+import { Calculator, TrendingDown, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Free Legal Document Templates — Download Word & PDF | Veridoca',
-  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. State-specific guidance, cites primary legal sources. No registration required.',
+  title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
+  description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring. Interaktiva sparkalkylatorer och praktisk vägledning.',
 }
 
-const popularTemplates = getPopularTemplates(8)
-const featuredArticles = getFeaturedArticles(3)
-
-const homepageFaqs = [
-  { question: 'Are these legal document templates really free?', answer: 'Yes, completely free. All templates on Veridoca can be downloaded as PDF or Word (.docx) with no registration, no email required, and no hidden fees. We are supported by advertising revenue, which keeps all content free for users.' },
-  { question: 'Who writes the content on Veridoca?', answer: 'Content is written by the Veridoca editorial team and researched from primary sources — state statutes, federal law, and court decisions. We cite our sources on every page. For advice specific to your situation, consult a licensed attorney in your state.' },
-  { question: 'Will these templates work in my state?', answer: 'Our templates are designed for general US use and include state-specific guidance sections. We recommend reviewing the state-specific requirements section on any template page and consulting a local attorney for high-stakes transactions.' },
-  { question: 'Do I need to register to download templates?', answer: 'No. You can download any template directly from the page with a single click. No account, no email address, and no personal information is required.' },
-  { question: 'Are Word (.docx) templates included?', answer: 'Yes. Every template is available in both PDF format (for printing and signing) and Word (.docx) format (for editing and customizing to your specific situation).' },
-  { question: 'When should I hire a lawyer instead of using a template?', answer: 'Templates work well for routine, straightforward situations where parties agree on terms. We recommend consulting a licensed attorney for complex estates, contested divorces or custody, business acquisitions, and any situation involving potential litigation.' },
+const tools = [
+  {
+    icon: Calculator,
+    title: 'Mobilkalkylator',
+    description: 'Se hur mycket du kan spara per år på ditt mobilabonnemang',
+    href: '/verktyg/mobilkalkylator/',
+    badge: 'Populär',
+  },
+  {
+    icon: TrendingDown,
+    title: 'Bredbandskalkylator',
+    description: 'Räkna ut din verkliga kostnad över 12–24 månader',
+    href: '/verktyg/bredbandskalkylator/',
+  },
+  {
+    icon: Zap,
+    title: 'Bindningstidskalkylator',
+    description: 'Lönar det sig att bryta bindningstiden?',
+    href: '/verktyg/bindningstid/',
+  },
 ]
-
-const steps = [
-  { number: '01', title: 'Browse or Search', description: 'Find your document by category, keyword, or state. 500+ templates organized across 7 legal categories.' },
-  { number: '02', title: 'Read the Guide', description: 'Our plain-English guide explains what the document is, when to use it, and your state\'s specific requirements. Cites primary legal sources.' },
-  { number: '03', title: 'Download Free', description: 'Instantly download PDF and Word versions — no registration, no email, no payment. Ready to customize and sign.' },
-]
-
-const topStates = [
-  { name: 'California', slug: 'california' },
-  { name: 'Texas', slug: 'texas' },
-  { name: 'Florida', slug: 'florida' },
-  { name: 'New York', slug: 'new-york' },
-  { name: 'Illinois', slug: 'illinois' },
-  { name: 'Pennsylvania', slug: 'pennsylvania' },
-  { name: 'Georgia', slug: 'georgia' },
-  { name: 'Ohio', slug: 'ohio' },
-  { name: 'Michigan', slug: 'michigan' },
-  { name: 'Washington', slug: 'washington' },
-  { name: 'Colorado', slug: 'colorado' },
-  { name: 'Arizona', slug: 'arizona' },
-]
-
-const categoryIconMap: Record<string, React.ReactNode> = {
-  Building2: <Building2 className="w-5 h-5" />,
-  Users: <Users className="w-5 h-5" />,
-  Home: <Home className="w-5 h-5" />,
-  User: <User className="w-5 h-5" />,
-  Heart: <Heart className="w-5 h-5" />,
-  FileCheck: <FileText className="w-5 h-5" />,
-  DollarSign: <DollarSign className="w-5 h-5" />,
-}
 
 export default function HomePage() {
   return (
-    <div className="bg-[#07090f]">
-
-      {/* ─── HERO ─── */}
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden py-24">
-        {/* Glow orbs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[900px] h-[700px] rounded-full bg-emerald-500/[0.12] blur-[130px]" />
-          <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-blue-600/[0.08] blur-[100px]" />
-          <div className="absolute bottom-0 -left-32 w-[500px] h-[500px] rounded-full bg-violet-600/[0.07] blur-[100px]" />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.10] text-slate-300 text-sm mb-8 backdrop-blur-sm">
-            <Shield className="w-3.5 h-3.5 text-emerald-400" />
-            Primary Sources Cited · Updated 2026 · All 50 States
+    <div className="bg-[#FFFEF9]">
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-16 pb-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="animate-slideUp">
+            <p className="text-[15px] text-[#C95D3F] font-medium mb-6 tracking-wide">
+              OBEROENDE GUIDER & VERKTYG
+            </p>
+            <h1 className="font-serif text-5xl md:text-6xl font-semibold text-[#2C2C2C] leading-[1.1] tracking-tight mb-6">
+              Hitta rätt och spara pengar på bredband & mobil
+            </h1>
+            <p className="text-[18px] text-[#4A4A4A] leading-relaxed mb-8">
+              Räkna ut vad du faktiskt betalar. Jämför dina alternativ. Få konkreta svar från någon som har jobbat i branschen.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/verktyg/"
+                className="inline-block px-6 py-3 bg-[#C95D3F] text-[#FFFEF9] font-medium hover:bg-[#2C2C2C] transition-colors"
+              >
+                Se verktyg
+              </Link>
+              <Link
+                href="/bredband/"
+                className="inline-block px-6 py-3 border border-[#E5E5E5] text-[#2C2C2C] font-medium hover:border-[#C95D3F] hover:text-[#C95D3F] transition-colors"
+              >
+                Läs guider
+              </Link>
+            </div>
           </div>
 
-          {/* H1 */}
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight text-white mb-6">
-            Download Free<br />
-            <span className="text-emerald-400">Legal Templates</span>
-          </h1>
+          <div className="bg-[#FAF9F5] border border-[#E5E5E5] p-8 animate-fadeIn">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-[#C95D3F] flex items-center justify-center">
+                <Calculator className="w-5 h-5 text-[#FFFEF9]" />
+              </div>
+              <div>
+                <h3 className="font-serif font-semibold text-[18px] text-[#2C2C2C]">
+                  Snabbkoll: Mobil
+                </h3>
+                <p className="text-[14px] text-[#8B8B8B]">Hur mycket kan du spara?</p>
+              </div>
+            </div>
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="block text-[14px] text-[#4A4A4A] mb-2 font-medium">
+                  Betalar idag per månad (kr)
+                </label>
+                <input
+                  type="number"
+                  defaultValue="349"
+                  className="w-full px-4 py-2 border border-[#E5E5E5] bg-[#FFFEF9] text-[#2C2C2C] focus:outline-none focus:border-[#C95D3F]"
+                  placeholder="349"
+                />
+              </div>
+              <div>
+                <label className="block text-[14px] text-[#4A4A4A] mb-2 font-medium">
+                  Alternativpris per månad (kr)
+                </label>
+                <input
+                  type="number"
+                  defaultValue="199"
+                  className="w-full px-4 py-2 border border-[#E5E5E5] bg-[#FFFEF9] text-[#2C2C2C] focus:outline-none focus:border-[#C95D3F]"
+                  placeholder="199"
+                />
+              </div>
+            </div>
+            <div className="bg-[#FFFEF9] border-l-3 border-[#C95D3F] p-4 mb-4">
+              <p className="text-[14px] text-[#8B8B8B] mb-1">Besparing per år</p>
+              <p className="font-serif font-semibold text-[28px] text-[#2C2C2C]">
+                1 800 kr
+              </p>
+            </div>
+            <Link
+              href="/verktyg/mobilkalkylator/"
+              className="block text-center px-4 py-2 bg-[#2C2C2C] text-[#FFFEF9] font-medium hover:bg-[#C95D3F] transition-colors text-[15px]"
+            >
+              Fullständig kalkylator →
+            </Link>
+          </div>
+        </div>
+      </section>
 
-          <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            500+ free legal forms for every US state. Business contracts, leases, wills — no account, no email, no cost.
+      <section className="border-t border-[#E5E5E5] py-12 bg-[#FAF9F5]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap justify-between gap-8 text-[15px] text-[#8B8B8B]">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-[#C95D3F]"></span>
+              Uppdateras regelbundet
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-[#C95D3F]"></span>
+              Inga tracking-cookies
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-[#C95D3F]"></span>
+              Transparent om affiliatelänkar
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+        <div className="mb-12">
+          <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-4 leading-tight">
+            Interaktiva verktyg
+          </h2>
+          <p className="text-[17px] text-[#4A4A4A] leading-relaxed max-w-2xl">
+            Räkna på dina egna siffror. Inga hårdkodade priser eller påstådda erbjudanden — du fyller i vad du faktiskt betalar.
           </p>
-
-          {/* Search */}
-          <div className="max-w-xl mx-auto mb-8">
-            <div className="relative flex items-center bg-white/[0.06] border border-white/[0.12] rounded-2xl overflow-hidden backdrop-blur-sm hover:border-white/20 transition-colors">
-              <Search className="absolute left-4 w-5 h-5 text-slate-400 pointer-events-none" />
-              <input
-                type="search"
-                placeholder="Search templates (e.g., lease, NDA, will...)"
-                className="flex-1 pl-12 pr-4 py-4 bg-transparent text-white placeholder-slate-500 text-sm outline-none"
-              />
-              <Link
-                href="/templates"
-                className="m-1.5 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-sm rounded-xl transition-colors"
-              >
-                Search
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick links */}
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {['Lease Agreement', 'NDA', 'Last Will & Testament', 'Power of Attorney', 'Offer Letter'].map((term) => (
-              <Link
-                key={term}
-                href={`/templates`}
-                className="px-3.5 py-1.5 bg-white/[0.05] hover:bg-white/[0.10] text-slate-400 hover:text-white rounded-full border border-white/[0.08] hover:border-white/[0.15] transition-all"
-              >
-                {term}
-              </Link>
-            ))}
-          </div>
         </div>
-      </section>
 
-      {/* ─── TRUST BAR ─── */}
-      <div className="border-t border-b border-white/[0.06] bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-center gap-8">
-            {[
-              { icon: Shield, text: 'Primary Sources Cited' },
-              { icon: FileText, text: '500+ Free Templates' },
-              { icon: CheckCircle, text: 'All 50 States' },
-              { icon: BookOpen, text: 'No Registration Required' },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-slate-400 text-sm font-medium">
-                <Icon className="w-4 h-4 text-emerald-400" />
-                {text}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ─── CATEGORIES ─── */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Browse by Area</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">7 Legal Categories</h2>
-            <p className="text-slate-400 text-lg">Every area of US law — from business formation to estate planning</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            {categories.map((cat) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {tools.map((tool) => {
+            const Icon = tool.icon
+            return (
               <Link
-                key={cat.slug}
-                href={`/templates/${cat.slug}`}
-                className="group relative flex flex-col gap-3 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-200"
+                key={tool.title}
+                href={tool.href}
+                className="group border border-[#E5E5E5] p-6 hover:border-[#C95D3F] transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
-                  {categoryIconMap[cat.icon] ?? <FileText className="w-5 h-5" />}
-                </div>
-                <div>
-                  <p className="font-bold text-white text-sm mb-0.5">{cat.name}</p>
-                  <p className="text-slate-500 text-xs">{cat.templateCount} templates</p>
-                </div>
-                <p className="text-slate-400 text-xs leading-relaxed line-clamp-2">{cat.description}</p>
-                <span className="text-emerald-400 text-xs font-medium mt-auto flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Browse <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── POPULAR TEMPLATES ─── */}
-      <section className="py-20 sm:py-28 bg-white/[0.02] border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Most Used</p>
-              <h2 className="text-3xl sm:text-5xl font-black text-white">Popular Templates</h2>
-              <p className="text-slate-400 mt-2 text-lg">Most-used legal documents across all 50 states</p>
-            </div>
-            <Link href="/templates" className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">
-              View all 500+ <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {popularTemplates.map((template) => (
-              <Link
-                key={template.slug}
-                href={`/templates/${template.category}/${template.slug}`}
-                className="group flex flex-col gap-3 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.07] hover:border-white/[0.15] transition-all duration-200"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 capitalize">
-                    {template.category.replace('-', ' ')}
+                {tool.badge && (
+                  <span className="inline-block text-[12px] text-[#C95D3F] font-medium mb-3 tracking-wide">
+                    {tool.badge}
                   </span>
-                </div>
-                <p className="font-bold text-white text-sm leading-snug group-hover:text-emerald-300 transition-colors">{template.name}</p>
-                <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{template.intro?.slice(0, 90)}...</p>
-                <div className="flex items-center justify-end mt-auto pt-2 border-t border-white/[0.06]">
-                  <span className="text-xs text-emerald-400 font-medium flex items-center gap-1 transition-all">
-                    Free Download <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── HOW IT WORKS ─── */}
-      <section className="py-20 sm:py-28 border-t border-white/[0.05]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Simple Process</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">How It Works</h2>
-            <p className="text-slate-400 text-lg">Get your legal document in 3 simple steps</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, i) => (
-              <div key={step.number} className="relative text-center">
-                {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-7 left-[calc(50%+2.5rem)] right-0 h-px bg-gradient-to-r from-white/10 to-transparent" />
                 )}
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-emerald-400 font-black text-xl mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20">
-                  {step.number}
-                </div>
-                <h3 className="font-bold text-white text-lg mb-2">{step.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── BY STATE ─── */}
-      <section className="py-20 sm:py-24 bg-white/[0.02] border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start justify-between mb-10">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-4 h-4 text-emerald-400" />
-                <span className="text-emerald-400 text-sm font-semibold uppercase tracking-widest">State-Specific</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-white mb-2">Templates by State</h2>
-              <p className="text-slate-400">State-specific requirements and customized guidance</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
-            {topStates.map((state) => (
-              <Link
-                key={state.slug}
-                href={`/states/${state.slug}`}
-                className="flex items-center justify-center p-3 bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] hover:border-emerald-500/30 rounded-xl text-sm font-medium text-slate-300 hover:text-white transition-all text-center"
-              >
-                {state.name}
-              </Link>
-            ))}
-          </div>
-          <div className="mt-5">
-            <Link href="/states" className="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition-colors">
-              View all 50 states + D.C. <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── ARTICLES ─── */}
-      <section className="py-20 sm:py-28 border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <BookOpen className="w-4 h-4 text-emerald-400" />
-                <span className="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Legal Knowledge</span>
-              </div>
-              <h2 className="text-3xl sm:text-5xl font-black text-white mb-2">Legal Guides</h2>
-              <p className="text-slate-400 text-lg">Plain-English guides to your legal rights</p>
-            </div>
-            <Link href="/blog" className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">
-              All guides <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {featuredArticles.map((article) => (
-              <Link
-                key={article.slug}
-                href={`/blog/${article.slug}`}
-                className="group flex flex-col rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.07] hover:border-white/[0.15] transition-all duration-200 overflow-hidden"
-              >
-                <div className="h-1 bg-gradient-to-r from-emerald-500 to-blue-500" />
-                <div className="p-5 flex flex-col flex-1 gap-3">
-                  <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wide">
-                    {article.category.replace(/-/g, ' ')}
-                  </span>
-                  <h3 className="font-bold text-white text-sm leading-snug group-hover:text-emerald-300 transition-colors">{article.title}</h3>
-                  <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 flex-1">{article.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-white/[0.06]">
-                    <span>{article.readTime} min read</span>
-                    <span className="text-emerald-400 font-medium group-hover:text-emerald-300 transition-colors">Read →</span>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-[#FAF9F5] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C95D3F] transition-colors">
+                    <Icon className="w-6 h-6 text-[#C95D3F] group-hover:text-[#FFFEF9] transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif font-semibold text-[19px] text-[#2C2C2C] mb-2 group-hover:text-[#C95D3F] transition-colors">
+                      {tool.title}
+                    </h3>
+                    <p className="text-[15px] text-[#4A4A4A] leading-relaxed">
+                      {tool.description}
+                    </p>
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
+            )
+          })}
         </div>
       </section>
 
-      {/* ─── TRUST PILLARS ─── */}
-      <section className="py-20 sm:py-24 bg-white/[0.02] border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Why Veridoca</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">Built on Trust</h2>
-            <p className="text-slate-400 text-lg max-w-xl mx-auto">We exist to make quality legal information accessible to every American.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: Shield, title: 'Editorial Standards', desc: 'Written by the Veridoca editorial team. Every legal claim cites a primary source: state statutes, federal law, or court decisions.' },
-              { icon: FileText, title: 'Cited to Law', desc: 'We link to primary sources — statutes, regulations, and official court decisions — so you can verify every claim yourself.' },
-              { icon: CheckCircle, title: 'Regularly Updated', desc: 'Pages are reviewed and updated to reflect changes in state and federal law. Each page shows its last-updated date.' },
-              { icon: BookOpen, title: '100% Free', desc: 'No subscription, no upsell, no email. Supported by advertising so legal resources stay free.' },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="p-6 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex flex-col gap-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1.5">{title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
-                </div>
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+        <div className="mb-12">
+          <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-4 leading-tight">
+            Tre områden
+          </h2>
+          <p className="text-[17px] text-[#4A4A4A] leading-relaxed">
+            Jag fokuserar på de områden där jag har mest erfarenhet och där folk faktiskt behöver hjälp.
+          </p>
+        </div>
+
+        <div className="space-y-12">
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">01</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/bredband/" className="hover:text-[#C95D3F] transition-colors">
+                  Bredband
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Fiber eller mobilt? Hur mycket hastighet behöver du egentligen? Vad kostar det faktiskt när kampanjpriset tar slut? Här får du konkreta svar.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/bredband/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+                  Bredbandguiden →
+                </Link>
+                <Link href="/bredband/byta-leverantor/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+                  Byta leverantör →
+                </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">02</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/mobilabonnemang/" className="hover:text-[#C95D3F] transition-colors">
+                  Mobilabonnemang
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Skillnaden mellan operatör och virtuell operatör. Hur mycket surf du verkligen behöver. Vad som faktiskt spelar roll när du väljer abonnemang.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/mobilabonnemang/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+                  Mobilguiden →
+                </Link>
+                <Link href="/mobilabonnemang/billigt/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+                  Hitta billigt abonnemang →
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">03</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/forsakring/hemforsakring/" className="hover:text-[#C95D3F] transition-colors">
+                  Hemförsäkring
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Rent informativ guide om vad hemförsäkring täcker, självrisk och frågor att ställa. Jag rankar inte försäkringsbolag och ger inga råd — det är strikt reglerat i Sverige.
+              </p>
+              <Link href="/forsakring/hemforsakring/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+                Läs guiden →
+              </Link>
+            </div>
+          </article>
         </div>
       </section>
 
-      {/* ─── FAQ ─── */}
-      <section className="py-20 sm:py-28 border-t border-white/[0.05]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">FAQ</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">Common Questions</h2>
-            <p className="text-slate-400">Everything you need to know about using Veridoca</p>
-          </div>
-          <FAQAccordion faqs={homepageFaqs} />
-          <div className="text-center mt-10">
-            <Link href="/faq" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-colors">
-              View all FAQs <ArrowRight className="w-4 h-4" />
+      <section className="border-t border-[#E5E5E5] bg-[#FAF9F5] py-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-6 leading-tight">
+              Hur tjänar sidan pengar?
+            </h2>
+            <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6">
+              Veridoca finansieras via affiliatelänkar. När jag länkar till en operatör eller leverantör och du tecknar ett avtal, kan jag få en provision. Det kostar ingenting extra för dig.
+            </p>
+            <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-8">
+              Alla länkar är märkta med <span className="text-[12px] text-[#8B8B8B] font-medium uppercase tracking-wide border border-[#E5E5E5] px-2 py-1 bg-[#FFFEF9]">Reklamlänk</span> så du vet exakt vilka som är affiliatelänkar.
+            </p>
+            <Link href="/reklam/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+              Läs mer om hur det fungerar →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="relative py-24 sm:py-32 border-t border-white/[0.05] overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-emerald-500/[0.14] blur-[100px]" />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">Get Started</p>
-          <h2 className="text-4xl sm:text-6xl font-black text-white mb-5 leading-tight">
-            Ready for your free<br />legal template?
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+        <div className="max-w-3xl">
+          <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-6 leading-tight">
+            Viktigt att veta
           </h2>
-          <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-            500+ free legal templates. Primary sources cited. No account. No email. Free forever.
-          </p>
-          <Link
-            href="/templates"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-white text-slate-900 font-bold rounded-full text-base hover:bg-slate-100 transition-colors shadow-2xl shadow-black/30"
-          >
-            Browse All Templates <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="space-y-4 text-[17px] text-[#4A4A4A] leading-relaxed">
+            <p>
+              Guiderna på Veridoca är allmän information och ska inte ses som personlig rådgivning. Priser och villkor ändras över tid — kontrollera alltid hos leverantören.
+            </p>
+            <p className="text-[15px] text-[#8B8B8B] border-l-2 border-[#C95D3F] pl-6">
+              <strong className="text-[#4A4A4A]">Om hemförsäkring:</strong> Jag ger inga råd om vilken försäkring du ska välja och rankar inte försäkringsbolag. För rådgivning, kontakta ett försäkringsbolag eller en oberoende försäkringsrådgivare.
+            </p>
+          </div>
         </div>
       </section>
-
     </div>
   )
 }

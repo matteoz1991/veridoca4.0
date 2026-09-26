@@ -1,117 +1,63 @@
 'use client'
 
 import Link from 'next/link'
-import { Scale, Shield, FileText, Users } from 'lucide-react'
+import Image from 'next/image'
 
 const footerLinks = {
-  templates: {
-    title: 'Templates',
+  guides: {
+    title: 'Guider',
     links: [
-      { label: 'Business Documents', href: '/templates/business' },
-      { label: 'Employment Documents', href: '/templates/employment' },
-      { label: 'Real Estate Documents', href: '/templates/real-estate' },
-      { label: 'Personal Legal Documents', href: '/templates/personal' },
-      { label: 'Family Documents', href: '/templates/family' },
-      { label: 'Estate Planning', href: '/templates/estate-planning' },
-      { label: 'Financial Documents', href: '/templates/financial' },
+      { label: 'Bredband', href: '/bredband/' },
+      { label: 'Byta bredbandsleverantör', href: '/bredband/byta-leverantor/' },
+      { label: 'Mobilabonnemang', href: '/mobilabonnemang/' },
+      { label: 'Billigt mobilabonnemang', href: '/mobilabonnemang/billigt/' },
+      { label: 'Hemförsäkring', href: '/forsakring/hemforsakring/' },
     ],
   },
-  popular: {
-    title: 'Popular Templates',
+  about: {
+    title: 'Om Veridoca',
     links: [
-      { label: 'Residential Lease Agreement', href: '/templates/real-estate/residential-lease-agreement' },
-      { label: 'Non-Disclosure Agreement', href: '/templates/business/non-disclosure-agreement' },
-      { label: 'Last Will and Testament', href: '/templates/estate-planning/last-will-and-testament' },
-      { label: 'Power of Attorney', href: '/templates/personal/power-of-attorney' },
-      { label: 'Child Custody Agreement', href: '/templates/family/child-custody-agreement' },
-      { label: 'LLC Operating Agreement', href: '/templates/business/llc-operating-agreement' },
-      { label: 'Employment Contract', href: '/templates/employment/employment-contract' },
-    ],
-  },
-  resources: {
-    title: 'Resources',
-    links: [
-      { label: 'Legal Blog', href: '/blog' },
-      { label: 'FAQ Hub', href: '/faq' },
-      { label: 'Legal Resources', href: '/resources' },
-      { label: 'Templates by State', href: '/states' },
-      { label: 'About Veridoca', href: '/about' },
-      { label: 'Contact Us', href: '/contact' },
+      { label: 'Om oss', href: '/om-oss/' },
+      { label: 'Så tjänar vi pengar', href: '/reklam/' },
+      { label: 'Kontakt', href: '/kontakt/' },
     ],
   },
   legal: {
-    title: 'Legal',
+    title: 'Juridiskt',
     links: [
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Terms of Service', href: '/terms-of-service' },
-      { label: 'Disclaimer', href: '/disclaimer' },
-      { label: 'Editorial Policy', href: '/about#editorial-policy' },
+      { label: 'Integritetspolicy', href: '/integritet/' },
     ],
   },
 }
 
-const topStates = [
-  { name: 'California', slug: 'california' },
-  { name: 'Texas', slug: 'texas' },
-  { name: 'Florida', slug: 'florida' },
-  { name: 'New York', slug: 'new-york' },
-  { name: 'Illinois', slug: 'illinois' },
-  { name: 'Pennsylvania', slug: 'pennsylvania' },
-  { name: 'Georgia', slug: 'georgia' },
-  { name: 'Ohio', slug: 'ohio' },
-  { name: 'Michigan', slug: 'michigan' },
-  { name: 'Washington', slug: 'washington' },
-]
-
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.06]" style={{ background: '#07090f' }}>
-      {/* Trust bar */}
-      <div className="border-b border-white/[0.06] bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
-            {[
-              { icon: Shield, text: 'Primary Sources Cited' },
-              { icon: FileText, text: '500+ Free Templates' },
-              { icon: Users, text: 'All 50 States Covered' },
-              { icon: Scale, text: 'No Registration Required' },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-slate-400">
-                <Icon className="w-4 h-4 text-emerald-400" />
-                {text}
-              </div>
-            ))}
+    <footer className="border-t border-[#E5E5E5] bg-[#FFFEF9] mt-20">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+          <div className="col-span-2 md:col-span-1">
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity" aria-label="Veridoca">
+              <Image 
+                src="/logo-mark.svg" 
+                alt="Veridoca" 
+                width={72} 
+                height={72} 
+                className="h-[72px] w-[72px]"
+                unoptimized
+              />
+            </Link>
+            <p className="text-[15px] text-[#8B8B8B] leading-relaxed max-w-xs">
+              Oberoende guider om bredband, mobilabonnemang och hemförsäkring.
+            </p>
           </div>
-        </div>
-      </div>
 
-      {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        {/* Logo + mission */}
-        <div className="mb-12">
-          <Link href="/" className="inline-flex items-center gap-2.5 mb-4">
-            <div
-              className="w-8 h-8 rounded-xl flex items-center justify-center"
-              style={{ background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)' }}
-            >
-              <Scale className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-lg font-bold text-white tracking-tight">Veridoca</span>
-          </Link>
-          <p className="text-slate-500 text-sm max-w-sm leading-relaxed">
-            Free legal document templates for every situation. Primary sources cited. Empowering Americans to handle routine legal paperwork with confidence.
-          </p>
-        </div>
-
-        {/* Link columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-4">{section.title}</h3>
+              <h3 className="font-serif font-semibold text-[#2C2C2C] mb-4 text-[15px]">{section.title}</h3>
               <ul className="space-y-2.5">
                 {section.links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
+                    <Link href={link.href} className="text-[15px] text-[#8B8B8B] hover:text-[#C95D3F] transition-colors">
                       {link.label}
                     </Link>
                   </li>
@@ -121,44 +67,21 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* State links */}
-        <div className="border-t border-white/[0.06] pt-8 mb-8">
-          <h3 className="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Templates by State</h3>
-          <div className="flex flex-wrap gap-x-4 gap-y-2">
-            {topStates.map((state) => (
-              <Link
-                key={state.slug}
-                href={`/states/${state.slug}`}
-                className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
-              >
-                {state.name}
-              </Link>
-            ))}
-            <Link href="/states" className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors font-medium">
-              View All →
-            </Link>
-          </div>
-        </div>
-
-        {/* Disclaimer + copyright */}
-        <div className="border-t border-white/[0.06] pt-8">
-          <p className="text-slate-600 text-xs leading-relaxed mb-5">
-            <strong className="text-slate-500">Legal Disclaimer:</strong> The information on Veridoca.com is for general informational purposes only and does not constitute legal advice. Use of this site does not create an attorney-client relationship. Laws vary by state and change frequently. Always consult a licensed attorney in your jurisdiction for advice specific to your situation.
+        <div className="border-t border-[#E5E5E5] pt-8">
+          <p className="text-[14px] text-[#8B8B8B] leading-relaxed mb-6 max-w-4xl">
+            <strong className="text-[#4A4A4A]">Ansvarsfriskrivning:</strong> Informationen på Veridoca är allmän information och ska inte ses som personlig rådgivning. Priser och villkor ändras över tid—kontrollera alltid hos leverantören. Vi är inte ett försäkringsförmedlingsföretag och ger ingen rådgivning om specifika försäkringar.
           </p>
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <p className="text-slate-600 text-xs">
-              © {new Date().getFullYear()} Veridoca.com. All rights reserved.
+            <p className="text-[14px] text-[#8B8B8B]">
+              © {new Date().getFullYear()} Veridoca
             </p>
-            <div className="flex items-center gap-5">
-              <Link href="/privacy-policy" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Privacy</Link>
-              <Link href="/terms-of-service" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Terms</Link>
-              <Link href="/disclaimer" className="text-slate-600 hover:text-slate-300 text-xs transition-colors">Disclaimer</Link>
-              <button
-                onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
-                className="text-slate-600 hover:text-slate-300 text-xs transition-colors"
-              >
-                Cookie Settings
-              </button>
+            <div className="flex items-center gap-6">
+              <Link href="/integritet/" className="text-[14px] text-[#8B8B8B] hover:text-[#C95D3F] transition-colors">
+                Integritet
+              </Link>
+              <Link href="/reklam/" className="text-[14px] text-[#8B8B8B] hover:text-[#C95D3F] transition-colors">
+                Reklam
+              </Link>
             </div>
           </div>
         </div>

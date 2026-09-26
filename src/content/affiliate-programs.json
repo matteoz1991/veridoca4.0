@@ -1,0 +1,76 @@
+{
+  "programs": [
+    {
+      "slug": "telia",
+      "name": "Telia",
+      "category": "bredband-mobil",
+      "network": "Adtraction",
+      "url": "https://www.telia.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "tele2",
+      "name": "Tele2",
+      "category": "bredband-mobil",
+      "network": "Adtraction",
+      "url": "https://www.tele2.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "telenor",
+      "name": "Telenor",
+      "category": "bredband-mobil",
+      "network": "Adtraction",
+      "url": "https://www.telenor.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "tre",
+      "name": "3 (Tre)",
+      "category": "mobil",
+      "network": "Adrecord",
+      "url": "https://www.tre.se/",
+      "notes": "TODO: Ersätt med riktig Adrecord-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "hallon",
+      "name": "Hallon",
+      "category": "mobil",
+      "network": "Adtraction",
+      "url": "https://www.hallon.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "comviq",
+      "name": "Comviq",
+      "category": "mobil",
+      "network": "Adrecord",
+      "url": "https://www.comviq.se/",
+      "notes": "TODO: Ersätt med riktig Adrecord-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "vimla",
+      "name": "Vimla",
+      "category": "mobil",
+      "network": "Adtraction",
+      "url": "https://www.vimla.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "bahnhof",
+      "name": "Bahnhof",
+      "category": "bredband",
+      "network": "Adtraction",
+      "url": "https://www.bahnhof.se/",
+      "notes": "TODO: Ersätt med riktig Adtraction-spårningslänk när du gått med i programmet"
+    },
+    {
+      "slug": "bredbandsbolaget",
+      "name": "Bredbandsbolaget",
+      "category": "bredband",
+      "network": "Addrevenue",
+      "url": "https://www.bredbandsbolaget.se/",
+      "notes": "TODO: Ersätt med riktig Addrevenue-spårningslänk när du gått med i programmet"
+    }
+  ]
+}
