@@ -32,20 +32,27 @@ export default function Header() {
         : 'bg-[#FFFEF9] border-[#E5E5E5]'
     }`}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity group" aria-label="Veridoca">
-          {/* Logo mark seal (always shown) */}
+        <Link href="/" className="hover:opacity-80 transition-opacity" aria-label="Veridoca">
+          {/* Desktop: full logo with seal + wordmark at 44px tall */}
           <Image 
-            src="/logo-mark.svg" 
-            alt="" 
-            width={40} 
-            height={40} 
-            className="h-10 w-10 flex-shrink-0"
+            src="/logo.svg" 
+            alt="Veridoca" 
+            width={176} 
+            height={44} 
+            className="hidden sm:block h-11"
+            unoptimized
             priority
           />
-          {/* Wordmark text - hidden on small mobile, shown from sm breakpoint */}
-          <span className="hidden sm:block font-serif text-2xl font-semibold text-[#2C2C2C] tracking-tight group-hover:text-[#C95D3F] transition-colors">
-            Veridoca
-          </span>
+          {/* Mobile: wordmark only at 26px tall */}
+          <Image 
+            src="/logo-wordmark.svg" 
+            alt="Veridoca" 
+            width={104} 
+            height={26} 
+            className="block sm:hidden h-[26px]"
+            unoptimized
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

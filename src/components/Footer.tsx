@@ -40,9 +40,10 @@ export default function Footer() {
               <Image 
                 src="/logo-mark.svg" 
                 alt="Veridoca" 
-                width={80} 
-                height={80} 
-                className="h-20 w-20"
+                width={72} 
+                height={72} 
+                className="h-[72px] w-[72px]"
+                unoptimized
               />
             </Link>
             <p className="text-[15px] text-[#8B8B8B] leading-relaxed max-w-xs">
