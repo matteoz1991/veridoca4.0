@@ -1,34 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 120" fill="none">
-  <defs>
-    <path id="circlePath" d="M 60,60 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0" />
-  </defs>
-  
-  <!-- Logo mark: seal stamp -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120">
+  <!-- Logo mark seal -->
   <g id="seal">
-    <!-- Outer ring -->
     <circle cx="60" cy="60" r="54" stroke="#2C2C2C" stroke-width="1.5" fill="none" />
-    
-    <!-- Inner ring -->
     <circle cx="60" cy="60" r="48" stroke="#2C2C2C" stroke-width="1" fill="none" />
     
-    <!-- Circular text -->
-    <text font-family="sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.8" fill="#2C2C2C">
-      <textPath href="#circlePath" startOffset="0%" text-anchor="start">
-        VERIDOCA · OBEROENDE GUIDER ·
-      </textPath>
-    </text>
+    <!-- Decorative dots -->
+    <circle cx="60" cy="9" r="1.5" fill="#2C2C2C" />
+    <circle cx="87" cy="15" r="1.5" fill="#2C2C2C" />
+    <circle cx="105" cy="33" r="1.5" fill="#2C2C2C" />
+    <circle cx="111" cy="60" r="1.5" fill="#2C2C2C" />
+    <circle cx="105" cy="87" r="1.5" fill="#2C2C2C" />
+    <circle cx="87" cy="105" r="1.5" fill="#2C2C2C" />
+    <circle cx="60" cy="111" r="1.5" fill="#2C2C2C" />
+    <circle cx="33" cy="105" r="1.5" fill="#2C2C2C" />
+    <circle cx="15" cy="87" r="1.5" fill="#2C2C2C" />
+    <circle cx="9" cy="60" r="1.5" fill="#2C2C2C" />
+    <circle cx="15" cy="33" r="1.5" fill="#2C2C2C" />
+    <circle cx="33" cy="15" r="1.5" fill="#2C2C2C" />
     
-    <!-- Center serif V -->
-    <text x="60" y="78" font-family="serif" font-size="58" font-weight="600" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
-      V
-    </text>
+    <!-- Serif V -->
+    <path d="M 38,45 L 44,45 L 44,46 L 42,46 L 42,47 L 53,72 L 55,72 L 57,72 L 60,64 L 63,72 L 65,72 L 67,72 L 78,47 L 78,46 L 76,46 L 76,45 L 82,45 L 82,46 L 80,46 L 80,47 L 68,75 L 68,77 L 66,77 L 64,77 L 60,66 L 56,77 L 54,77 L 52,77 L 52,75 L 40,47 L 40,46 L 38,46 Z" fill="#C95D3F" />
   </g>
   
-  <!-- Wordmark "Veridoca" -->
-  <text x="145" y="65" font-family="serif" font-size="52" font-weight="600" fill="#2C2C2C" letter-spacing="-0.5">
-    Veridoca
-  </text>
+  <!-- Simplified wordmark - basic serif letter shapes as paths -->
+  <!-- V -->
+  <path d="M 140,50 L 145,50 L 153,72 L 161,50 L 166,50 L 155,80 L 151,80 Z" fill="#2C2C2C" />
+  <!-- e -->
+  <path d="M 170,58 L 178,58 C 182,58 184,60 184,64 C 184,66 183,68 180,69 L 184,75 L 180,75 L 177,69 L 174,69 L 174,75 L 170,75 Z M 174,61 L 174,66 L 177,66 C 179,66 180,65 180,64 C 180,62 179,61 177,61 Z" fill="#2C2C2C" />
+  <!-- i -->
+  <path d="M 190,58 L 194,58 L 194,75 L 190,75 Z M 190,52 L 194,52 L 194,56 L 190,56 Z" fill="#2C2C2C" />
+  <!-- d -->
+  <path d="M 200,50 L 204,50 L 204,75 L 200,75 Z M 200,58 L 210,58 C 214,58 216,61 216,66 C 216,71 214,74 210,74 L 200,74 Z M 204,61 L 204,71 L 209,71 C 211,71 212,69 212,66 C 212,63 211,61 209,61 Z" fill="#2C2C2C" />
+  <!-- o -->
+  <path d="M 220,58 L 228,58 C 232,58 234,61 234,66 C 234,71 232,74 228,74 L 220,74 Z M 224,61 L 224,71 L 227,71 C 230,71 231,69 231,66 C 231,63 230,61 227,61 Z" fill="#2C2C2C" />
+  <!-- c -->
+  <path d="M 238,58 L 246,58 L 246,61 L 242,61 L 242,71 L 246,71 L 246,74 L 238,74 Z" fill="#2C2C2C" />
+  <!-- a -->
+  <path d="M 250,58 L 258,58 C 262,58 264,60 264,64 C 264,67 262,69 259,69 L 264,75 L 260,75 L 256,69 L 254,69 L 254,75 L 250,75 Z M 254,61 L 254,66 L 257,66 C 259,66 260,65 260,64 C 260,62 259,61 257,61 Z" fill="#2C2C2C" />
   
-  <!-- Thin terracotta accent rule -->
-  <line x1="145" y1="85" x2="365" y2="85" stroke="#C95D3F" stroke-width="1.5" />
+  <!-- Thin terracotta rule -->
+  <line x1="140" y1="85" x2="270" y2="85" stroke="#C95D3F" stroke-width="1.5" />
 </svg>

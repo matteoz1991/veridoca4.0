@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
-  <!-- Circle background -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Clean circle background -->
   <circle cx="60" cy="60" r="58" fill="#FFFEF9" />
   
   <!-- Circle border -->
   <circle cx="60" cy="60" r="58" stroke="#2C2C2C" stroke-width="2" fill="none" />
   
-  <!-- Terracotta serif V -->
-  <text x="60" y="83" font-family="serif" font-size="68" font-weight="700" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
-    V
-  </text>
+  <!-- Bold serif V as path -->
+  <path d="M 35,40 L 42,40 L 42,41 L 40,41 L 40,42 L 52,73 L 55,73 L 58,73 L 60,66 L 62,73 L 65,73 L 68,73 L 80,42 L 80,41 L 78,41 L 78,40 L 85,40 L 85,41 L 83,41 L 83,42 L 70,76 L 70,78 L 67,78 L 64,78 L 60,67 L 56,78 L 53,78 L 50,78 L 50,76 L 37,42 L 37,41 L 35,41 Z" fill="#C95D3F" />
 </svg>

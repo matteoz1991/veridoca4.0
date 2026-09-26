@@ -1,23 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
-  <defs>
-    <path id="circlePath" d="M 60,60 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0" />
-  </defs>
-  
-  <!-- Outer ring -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Outer circle ring -->
   <circle cx="60" cy="60" r="54" stroke="#2C2C2C" stroke-width="1.5" fill="none" />
   
-  <!-- Inner ring -->
+  <!-- Inner circle ring -->
   <circle cx="60" cy="60" r="48" stroke="#2C2C2C" stroke-width="1" fill="none" />
   
-  <!-- Circular text "VERIDOCA · OBEROENDE GUIDER ·" -->
-  <text font-family="sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.8" fill="#2C2C2C">
-    <textPath href="#circlePath" startOffset="0%" text-anchor="start">
-      VERIDOCA · OBEROENDE GUIDER ·
-    </textPath>
-  </text>
+  <!-- Decorative dots around the ring (instead of unreadable small text) -->
+  <circle cx="60" cy="9" r="1.5" fill="#2C2C2C" />
+  <circle cx="87" cy="15" r="1.5" fill="#2C2C2C" />
+  <circle cx="105" cy="33" r="1.5" fill="#2C2C2C" />
+  <circle cx="111" cy="60" r="1.5" fill="#2C2C2C" />
+  <circle cx="105" cy="87" r="1.5" fill="#2C2C2C" />
+  <circle cx="87" cy="105" r="1.5" fill="#2C2C2C" />
+  <circle cx="60" cy="111" r="1.5" fill="#2C2C2C" />
+  <circle cx="33" cy="105" r="1.5" fill="#2C2C2C" />
+  <circle cx="15" cy="87" r="1.5" fill="#2C2C2C" />
+  <circle cx="9" cy="60" r="1.5" fill="#2C2C2C" />
+  <circle cx="15" cy="33" r="1.5" fill="#2C2C2C" />
+  <circle cx="33" cy="15" r="1.5" fill="#2C2C2C" />
   
-  <!-- Center serif V in terracotta -->
-  <text x="60" y="78" font-family="serif" font-size="58" font-weight="600" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
-    V
-  </text>
+  <!-- Serif V as path (hand-drawn serif letter) -->
+  <path d="M 38,45 L 44,45 L 44,46 L 42,46 L 42,47 L 53,72 L 55,72 L 57,72 L 60,64 L 63,72 L 65,72 L 67,72 L 78,47 L 78,46 L 76,46 L 76,45 L 82,45 L 82,46 L 80,46 L 80,47 L 68,75 L 68,77 L 66,77 L 64,77 L 60,66 L 56,77 L 54,77 L 52,77 L 52,75 L 40,47 L 40,46 L 38,46 Z" fill="#C95D3F" />
 </svg>
