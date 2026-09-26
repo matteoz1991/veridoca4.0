@@ -1,23 +1,37 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
   { label: 'Bredband', href: '/bredband/' },
   { label: 'Mobilabonnemang', href: '/mobilabonnemang/' },
   { label: 'Hemförsäkring', href: '/forsakring/hemforsakring/' },
+  { label: 'Verktyg', href: '/verktyg/' },
   { label: 'Om', href: '/om-oss/' },
 ]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="border-b border-[#E5E5E5] bg-[#FFFEF9]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl font-semibold text-[#2C2C2C] tracking-tight">
+    <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+      scrolled 
+        ? 'bg-[#FFFEF9]/95 backdrop-blur-md border-[#E5E5E5] shadow-sm' 
+        : 'bg-[#FFFEF9] border-[#E5E5E5]'
+    }`}>
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+        <Link href="/" className="font-serif text-2xl font-semibold text-[#2C2C2C] tracking-tight hover:text-[#C95D3F] transition-colors">
           Veridoca
         </Link>
 
@@ -50,7 +64,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-[#E5E5E5] bg-[#FFFEF9]">
+        <div className="md:hidden border-t border-[#E5E5E5] bg-[#FFFEF9] animate-slideDown">
           <div className="max-w-6xl mx-auto px-6 py-4 space-y-3">
             {navItems.map((item) => (
               <Link
