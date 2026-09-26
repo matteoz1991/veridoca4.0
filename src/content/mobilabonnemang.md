@@ -6,6 +6,8 @@ lastUpdated: "2026-09-26"
 
 # Mobilabonnemangsguiden 2026
 
+_Skriven av Matt, 15 år i telekombranschen_
+
 **UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
 
 Att välja mobilabonnemang kan vara förvirrande med alla olika operatörer, datapaket och bindningsvillkor. Den här guiden hjälper dig att hitta rätt abonnemang för dina behov.

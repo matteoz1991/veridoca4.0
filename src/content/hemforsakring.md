@@ -6,6 +6,8 @@ lastUpdated: "2026-09-26"
 
 # Hemförsäkring: vad den täcker och vad du bör tänka på
 
+_Skriven av Matt, 15 år i telekombranschen_
+
 **UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
 
 **OBS:** Detta är en rent informativ guide om vad en hemförsäkring vanligtvis innehåller. Vi ger inga råd eller rekommendationer om vilken försäkring du ska välja, och vi rankar inte försäkringsbolag. För rådgivning, kontakta en försäkringsrådgivare eller försäkringsbolag direkt.

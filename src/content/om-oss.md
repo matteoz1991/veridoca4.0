@@ -13,10 +13,11 @@ Vi vill göra det enklare för svenska konsumenter att förstå och jämföra ol
 
 ## Vem driver webbplatsen?
 
-**TODO: Fyll i ditt namn, bakgrund och erfarenhet inom telekom/energibranschen. Berätta varför du startade den här sajten och vad du vill uppnå.**
+Hej, jag heter Matt. I 15 år har jag jobbat i telekombranschen, mest med att sälja bredband och mobilabonnemang, och en del försäkringar också. Jag har suttit på andra sidan bordet och vet hur kampanjpriser, bindningstider och tillägg fungerar, och var det brukar bli dyrt när kampanjen tar slut.
 
-Exempel:
-> Jag heter [DITT NAMN] och har arbetat i [X] år inom telekom- och energibranschen med fokus på försäljning och kundkontakt. Jag startade veridoca.com för att dela med mig av min erfarenhet och hjälpa konsumenter att hitta rätt lösningar utan krångel.
+Veridoca startade jag för att göra det enklare att välja rätt, utan säljsnack. Här räknar vi på vad ett abonnemang faktiskt kostar över tid, förklarar villkoren på vanlig svenska och säger ärligt när det inte lönar sig att byta.
+
+Sajten finansieras genom affiliatelänkar. Om du går vidare till en leverantör via en länk märkt Reklamlänk kan jag få ersättning. Det påverkar aldrig vad jag rekommenderar eller vilket pris du betalar.
 
 ## Hur vi arbetar
 

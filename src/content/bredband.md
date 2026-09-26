@@ -6,6 +6,8 @@ lastUpdated: "2026-09-26"
 
 # Bredbandguiden: Hitta rätt bredband 2026
 
+_Skriven av Matt, 15 år i telekombranschen_
+
 **UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
 
 Att välja rätt bredband handlar om mycket mer än bara hastighet. I den här guiden går vi igenom de viktigaste faktorerna att tänka på när du ska teckna eller byta bredbandsavtal.

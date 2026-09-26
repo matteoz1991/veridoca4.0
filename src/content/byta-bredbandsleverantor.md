@@ -6,6 +6,8 @@ lastUpdated: "2026-09-26"
 
 # Byta bredbandsleverantör: så gör du
 
+_Skriven av Matt, 15 år i telekombranschen_
+
 **UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
 
 Att byta bredbandsleverantör kan kännas krångligt, men i de flesta fall går det snabbt och smidigt om du förbereder dig rätt.
