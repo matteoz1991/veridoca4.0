@@ -6,6 +6,8 @@ lastUpdated: "2026-09-26"
 
 # Hitta billigt mobilabonnemang: checklista
 
+_Skriven av Matt, 15 år i telekombranschen_
+
 **UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
 
 Vill du spara pengar på ditt mobilabonnemang? Här är en steg-för-steg-checklista för att hitta ett billigt abonnemang som ändå passar dina behov.
