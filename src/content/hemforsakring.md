@@ -34,7 +34,7 @@ Självrisk är den summa du själv betalar vid en skada innan försäkringen tr�
 **Högre självrisk = lägre premie:**
 Vissa väljer en högre självrisk för att få lägre månadskostnad. Fundera på vad du har råd att betala själv om olyckan är framme.
 
-Vanliga självrisknivåer i Sverige brukar ligga mellan 1 000 kr och 5 000 kr. Många försäkringar har en grundsjälvrisk på 1 500 kr. Om du väljer högre självrisk får du oftast lägre årspremie, men du måste kunna betala den högre summan själv vid en skada.
+Självrisken varierar och anges i dina försäkringsvillkor. Om du väljer högre självrisk får du oftast lägre årspremie, men du måste kunna betala den högre summan själv vid en skada.
 
 ## Allriskförsäkring
 
@@ -44,7 +44,7 @@ En vanlig hemförsäkring täcker olyckor som brand, vattenskada, inbrott och vi
 
 Allrisk är dyrare, men kan vara värt det om du har dyra elektronikprylar eller ofta är ute och reser.
 
-Allriskskydd täcker exempelvis situationer som att du tappar din mobiltelefon i golvet så att skärmen går sönder, spiller kaffe på datorn, eller skadar kameran av misstag. Vanlig hemförsäkring täcker bara dessa om de orsakats av en namngiven händelse (t.ex. brand eller inbrott). Kostnaden för allrisk varierar mellan försäkringsbolag och beroende på dina övriga villkor – vissa lägger till det som ett tillägg på några hundralappar per år, medan andra har högre påslag.
+Allriskskydd täcker exempelvis situationer som att du tappar din mobiltelefon i golvet så att skärmen går sönder, spiller kaffe på datorn, eller skadar kameran av misstag. Vanlig hemförsäkring täcker bara dessa om de orsakats av en namngiven händelse (t.ex. brand eller inbrott). Kostnaden för allrisk varierar mellan försäkringsbolag och beroende på dina övriga villkor.
 
 ## Försäkringsbelopp och värdering
 
@@ -56,7 +56,7 @@ När du tecknar försäkringen anger du ett försäkringsbelopp – det högsta 
 
 De flesta hemförsäkringar i Sverige har nyvärdeskydd, men kolla villkoren.
 
-Nyvärdeskydd är idag standard i de flesta svenska hemförsäkringar och innebär att du får ersättning motsvarande vad det kostar att köpa en likvädig ny sak (inte exakt samma modell om den är utgången, utan en likvärdig ersättning). Vissa äldre försäkringar eller billigare alternativ har dagsvärdeskydd, där du bara får ersättning för vad saken är värd idag med hänsyn till ålder och slitage. Se även till att ditt försäkringsbelopp (totala ersättningssumman) är tillräckligt högt – vänd en runda hemma och uppskatta vad det skulle kosta att ersätta allt om allting förstördes i en brand.
+Många försäkringar betalar nyvärde för nyare saker men gör ett åldersavdrag på äldre föremål, så läs villkoren noggrannare. Du får då ersättning motsvarande vad det kostar att köpa en likvärdig ny sak (inte exakt samma modell om den är utgången, utan en likvärdig ersättning). Vissa äldre försäkringar eller billigare alternativ har dagsvärdeskydd, där du bara får ersättning för vad saken är värd idag med hänsyn till ålder och slitage. Se även till att ditt försäkringsbelopp (totala ersättningssumman) är tillräckligt högt – vänd en runda hemma och uppskatta vad det skulle kosta att ersätta allt om allting förstördes i en brand. För neutrala jämförelser av försäkringsvillkor, se Konsumenternas.se.
 
 ## Frågor att ställa innan du tecknar försäkring
 

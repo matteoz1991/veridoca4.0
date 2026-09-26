@@ -19,7 +19,7 @@ Innan du byter, se över ditt nuvarande avtal:
 - Har du kvar bindningstid?
 - Finns det några avgifter för förtida uppsägning?
 
-Du hittar dina avtalsvillkor i operatörens kundportal (logga in på deras webbsida), i det bekräftelsemail du fick när du tecknade avtalet, eller genom att ringa kundservice. Notera särskilt när bindningstiden går ut – att säga upp några veckor för tidigt kan kosta tusen kronor i förtidsavgift.
+Du hittar dina avtalsvillkor i operatörens kundportal (logga in på deras webbsida), i det bekräftelsemail du fick när du tecknade avtalet, eller genom att ringa kundservice. Notera särskilt när bindningstiden går ut – att säga upp för tidigt kan kosta pengar i förtidsavgift. Använd gärna vår [bindningstidskalkylator](/verktyg/bindningstid/) för att räkna ut när det lönar sig att byta.
 
 ### 2. Jämför nya leverantörer
 
@@ -40,7 +40,7 @@ Beroende på typ av bredband:
 - **Fiber:** Kan kräva installationsbesök eller att du själv kopplar in en router
 - **Mobilt bredband:** Får ofta routern hemskickad, aktiveras automatiskt
 
-De flesta fiberoperatörer skickar bara en router som du själv kopplar in – det räcker oftast att koppla en kabel från fiberjacket i väggen till routern. Installationsbesök kostar ofta 500–1000 kr extra och behövs bara om det är något tekniskt problem. Mobilt bredband är enklast: routern kommer med posten, du sätter i den och slår på – klar på fem minuter.
+De flesta fiberoperatörer skickar bara en router som du själv kopplar in – det räcker oftast att koppla en kabel från fiberjacket i väggen till routern. Om du behöver ett installationsbesök, fråga vad det kostar – det behövs bara om det är något tekniskt problem. Mobilt bredband är enklast: routern kommer med posten, du sätter i den och slår på – klar på fem minuter.
 
 ### 5. Säg upp det gamla abonnemanget
 
@@ -58,7 +58,7 @@ Många leverantörer skickar eller installerar en egen router. När du byter lev
 - Returnera den gamla routern (kolla ditt avtal)
 - Installera en ny router från den nya leverantören
 
-De flesta operatörer äger routern och kräver att du skickar tillbaka den när du avslutar abonnemanget. Om du inte returnerar den inom angiven tid (ofta 14–30 dagar) kan de debitera dig för routerns värde, vanligen 500–1500 kr. Spara returlappen och följesedeln som bevis på att du skickat tillbaka den.
+De flesta operatörer äger routern och kräver att du skickar tillbaka den när du avslutar abonnemanget. Om du inte returnerar den inom den tid som anges i ditt avtal kan operatören debitera dig för routern. Spara returlappen och följesedeln som bevis på att du skickat tillbaka den.
 
 ---
 

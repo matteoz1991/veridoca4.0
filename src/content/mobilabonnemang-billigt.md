@@ -31,7 +31,7 @@ De stora operatörerna (Telia, Tele2, Tre) är ofta dyrare än de virtuella oper
 - Ingår EU-roaming?
 - Hur är kundservicen?
 
-Min erfarenhet: virtuella operatörer kan spara dig 100–200 kr per månad för i stort sett samma sak. De största skillnaderna brukar vara att kundservice är enklare (ofta bara chatt eller mail, ingen fysisk butik) och att vissa tilläggstjänster saknas. Men om du mest behöver surf, samtal och sms fungerar de utmärkt. Kolla bara att operatören använder ett nät med bra täckning där du bor – täckningen är identisk med huvudoperatören eftersom det är samma nät.
+Min erfarenhet: virtuella operatörer är ofta betydligt billigare för i stort sett samma sak på samma nät. De största skillnaderna brukar vara att kundservice är enklare (ofta bara chatt eller mail, ingen fysisk butik) och att vissa tilläggstjänster saknas. Men om du mest behöver surf, samtal och sms fungerar de utmärkt. Kolla bara att operatören använder ett nät med bra täckning där du bor – täckningen är identisk med huvudoperatören eftersom det är samma nät. Använd gärna vår [mobilabonnemangskalkylator](/verktyg/mobilkalkylator/) för att jämföra totalkostnaden.
 
 ## 4. Undvik onödiga tillval
 
@@ -63,7 +63,7 @@ Räkna på hela perioden:
 - Uppläggningsavgift
 - Bindningstid och eventuella avgifter vid uppsägning
 
-Använd gärna vår [Mobilabonnemangskalkylator](/verktyg/mobilabonnemang-kalkylator/) för att räkna ut den verkliga kostnaden över hela avtalsperioden och jämföra olika alternativ. Det är lätt att fastna för ett lågt kampanjpris och missa att ordinarie priset efter kampanjen är mycket högre.
+Använd gärna vår [mobilabonnemangskalkylator](/verktyg/mobilkalkylator/) för att räkna ut den verkliga kostnaden över hela avtalsperioden och jämföra olika alternativ. Det är lätt att fastna för ett lågt kampanjpris och missa att ordinarie priset efter kampanjen är mycket högre.
 
 ## 8. Kolla användarrecensioner
 

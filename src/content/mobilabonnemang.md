@@ -17,14 +17,14 @@ I Sverige finns det egentligen bara tre stora mobilnät:
 - **Tele2**
 - **Tre (3)**
 
-Alla andra operatörer är så kallade **virtuella operatörer** (MVNO) som hyr kapacitet i något av dessa tre nät. Exempel: Hallon, Comviq, Vimla, Lycamobile.
+Alla andra operatörer är så kallade **virtuella operatörer** (MVNO) som hyr kapacitet i något av dessa tre nät. Exempel: Hallon, Comviq, Vimla.
 
 **Virtuella operatörer:**
 - Ofta billigare än huvudoperatören
 - Använder samma nät och täckning som "moderbolaget"
 - Kan ha sämre kundservice eller färre tillval (t.ex. roaming)
 
-Exempel på virtuella operatörer och vilket nät de använder: Hallon och Comviq använder Tele2s nät, Vimla använder Telias nät, och Lycamobile använder Tre (3):s nät. Priserna kan skilja 100–200 kr/mån för samma datamängd jämfört med huvudoperatören, så det är definitivt värt att jämföra. Täckningen är identisk eftersom det är samma master och samma nät – skillnaden ligger i service, support och eventuella tilläggstjänster.
+Exempel på virtuella operatörer och vilket nät de använder: Comviq använder Tele2:s nät, Vimla använder Telias nät, Hallon använder Tre:s nät. Virtuella operatörer är ofta billigare än huvudoperatörerna för samma datamängd, så det är definitivt värt att jämföra. Täckningen är identisk eftersom det är samma master och samma nät – skillnaden ligger i service, support och eventuella tilläggstjänster.
 
 ## Hur mycket surf behöver du?
 
@@ -45,7 +45,7 @@ Ditt behov av data beror på hur du använder mobilen:
 - Sällan tillgång till wifi
 - Använder mobilen som hotspot
 
-Enligt PTS senaste statistik ligger svensk genomsnittlig mobilanvändning på omkring 10–15 GB per månad, men det varierar mycket beroende på om du har wifi hemma och på jobbet. Kolla din egen förbrukning i telefonens inställningar under "Mobildata" eller "Dataanvändning" – där ser du exakt hur mycket du använt senaste månaden.
+Kolla din egen förbrukning i telefonens inställningar under "Mobildata" eller "Dataanvändning" – där ser du exakt hur mycket du använt senaste månaden. Förbrukningen varierar mycket beroende på om du har wifi hemma och på jobbet.
 
 ## Familjeabonnemang och poolade data
 
@@ -60,7 +60,7 @@ Många operatörer erbjuder familjeabonnemang där flera SIM-kort delar på en g
 - Om någon streamar mycket kan poolen ta slut
 - Alla är bundna till samma operatör och avtal
 
-De flesta operatörer erbjuder familjeabonnemang där extrakort kostar runt 50–100 kr mindre per kort jämfört med separata avtal. Detaljerna varierar mellan operatörer och kampanjer ändras ofta, så kolla aktuella priser direkt hos Telia, Tele2, Tre och de virtuella operatörerna när du jämför.
+De flesta operatörer erbjuder familjeabonnemang där extrakort ofta är billigare än separata avtal. Detaljerna varierar mellan operatörer och kampanjer ändras ofta, så kolla aktuella priser direkt hos Telia, Tele2, Tre och de virtuella operatörerna när du jämför.
 
 ## Bindningstid
 

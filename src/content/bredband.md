@@ -41,7 +41,7 @@ Om fiber inte finns där du bor, eller om du behöver flexibilitet, kan mobilt b
 - Kan ha datatak
 - Högre latens än fiber
 
-Priset för mobilt bredband börjar ofta runt 200–300 kr/mån för grundläggande hastigheter. För bästa täckning, kolla vilka nät som fungerar bra i ditt område – de tre stora näten (Telia, Tele2 och Tre) har olika utbyggnad på landsbygden. PTS täckningskartor på pts.se visar var respektive operatör har 4G- och 5G-täckning.
+Priset för mobilt bredband varierar med hastighet och eventuella datatak. För att jämföra olika alternativ kan du använda vår [bredbandskalkylator](/verktyg/bredbandskalkylator/). För bästa täckning, kolla vilka nät som fungerar bra i ditt område – de tre stora näten (Telia, Tele2 och Tre) har olika utbyggnad på landsbygden. PTS täckningskartor på pts.se visar var respektive operatör har 4G- och 5G-täckning.
 
 ## Bindningstid och uppsägningstid
 
@@ -76,7 +76,7 @@ I Sverige finns både stora nationella operatörer (Telia, Tele2, Telenor) och m
 
 **Mitt tips:** Stora operatörer har ofta bra kundservice och teknisk support, men är sällan billigast. Mindre lokala fiberföreningar kan ha förmånliga priser om du bor inom deras område. Mobila bredbandsoperatörer skiljer sig mest på vilken täckning de har i just ditt område – här är det värt att kolla med grannar eller testa själv om möjligt.
 
-Viktigt att kolla: kampanjpriset gäller ofta bara första året. Räkna alltid på vad abonnemanget kostar efter kampanjperioden. Om ordinarie pris är 499 kr men kampanjpris 199 kr första året, blir genomsnittskostnaden över två år 349 kr/mån – inte 199 kr.
+Viktigt att kolla: kampanjpriset gäller ofta bara första året. Räkna alltid på vad abonnemanget kostar efter kampanjperioden. Ett räkneexempel: Om ordinarie pris är 499 kr men kampanjpris 199 kr första året, blir genomsnittskostnaden över två år 349 kr/mån – inte 199 kr.
 
 ---
 
