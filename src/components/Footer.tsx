@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 const footerLinks = {
   guides: {
@@ -35,8 +36,14 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="font-serif text-2xl font-semibold text-[#2C2C2C] tracking-tight mb-4 inline-block">
-              Veridoca
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity" aria-label="Veridoca">
+              <Image 
+                src="/logo-mark.svg" 
+                alt="Veridoca" 
+                width={80} 
+                height={80} 
+                className="h-20 w-20"
+              />
             </Link>
             <p className="text-[15px] text-[#8B8B8B] leading-relaxed max-w-xs">
               Oberoende guider om bredband, mobilabonnemang och hemförsäkring.

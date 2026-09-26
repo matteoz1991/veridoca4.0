@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="#FFFEF9">
+  <defs>
+    <path id="circlePath" d="M 365,315 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0" />
+  </defs>
+  
+  <rect width="1200" height="630" fill="#FFFEF9" />
+  
+  <g id="seal">
+    <circle cx="365" cy="315" r="54" stroke="#2C2C2C" stroke-width="1.5" fill="none" />
+    <circle cx="365" cy="315" r="48" stroke="#2C2C2C" stroke-width="1" fill="none" />
+    
+    <text font-family="sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.8" fill="#2C2C2C">
+      <textPath href="#circlePath" startOffset="0%" text-anchor="start">
+        VERIDOCA - OBEROENDE GUIDER -
+      </textPath>
+    </text>
+    
+    <text x="365" y="333" font-family="serif" font-size="58" font-weight="600" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
+      V
+    </text>
+  </g>
+  
+  <text x="450" y="320" font-family="serif" font-size="52" font-weight="600" fill="#2C2C2C" letter-spacing="-0.5">
+    Veridoca
+  </text>
+  
+  <line x1="450" y1="340" x2="770" y2="340" stroke="#C95D3F" stroke-width="1.5" />
+  
+  <text x="450" y="375" font-family="sans-serif" font-size="20" font-weight="400" fill="#4A4A4A">
+    Oberoende guider om bredband, mobilabonnemang och hemforsakring
+  </text>
+</svg>

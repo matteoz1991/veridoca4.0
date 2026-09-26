@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <path id="circlePath" d="M 60,60 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0" />
+  </defs>
+  
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="54" stroke="#2C2C2C" stroke-width="1.5" fill="none" />
+  
+  <!-- Inner ring -->
+  <circle cx="60" cy="60" r="48" stroke="#2C2C2C" stroke-width="1" fill="none" />
+  
+  <!-- Circular text "VERIDOCA · OBEROENDE GUIDER ·" -->
+  <text font-family="sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.8" fill="#2C2C2C">
+    <textPath href="#circlePath" startOffset="0%" text-anchor="start">
+      VERIDOCA · OBEROENDE GUIDER ·
+    </textPath>
+  </text>
+  
+  <!-- Center serif V in terracotta -->
+  <text x="60" y="78" font-family="serif" font-size="58" font-weight="600" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
+    V
+  </text>
+</svg>

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -31,8 +32,25 @@ export default function Header() {
         : 'bg-[#FFFEF9] border-[#E5E5E5]'
     }`}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl font-semibold text-[#2C2C2C] tracking-tight hover:text-[#C95D3F] transition-colors">
-          Veridoca
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity" aria-label="Veridoca">
+          {/* Desktop: full logo lockup */}
+          <Image 
+            src="/logo.svg" 
+            alt="Veridoca" 
+            width={190} 
+            height={60} 
+            className="hidden md:block h-10 w-auto"
+            priority
+          />
+          {/* Mobile: logo mark only */}
+          <Image 
+            src="/logo-mark.svg" 
+            alt="Veridoca" 
+            width={40} 
+            height={40} 
+            className="md:hidden h-10 w-10"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

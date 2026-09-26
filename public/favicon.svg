@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Circle background -->
+  <circle cx="60" cy="60" r="58" fill="#FFFEF9" />
+  
+  <!-- Circle border -->
+  <circle cx="60" cy="60" r="58" stroke="#2C2C2C" stroke-width="2" fill="none" />
+  
+  <!-- Terracotta serif V -->
+  <text x="60" y="83" font-family="serif" font-size="68" font-weight="700" fill="#C95D3F" text-anchor="middle" dominant-baseline="middle">
+    V
+  </text>
+</svg>

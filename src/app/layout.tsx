@@ -30,6 +30,15 @@ export const metadata: Metadata = {
   authors: [{ name: 'Veridoca' }],
   creator: 'Veridoca',
   publisher: 'Veridoca',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -42,11 +51,20 @@ export const metadata: Metadata = {
     siteName: 'Veridoca',
     title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
     description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Veridoca — Oberoende guider',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
     description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
+    images: ['/og-image.png'],
   },
   metadataBase: new URL('https://veridoca.com'),
 }
