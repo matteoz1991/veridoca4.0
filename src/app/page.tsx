@@ -1,173 +1,163 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Wifi, Smartphone, Home, Shield, FileText, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
   description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring. Hjälper dig att jämföra och förstå dina alternativ.',
 }
 
-const guides = [
-  {
-    icon: Wifi,
-    title: 'Bredband',
-    description: 'Guider om fiber, mobilt bredband, bindningstid och hur du byter leverantör.',
-    href: '/bredband/',
-    pages: [
-      { label: 'Bredbandguiden', href: '/bredband/' },
-      { label: 'Byta leverantör', href: '/bredband/byta-leverantor/' },
-    ],
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobilabonnemang',
-    description: 'Allt om surf, familjeabonnemang, operatörer och hur du hittar det billigaste abonnemanget.',
-    href: '/mobilabonnemang/',
-    pages: [
-      { label: 'Mobilabonnemang', href: '/mobilabonnemang/' },
-      { label: 'Billigt mobilabonnemang', href: '/mobilabonnemang/billigt/' },
-    ],
-  },
-  {
-    icon: Home,
-    title: 'Hemförsäkring',
-    description: 'Rent informativ guide om vad hemförsäkring täcker, självrisk och viktiga frågor att ställa.',
-    href: '/forsakring/hemforsakring/',
-    pages: [
-      { label: 'Hemförsäkring', href: '/forsakring/hemforsakring/' },
-    ],
-  },
-]
-
 export default function HomePage() {
   return (
-    <div className="bg-[#07090f]">
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden py-24">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[900px] h-[700px] rounded-full bg-emerald-500/[0.12] blur-[130px]" />
-          <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-blue-600/[0.08] blur-[100px]" />
-          <div className="absolute bottom-0 -left-32 w-[500px] h-[500px] rounded-full bg-violet-600/[0.07] blur-[100px]" />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.10] text-slate-300 text-sm mb-8 backdrop-blur-sm">
-            <Shield className="w-3.5 h-3.5 text-emerald-400" />
-            Oberoende guider på svenska
-          </div>
-
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight text-white mb-6">
-            Hitta rätt<br />
-            <span className="text-emerald-400">bredband & mobil</span>
-          </h1>
-
-          <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Oberoende guider om bredband, mobilabonnemang och hemförsäkring. Hjälper dig att jämföra och förstå dina alternativ.
+    <div className="bg-[#FFFEF9]">
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-20 pb-16">
+        <div className="max-w-3xl">
+          <p className="text-[15px] text-[#C95D3F] font-medium mb-6 tracking-wide">
+            OBEROENDE GUIDER
           </p>
+          <h1 className="font-serif text-6xl md:text-7xl font-semibold text-[#2C2C2C] leading-[1.05] tracking-tight mb-8">
+            Hitta rätt bredband, mobilabonnemang och försäkring
+          </h1>
+          <p className="text-[19px] text-[#4A4A4A] leading-relaxed max-w-2xl mb-10">
+            Praktiska guider skrivna av någon som faktiskt har jobbat i branschen. Inga rankings, inga påhittade jämförelser—bara information du faktiskt behöver.
+          </p>
+        </div>
 
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {['Fiber', 'Mobilt bredband', 'Mobilabonnemang', 'Hemförsäkring'].map((term) => (
-              <span
-                key={term}
-                className="px-3.5 py-1.5 bg-white/[0.05] text-slate-400 rounded-full border border-white/[0.08]"
-              >
-                {term}
-              </span>
-            ))}
+        <div className="flex flex-wrap gap-3 mt-12 text-[15px]">
+          {['Fiber', 'Mobilt bredband', 'Operatörer', 'Hemförsäkring'].map((term) => (
+            <span
+              key={term}
+              className="px-4 py-2 border border-[#E5E5E5] text-[#4A4A4A]"
+            >
+              {term}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-[#E5E5E5] py-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap justify-between gap-12 text-[15px] text-[#8B8B8B]">
+            <div>Uppdateras regelbundet</div>
+            <div>Inga tracking-cookies</div>
+            <div>Transparent om affiliatelänkar</div>
           </div>
         </div>
       </section>
 
-      <div className="border-t border-b border-white/[0.06] bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-center gap-8">
-            {[
-              { icon: Shield, text: 'Oberoende guider' },
-              { icon: FileText, text: 'Uppdateras regelbundet' },
-              { icon: Wifi, text: 'Bredband • Mobil • Försäkring' },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex items-center gap-2 text-slate-400 text-sm font-medium">
-                <Icon className="w-4 h-4 text-emerald-400" />
-                {text}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Våra guider</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">Tre områden</h2>
-            <p className="text-slate-400 text-lg">Allt du behöver veta om bredband, mobilabonnemang och hemförsäkring</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {guides.map((guide) => {
-              const Icon = guide.icon
-              return (
-                <Link
-                  key={guide.title}
-                  href={guide.href}
-                  className="group flex flex-col gap-4 p-6 rounded-2xl bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-200"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white text-lg mb-2">{guide.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed mb-4">{guide.description}</p>
-                    <div className="space-y-1.5">
-                      {guide.pages.map((page) => (
-                        <div key={page.href} className="text-sm text-slate-500">
-                          → {page.label}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <span className="text-emerald-400 text-sm font-medium mt-auto flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Läs mer <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-28 bg-white/[0.02] border-t border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">Transparent</p>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">Så tjänar vi pengar</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Veridoca finansieras via affiliatelänkar. Alla länkar är tydligt märkta med &ldquo;Reklamlänk&rdquo;. 
-              Det kostar ingenting extra för dig – vi får provision om du tecknar ett avtal via våra länkar.
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+        <div className="grid md:grid-cols-12 gap-16">
+          <div className="md:col-span-7">
+            <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-6 leading-tight">
+              Tre områden
+            </h2>
+            <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-12">
+              Jag fokuserar på de tre områden där jag har mest erfarenhet och där jag vet att folk faktiskt behöver hjälp.
             </p>
           </div>
-          <div className="text-center">
-            <Link
-              href="/reklam/"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/[0.06] hover:bg-white/[0.10] border border-white/[0.10] hover:border-white/[0.15] text-white font-medium rounded-xl transition-all"
-            >
-              Läs mer om hur det fungerar <ArrowRight className="w-4 h-4" />
+        </div>
+
+        <div className="space-y-16">
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">01</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/bredband/" className="hover:text-[#C95D3F] transition-colors">
+                  Bredband
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Fiber, mobilt bredband, bindningstider. Vad du faktiskt ska tänka på när du tecknar eller byter avtal. Ingen fluff.
+              </p>
+              <div className="space-y-2">
+                <Link href="/bredband/" className="block text-[15px] text-[#C95D3F] border-b border-[#C95D3F] inline-block hover:opacity-70 transition-opacity">
+                  Bredbandguiden →
+                </Link>
+                <Link href="/bredband/byta-leverantor/" className="block text-[15px] text-[#C95D3F] border-b border-[#C95D3F] inline-block hover:opacity-70 transition-opacity">
+                  Byta leverantör →
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">02</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/mobilabonnemang/" className="hover:text-[#C95D3F] transition-colors">
+                  Mobilabonnemang
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Hur mycket surf du verkligen behöver. Skillnaden mellan operatörer och virtuella operatörer. Vad som faktiskt spelar roll.
+              </p>
+              <div className="space-y-2">
+                <Link href="/mobilabonnemang/" className="block text-[15px] text-[#C95D3F] border-b border-[#C95D3F] inline-block hover:opacity-70 transition-opacity">
+                  Mobilabonnemang →
+                </Link>
+                <Link href="/mobilabonnemang/billigt/" className="block text-[15px] text-[#C95D3F] border-b border-[#C95D3F] inline-block hover:opacity-70 transition-opacity">
+                  Hitta billigt abonnemang →
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-12 gap-8 border-t border-[#E5E5E5] pt-8">
+            <div className="md:col-span-2">
+              <span className="text-[14px] font-medium text-[#8B8B8B] tracking-wide">03</span>
+            </div>
+            <div className="md:col-span-10">
+              <h3 className="font-serif text-3xl font-semibold text-[#2C2C2C] mb-4">
+                <Link href="/forsakring/hemforsakring/" className="hover:text-[#C95D3F] transition-colors">
+                  Hemförsäkring
+                </Link>
+              </h3>
+              <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6 max-w-2xl">
+                Rent informativ guide om vad hemförsäkring täcker, självrisk och frågor att ställa. Jag rankar inte försäkringsbolag och ger inga råd—det är strikt reglerat i Sverige.
+              </p>
+              <div className="space-y-2">
+                <Link href="/forsakring/hemforsakring/" className="block text-[15px] text-[#C95D3F] border-b border-[#C95D3F] inline-block hover:opacity-70 transition-opacity">
+                  Läs guiden →
+                </Link>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="border-t border-[#E5E5E5] bg-[#FAF9F5] py-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-6 leading-tight">
+              Hur tjänar sidan pengar?
+            </h2>
+            <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-6">
+              Veridoca finansieras via affiliatelänkar. När jag länkar till en operatör eller leverantör och du tecknar ett avtal, kan jag få en provision. Det kostar ingenting extra för dig.
+            </p>
+            <p className="text-[17px] text-[#4A4A4A] leading-relaxed mb-8">
+              Alla länkar är märkta med <span className="text-[12px] text-[#8B8B8B] font-medium uppercase tracking-wide border border-[#E5E5E5] px-2 py-1">Reklamlänk</span> så du vet exakt vilka som är affiliatelänkar.
+            </p>
+            <Link href="/reklam/" className="text-[15px] text-[#C95D3F] border-b border-[#C95D3F] hover:opacity-70 transition-opacity">
+              Läs mer om hur det fungerar →
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-20 sm:py-28 border-t border-white/[0.05]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-5xl font-black text-white mb-4">
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+        <div className="max-w-3xl">
+          <h2 className="font-serif text-4xl font-semibold text-[#2C2C2C] mb-6 leading-tight">
             Viktigt att veta
           </h2>
-          <div className="text-slate-400 text-base leading-relaxed max-w-3xl mx-auto space-y-3">
+          <div className="space-y-4 text-[17px] text-[#4A4A4A] leading-relaxed">
             <p>
-              Guiderna på Veridoca.com är allmän information och ska inte ses som personlig rådgivning. 
-              Priser, villkor och erbjudanden ändras över tid – kontrollera alltid aktuella uppgifter hos respektive leverantör.
+              Guiderna på Veridoca är allmän information och ska inte ses som personlig rådgivning. Priser och villkor ändras över tid—kontrollera alltid hos leverantören.
             </p>
-            <p className="text-sm text-slate-500 pt-4">
-              <strong>Hemförsäkring:</strong> Vi ger inga råd eller rekommendationer om vilken försäkring du ska välja, 
-              och vi rankar inte försäkringsbolag. För rådgivning, kontakta ett försäkringsbolag eller en oberoende försäkringsrådgivare.
+            <p className="text-[15px] text-[#8B8B8B] border-l-2 border-[#C95D3F] pl-6">
+              <strong className="text-[#4A4A4A]">Om hemförsäkring:</strong> Jag ger inga råd om vilken försäkring du ska välja och rankar inte försäkringsbolag. För rådgivning, kontakta ett försäkringsbolag eller en oberoende försäkringsrådgivare.
             </p>
           </div>
         </div>

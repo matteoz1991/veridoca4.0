@@ -9,17 +9,17 @@ interface AffiliateLinkProps {
 
 export default function AffiliateLink({ slug, children, className = '' }: AffiliateLinkProps) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`}>
+    <span className={`inline-flex items-baseline gap-2 ${className}`}>
       <Link
         href={`/go/${slug}/`}
         target="_blank"
         rel="sponsored nofollow noopener"
-        className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium underline transition-colors"
+        className="text-[#C95D3F] hover:opacity-70 font-medium border-b border-[#C95D3F] transition-opacity inline-flex items-baseline gap-1"
       >
         {children}
-        <ExternalLink className="w-3.5 h-3.5" />
+        <ExternalLink className="w-3 h-3 inline" />
       </Link>
-      <span className="text-xs text-slate-500 font-medium">Reklamlänk</span>
+      <span className="text-[12px] text-[#8B8B8B] font-medium uppercase tracking-wide">Reklamlänk</span>
     </span>
   )
 }
