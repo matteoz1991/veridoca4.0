@@ -1,72 +1,71 @@
 import { MetadataRoute } from 'next'
-import { templates } from '@/data/templates'
-import { articles } from '@/data/articles'
-import { states } from '@/data/states'
-import { pseoPages } from '@/data/pseo'
 
-const BASE = 'https://veridoca.com'
+export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${BASE}/templates`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/states`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/resources`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
-    { url: `${BASE}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
-    { url: `${BASE}/search`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE}/terms-of-service`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE}/disclaimer`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-  ]
-
-  const categoryPages: MetadataRoute.Sitemap = [
-    'business', 'employment', 'real-estate', 'personal', 'family', 'estate-planning', 'financial',
-  ].map(cat => ({
-    url: `${BASE}/templates/${cat}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  const templatePages: MetadataRoute.Sitemap = templates.map(t => ({
-    url: `${BASE}/templates/${t.category}/${t.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.75,
-  }))
-
-  const articlePages: MetadataRoute.Sitemap = articles.map(a => ({
-    url: `${BASE}/blog/${a.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-
-  const statePages: MetadataRoute.Sitemap = states.map(s => ({
-    url: `${BASE}/states/${s.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.65,
-  }))
-
-  const pseoSitemapPages: MetadataRoute.Sitemap = pseoPages.map(p => ({
-    url: p.canonicalUrl,
-    lastModified: new Date(p.lastReviewed),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
+  const baseUrl = 'https://veridoca.com'
+  const currentDate = new Date().toISOString()
 
   return [
-    ...staticPages,
-    ...categoryPages,
-    ...templatePages,
-    ...articlePages,
-    ...statePages,
-    ...pseoSitemapPages,
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/bredband/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/bredband/byta-leverantor/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/mobilabonnemang/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mobilabonnemang/billigt/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/forsakring/hemforsakring/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/om-oss/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/reklam/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/kontakt/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/integritet/`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
 }

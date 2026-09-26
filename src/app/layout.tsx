@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import CookieConsent from '@/components/CookieConsent'
 
 const geist = Geist({
   variable: '--font-geist-sans',
@@ -13,12 +11,12 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Free Legal Document Templates — Download Word & PDF | Veridoca',
+    default: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
     template: '%s | Veridoca',
   },
-  description: 'Download 500+ free legal document templates for the US. Business contracts, leases, wills, employment agreements & more. State-specific, cites primary legal sources. No registration required.',
-  keywords: ['legal document templates', 'free legal forms', 'contract templates', 'lease agreement', 'will template', 'power of attorney'],
-  authors: [{ name: 'Veridoca Editorial Team' }],
+  description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring. Hjälper dig att jämföra och förstå dina alternativ.',
+  keywords: ['bredband', 'mobilabonnemang', 'hemförsäkring', 'fiber', 'mobilt bredband', 'operatörer', 'Sverige'],
+  authors: [{ name: 'Veridoca' }],
   creator: 'Veridoca',
   publisher: 'Veridoca',
   robots: {
@@ -28,46 +26,27 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'sv_SE',
     url: 'https://veridoca.com',
     siteName: 'Veridoca',
-    title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
+    title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
+    description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Legal Document Templates — Veridoca',
-    description: 'Download 500+ free legal document templates for the US. State-specific, cites primary legal sources.',
+    title: 'Veridoca — Guider till bredband, mobilabonnemang & hemförsäkring',
+    description: 'Oberoende guider på svenska om bredband, mobilabonnemang och hemförsäkring.',
   },
   metadataBase: new URL('https://veridoca.com'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`}>
+    <html lang="sv" className={`${geist.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-[#07090f]">
-        {/* Google Consent Mode v2 — must fire before AdSense */}
-        <Script id="gcm-init" strategy="beforeInteractive">{`
-          window.dataLayer=window.dataLayer||[];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent','default',{
-            ad_storage:'denied',
-            ad_user_data:'denied',
-            ad_personalization:'denied',
-            analytics_storage:'denied',
-            wait_for_update:500
-          });
-        `}</Script>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329226931623109"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <CookieConsent />
       </body>
     </html>
   )

@@ -1,0 +1,15 @@
+# Redirects for affiliate links
+# TODO: Replace placeholder URLs with actual Adtraction/Adrecord/Addrevenue tracking URLs
+
+# Bredband operators
+/go/telia/* https://www.telia.se/ 302
+/go/tele2/* https://www.tele2.se/ 302
+/go/telenor/* https://www.telenor.se/ 302
+/go/bahnhof/* https://www.bahnhof.se/ 302
+/go/bredbandsbolaget/* https://www.bredbandsbolaget.se/ 302
+
+# Mobile operators
+/go/tre/* https://www.tre.se/ 302
+/go/hallon/* https://www.hallon.se/ 302
+/go/comviq/* https://www.comviq.se/ 302
+/go/vimla/* https://www.vimla.se/ 302
