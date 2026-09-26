@@ -33,7 +33,7 @@ Om vi i framtiden skulle införa cookies kommer vi att:
 
 ## Kontaktformulär
 
-**TODO:** Om du i framtiden lägger till ett kontaktformulär, beskriv här vilka uppgifter som samlas in (namn, e-post) och hur de används.
+Webbplatsen har för närvarande inget kontaktformulär. Om ett sådant läggs till i framtiden kommer denna policy att uppdateras med information om vilka uppgifter som samlas in (t.ex. namn och e-post) och hur de används.
 
 ## Dina rättigheter enligt GDPR
 
@@ -58,4 +58,7 @@ Om du har frågor om hur vi hanterar personuppgifter, se vår [kontaktsida](/kon
 
 **Personuppgiftsansvarig:**
 
-TODO: Fyll i ditt namn/företagsnamn och kontaktuppgifter enligt GDPR:s krav.
+veridoca.com  
+Kontaktuppgifter: se [kontaktsidan](/kontakt/)
+
+Eftersom webbplatsen för närvarande inte samlar in några personuppgifter finns ingen aktiv personuppgiftsbehandling att ansvara för. Om detta ändras kommer fullständiga kontaktuppgifter till personuppgiftsansvarig att publiceras här enligt GDPR:s krav.

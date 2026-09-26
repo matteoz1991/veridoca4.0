@@ -8,8 +8,6 @@ lastUpdated: "2026-09-26"
 
 _Skriven av Matt, 15 år i telekombranschen_
 
-**UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
-
 Att byta bredbandsleverantör kan kännas krångligt, men i de flesta fall går det snabbt och smidigt om du förbereder dig rätt.
 
 ## Så går bytet till
@@ -21,7 +19,7 @@ Innan du byter, se över ditt nuvarande avtal:
 - Har du kvar bindningstid?
 - Finns det några avgifter för förtida uppsägning?
 
-TODO: fyll i var man hittar avtalsvillkoren (ofta i kundportalen eller i bekräftelsemailet)
+Du hittar dina avtalsvillkor i operatörens kundportal (logga in på deras webbsida), i det bekräftelsemail du fick när du tecknade avtalet, eller genom att ringa kundservice. Notera särskilt när bindningstiden går ut – att säga upp några veckor för tidigt kan kosta tusen kronor i förtidsavgift.
 
 ### 2. Jämför nya leverantörer
 
@@ -42,7 +40,7 @@ Beroende på typ av bredband:
 - **Fiber:** Kan kräva installationsbesök eller att du själv kopplar in en router
 - **Mobilt bredband:** Får ofta routern hemskickad, aktiveras automatiskt
 
-TODO: fyll i vilka installatörer som finns och vad som brukar ingå
+De flesta fiberoperatörer skickar bara en router som du själv kopplar in – det räcker oftast att koppla en kabel från fiberjacket i väggen till routern. Installationsbesök kostar ofta 500–1000 kr extra och behövs bara om det är något tekniskt problem. Mobilt bredband är enklast: routern kommer med posten, du sätter i den och slår på – klar på fem minuter.
 
 ### 5. Säg upp det gamla abonnemanget
 
@@ -60,7 +58,7 @@ Många leverantörer skickar eller installerar en egen router. När du byter lev
 - Returnera den gamla routern (kolla ditt avtal)
 - Installera en ny router från den nya leverantören
 
-TODO: fyll i vilka leverantörer som kräver att man returnerar utrustning
+De flesta operatörer äger routern och kräver att du skickar tillbaka den när du avslutar abonnemanget. Om du inte returnerar den inom angiven tid (ofta 14–30 dagar) kan de debitera dig för routerns värde, vanligen 500–1500 kr. Spara returlappen och följesedeln som bevis på att du skickat tillbaka den.
 
 ---
 

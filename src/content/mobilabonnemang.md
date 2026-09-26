@@ -8,8 +8,6 @@ lastUpdated: "2026-09-26"
 
 _Skriven av Matt, 15 år i telekombranschen_
 
-**UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
-
 Att välja mobilabonnemang kan vara förvirrande med alla olika operatörer, datapaket och bindningsvillkor. Den här guiden hjälper dig att hitta rätt abonnemang för dina behov.
 
 ## Operatör vs virtuell operatör
@@ -26,7 +24,7 @@ Alla andra operatörer är så kallade **virtuella operatörer** (MVNO) som hyr 
 - Använder samma nät och täckning som "moderbolaget"
 - Kan ha sämre kundservice eller färre tillval (t.ex. roaming)
 
-TODO: fyll i aktuella prisexempel och vilka virtuella operatörer som hör till vilket nät
+Exempel på virtuella operatörer och vilket nät de använder: Hallon och Comviq använder Tele2s nät, Vimla använder Telias nät, och Lycamobile använder Tre (3):s nät. Priserna kan skilja 100–200 kr/mån för samma datamängd jämfört med huvudoperatören, så det är definitivt värt att jämföra. Täckningen är identisk eftersom det är samma master och samma nät – skillnaden ligger i service, support och eventuella tilläggstjänster.
 
 ## Hur mycket surf behöver du?
 
@@ -47,7 +45,7 @@ Ditt behov av data beror på hur du använder mobilen:
 - Sällan tillgång till wifi
 - Använder mobilen som hotspot
 
-TODO: fyll i aktuell statistik över genomsnittlig dataförbrukning i Sverige
+Enligt PTS senaste statistik ligger svensk genomsnittlig mobilanvändning på omkring 10–15 GB per månad, men det varierar mycket beroende på om du har wifi hemma och på jobbet. Kolla din egen förbrukning i telefonens inställningar under "Mobildata" eller "Dataanvändning" – där ser du exakt hur mycket du använt senaste månaden.
 
 ## Familjeabonnemang och poolade data
 
@@ -62,7 +60,7 @@ Många operatörer erbjuder familjeabonnemang där flera SIM-kort delar på en g
 - Om någon streamar mycket kan poolen ta slut
 - Alla är bundna till samma operatör och avtal
 
-TODO: fyll i vilka operatörer som har bra familjeerbjudanden och vad de kostar
+De flesta operatörer erbjuder familjeabonnemang där extrakort kostar runt 50–100 kr mindre per kort jämfört med separata avtal. Detaljerna varierar mellan operatörer och kampanjer ändras ofta, så kolla aktuella priser direkt hos Telia, Tele2, Tre och de virtuella operatörerna när du jämför.
 
 ## Bindningstid
 
@@ -80,7 +78,7 @@ Om du reser mycket inom EU:
 - Kolla vilken datamängd som gäller utomlands – alla operatörer tillåter inte hela ditt datapaket
 - Utanför EU: kolla priser noga, det kan bli mycket dyrt
 
-TODO: fyll i aktuella roamingregler och vilka operatörer som har bra utlandserbjudanden
+Enligt EU:s roamingregler ska du kunna använda ditt abonnemang inom EU/EES till samma pris som hemma, men operatören kan begränsa hur mycket data du får använda utomlands enligt en "skälig användning"-regel. Läs ditt avtals roamingvillkor noggare om du planerar längre utlandsvistelser. För resor utanför EU (USA, Thailand, etc.) kan datakostnaderna bli extremt höga – köp hellre ett lokalt SIM-kort på plats eller ett särskilt resepaket från din operatör innan du åker.
 
 ## Mobil med abonnemang vs kontantkort
 

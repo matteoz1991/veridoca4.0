@@ -9,11 +9,7 @@ Har du frågor, förslag eller synpunkter? Vi vill gärna höra från dig.
 
 ## E-post
 
-**TODO: Lägg till en e-postadress för webbplatsen.**
-
-Exempel: kontakt@veridoca.com
-
-*(Observera: Domänen veridoca.com har för närvarande ingen MX-post konfigurerad, så e-post kan inte tas emot förrän DNS-inställningarna uppdateras hos din DNS-leverantör, Hostinger.)*
+En e-postadress för webbplatsen håller på att konfigureras. Återkom snart för direktkontakt via e-post.
 
 ## Vad du kan kontakta oss om
 

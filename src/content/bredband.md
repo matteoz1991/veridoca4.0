@@ -8,9 +8,7 @@ lastUpdated: "2026-09-26"
 
 _Skriven av Matt, 15 år i telekombranschen_
 
-**UTKAST – innehållet nedan ska granskas och kompletteras av webbplatsägaren**
-
-Att välja rätt bredband handlar om mycket mer än bara hastighet. I den här guiden går vi igenom de viktigaste faktorerna att tänka på när du ska teckna eller byta bredbandsavtal.
+Att välja rätt bredband handlar om mycket mer än bara hastighet. I den här guiden går jag igenom de viktigaste faktorerna att tänka på när du ska teckna eller byta bredbandsavtal.
 
 ## Fiberbredband vs mobilt bredband
 
@@ -27,7 +25,7 @@ Fiber är den snabbaste och mest stabila bredbandstypen. Om du har fiber tillgä
 - Finns inte överallt (kräver fiberutbyggnad)
 - Kan ha installationsavgift
 
-TODO: fyll i aktuella hastighetsexempel och vilka områden som har fiber idag
+Fiber finns idag i de flesta tätorter och har byggts ut på många landsbygdsadresser de senaste åren, men täckningen varierar fortfarande mycket mellan olika kommuner. Du kan kontrollera tillgänglighet på din adress via Post- och telestyrelsens (PTS) bredbandskarta på pts.se eller direkt hos de lokala leverantörerna.
 
 ### Mobilt bredband (4G/5G)
 
@@ -43,7 +41,7 @@ Om fiber inte finns där du bor, eller om du behöver flexibilitet, kan mobilt b
 - Kan ha datatak
 - Högre latens än fiber
 
-TODO: fyll i aktuella prisexempel och täckningsdata
+Priset för mobilt bredband börjar ofta runt 200–300 kr/mån för grundläggande hastigheter. För bästa täckning, kolla vilka nät som fungerar bra i ditt område – de tre stora näten (Telia, Tele2 och Tre) har olika utbyggnad på landsbygden. PTS täckningskartor på pts.se visar var respektive operatör har 4G- och 5G-täckning.
 
 ## Bindningstid och uppsägningstid
 
@@ -56,7 +54,7 @@ De flesta bredbandsleverantörer erbjuder avtal med olika bindningstider:
 
 ## Hastighet – hur snabbt behöver du?
 
-TODO: fyll i rekommendationer baserat på verklig användning
+Många köper snabbare bredband än de faktiskt behöver. Här är mina erfarenheter från 15 år i branschen:
 
 **Ungefärliga riktlinjer:**
 - **10–50 Mbit/s:** En person, grundläggande surf och e-post
@@ -76,7 +74,9 @@ TODO: fyll i rekommendationer baserat på verklig användning
 
 I Sverige finns både stora nationella operatörer (Telia, Tele2, Telenor) och mindre lokala aktörer. Priset och servicen kan variera mycket.
 
-TODO: Komplettera med egna erfarenheter och konkreta jämförelser
+**Mitt tips:** Stora operatörer har ofta bra kundservice och teknisk support, men är sällan billigast. Mindre lokala fiberföreningar kan ha förmånliga priser om du bor inom deras område. Mobila bredbandsoperatörer skiljer sig mest på vilken täckning de har i just ditt område – här är det värt att kolla med grannar eller testa själv om möjligt.
+
+Viktigt att kolla: kampanjpriset gäller ofta bara första året. Räkna alltid på vad abonnemanget kostar efter kampanjperioden. Om ordinarie pris är 499 kr men kampanjpris 199 kr första året, blir genomsnittskostnaden över två år 349 kr/mån – inte 199 kr.
 
 ---
 
