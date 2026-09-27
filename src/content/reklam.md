@@ -18,13 +18,12 @@ En affiliatelänk (även kallad partnerlänk eller reklamlänk) är en särskild
 
 ## Vilka nätverk arbetar vi med?
 
-Vi är anslutna till följande affiliatenätverk:
+Vi tjänar provision via följande affiliatenätverk:
 
-- **Adtraction**
-- **Adrecord**
 - **Addrevenue**
+- **Adtraction**
 
-Dessa nätverk förmedlar kontakten mellan oss och de olika leverantörerna (operatörer, bredbandsbolag, etc.).
+Dessa nätverk förmedlar kontakten mellan oss och de olika leverantörerna (operatörer, bredbandsbolag, försäkringsförmedlare m.fl.).
 
 ## Hur märks affiliatelänkar?
 
