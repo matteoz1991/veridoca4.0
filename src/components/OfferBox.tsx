@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import type { AffiliatePartner } from '@/config/affiliates'
 
@@ -33,7 +32,7 @@ export default function OfferBox({
       </div>
       
       <div className="flex items-center gap-4">
-        <Link
+        <a
           href={partner.goPath}
           target="_blank"
           rel="sponsored nofollow noopener"
@@ -41,7 +40,7 @@ export default function OfferBox({
         >
           {ctaText}
           <ExternalLink className="w-4 h-4" />
-        </Link>
+        </a>
         <span className="text-[12px] text-[#8B8B8B] font-medium uppercase tracking-wide">
           Reklamlänk
         </span>

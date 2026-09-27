@@ -3,57 +3,112 @@
   "outputDirectory": "out",
   "redirects": [
     {
-      "source": "/go/gofido-hemforsakring/:path*",
+      "source": "/go/gofido-hemforsakring",
       "destination": "https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F",
       "statusCode": 302
     },
     {
-      "source": "/go/gofido/:path*",
+      "source": "/go/gofido-hemforsakring/",
+      "destination": "https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/gofido",
       "destination": "https://addrevenue.io/t?a=984856&c=3469711",
       "statusCode": 302
     },
     {
-      "source": "/go/telia/:path*",
+      "source": "/go/gofido/",
+      "destination": "https://addrevenue.io/t?a=984856&c=3469711",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/telia",
       "destination": "https://www.telia.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/tele2/:path*",
+      "source": "/go/telia/",
+      "destination": "https://www.telia.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/tele2",
       "destination": "https://www.tele2.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/telenor/:path*",
+      "source": "/go/tele2/",
+      "destination": "https://www.tele2.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/telenor",
       "destination": "https://www.telenor.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/bahnhof/:path*",
+      "source": "/go/telenor/",
+      "destination": "https://www.telenor.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/bahnhof",
       "destination": "https://www.bahnhof.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/bredbandsbolaget/:path*",
+      "source": "/go/bahnhof/",
+      "destination": "https://www.bahnhof.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/bredbandsbolaget",
       "destination": "https://www.bredbandsbolaget.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/tre/:path*",
+      "source": "/go/bredbandsbolaget/",
+      "destination": "https://www.bredbandsbolaget.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/tre",
       "destination": "https://www.tre.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/hallon/:path*",
+      "source": "/go/tre/",
+      "destination": "https://www.tre.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/hallon",
       "destination": "https://www.hallon.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/comviq/:path*",
+      "source": "/go/hallon/",
+      "destination": "https://www.hallon.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/comviq",
       "destination": "https://www.comviq.se/",
       "statusCode": 302
     },
     {
-      "source": "/go/vimla/:path*",
+      "source": "/go/comviq/",
+      "destination": "https://www.comviq.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/vimla",
+      "destination": "https://www.vimla.se/",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/vimla/",
       "destination": "https://www.vimla.se/",
       "statusCode": 302
     }

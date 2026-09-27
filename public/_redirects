@@ -1,19 +1,31 @@
 # Redirects for affiliate links
 # Active affiliate links are managed in src/config/affiliates.ts
+# Each redirect has two rules: one with trailing slash, one without
 
 # Hemförsäkring (Addrevenue)
-/go/gofido-hemforsakring/* https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F 302
-/go/gofido/* https://addrevenue.io/t?a=984856&c=3469711 302
+/go/gofido-hemforsakring/ https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F 302
+/go/gofido-hemforsakring https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F 302
+/go/gofido/ https://addrevenue.io/t?a=984856&c=3469711 302
+/go/gofido https://addrevenue.io/t?a=984856&c=3469711 302
 
 # Bredband operators (placeholder)
-/go/telia/* https://www.telia.se/ 302
-/go/tele2/* https://www.tele2.se/ 302
-/go/telenor/* https://www.telenor.se/ 302
-/go/bahnhof/* https://www.bahnhof.se/ 302
-/go/bredbandsbolaget/* https://www.bredbandsbolaget.se/ 302
+/go/telia/ https://www.telia.se/ 302
+/go/telia https://www.telia.se/ 302
+/go/tele2/ https://www.tele2.se/ 302
+/go/tele2 https://www.tele2.se/ 302
+/go/telenor/ https://www.telenor.se/ 302
+/go/telenor https://www.telenor.se/ 302
+/go/bahnhof/ https://www.bahnhof.se/ 302
+/go/bahnhof https://www.bahnhof.se/ 302
+/go/bredbandsbolaget/ https://www.bredbandsbolaget.se/ 302
+/go/bredbandsbolaget https://www.bredbandsbolaget.se/ 302
 
 # Mobile operators
-/go/tre/* https://www.tre.se/ 302
-/go/hallon/* https://www.hallon.se/ 302
-/go/comviq/* https://www.comviq.se/ 302
-/go/vimla/* https://www.vimla.se/ 302
+/go/tre/ https://www.tre.se/ 302
+/go/tre https://www.tre.se/ 302
+/go/hallon/ https://www.hallon.se/ 302
+/go/hallon https://www.hallon.se/ 302
+/go/comviq/ https://www.comviq.se/ 302
+/go/comviq https://www.comviq.se/ 302
+/go/vimla/ https://www.vimla.se/ 302
+/go/vimla https://www.vimla.se/ 302
