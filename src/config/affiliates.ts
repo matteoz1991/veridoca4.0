@@ -7,6 +7,13 @@
 
 export type AffiliateNetwork = 'addrevenue' | 'adtraction'
 
+export interface PartnerLogo {
+  path: string
+  width: number
+  height: number
+  alt: string
+}
+
 export interface AffiliatePartner {
   id: string
   name: string
@@ -17,6 +24,7 @@ export interface AffiliatePartner {
   goPath?: string
   description?: string
   pages?: string[]
+  logo?: PartnerLogo
 }
 
 export const affiliatePartners: AffiliatePartner[] = [
@@ -31,6 +39,12 @@ export const affiliatePartners: AffiliatePartner[] = [
     goPath: '/go/gofido-hemforsakring/',
     description: 'Jämför och teckna hemförsäkring via Gofido',
     pages: ['/forsakring/hemforsakring'],
+    logo: {
+      path: '/partners/gofido-logo.webp',
+      width: 600,
+      height: 200,
+      alt: 'Gofido logotyp'
+    }
   },
 
   // Pending partners - Addrevenue (insurance)
@@ -38,8 +52,18 @@ export const affiliatePartners: AffiliatePartner[] = [
     id: 'hedvig',
     name: 'Hedvig',
     network: 'addrevenue',
-    active: false,
+    active: true,
     category: 'insurance',
+    trackingUrl: 'https://addrevenue.io/t?a=985083&c=3469711&u=https%3A%2F%2Fhedvig.com%2Fse%2Fforsakringar%2Fhemforsakring',
+    goPath: '/go/hedvig-hemforsakring/',
+    description: 'Digitalt försäkringsbolag där du köper och hanterar din försäkring i appen',
+    pages: ['/forsakring/hemforsakring'],
+    logo: {
+      path: '/partners/hedvig-logo.png',
+      width: 1144,
+      height: 324,
+      alt: 'Hedvig logotyp'
+    }
   },
   {
     id: 'svedea',
