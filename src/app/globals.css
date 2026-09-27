@@ -179,6 +179,18 @@ body {
   border-bottom-color: transparent;
 }
 
+/* Override prose-legal link styling for affiliate CTA buttons */
+.prose-legal a.affiliate-cta-button {
+  color: #FFFEF9 !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+.prose-legal a.affiliate-cta-button:hover {
+  color: #FFFEF9 !important;
+  border-bottom: none !important;
+}
+
 .prose-legal strong {
   color: #2C2C2C;
   font-weight: 600;

@@ -23,6 +23,16 @@
       "statusCode": 302
     },
     {
+      "source": "/go/hedvig-hemforsakring",
+      "destination": "https://addrevenue.io/t?a=985083&c=3469711&u=https%3A%2F%2Fhedvig.com%2Fse%2Fforsakringar%2Fhemforsakring",
+      "statusCode": 302
+    },
+    {
+      "source": "/go/hedvig-hemforsakring/",
+      "destination": "https://addrevenue.io/t?a=985083&c=3469711&u=https%3A%2F%2Fhedvig.com%2Fse%2Fforsakringar%2Fhemforsakring",
+      "statusCode": 302
+    },
+    {
       "source": "/go/telia",
       "destination": "https://www.telia.se/",
       "statusCode": 302
