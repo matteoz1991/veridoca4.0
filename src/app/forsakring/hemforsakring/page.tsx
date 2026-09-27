@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { getMarkdownContent } from '@/lib/markdown'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
+import OfferBox from '@/components/OfferBox'
+import { getPartnerById } from '@/config/affiliates'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { frontmatter } = getMarkdownContent('hemforsakring.md')
@@ -12,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function HemforsakringPage() {
   const { content, frontmatter } = getMarkdownContent('hemforsakring.md')
+  const gofidoPartner = getPartnerById('gofido')
 
   return (
     <div className="bg-[#FFFEF9] min-h-screen">
@@ -23,6 +26,17 @@ export default function HemforsakringPage() {
         </div>
         <article className="prose-legal">
           <MarkdownRenderer content={content} />
+          
+          {gofidoPartner && (
+            <OfferBox
+              partner={gofidoPartner}
+              title="Jämför hemförsäkringar med Gofido"
+              description="Gofido är en försäkringstjänst där du kan jämföra och teckna hemförsäkring från flera olika försäkringsbolag på en plats. Få en överblick över olika alternativ och villkor."
+              ctaText="Jämför på Gofido"
+              deepLink="https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F"
+            />
+          )}
+
           {frontmatter.lastUpdated && (
             <div className="mt-16 pt-8 border-t border-[#E5E5E5] text-[#8B8B8B] text-[14px]">
               Senast uppdaterad: {frontmatter.lastUpdated}

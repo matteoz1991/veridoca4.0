@@ -1,7 +1,11 @@
 # Redirects for affiliate links
-# TODO: Replace placeholder URLs with actual Adtraction/Adrecord/Addrevenue tracking URLs
+# Active affiliate links are managed in src/config/affiliates.ts
 
-# Bredband operators
+# Hemförsäkring (Addrevenue)
+/go/gofido-hemforsakring/* https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F 302
+/go/gofido/* https://addrevenue.io/t?a=984856&c=3469711 302
+
+# Bredband operators (placeholder)
 /go/telia/* https://www.telia.se/ 302
 /go/tele2/* https://www.tele2.se/ 302
 /go/telenor/* https://www.telenor.se/ 302
