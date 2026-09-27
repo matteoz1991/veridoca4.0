@@ -55,7 +55,7 @@ export default function OfferBox({
           href={partner.goPath}
           target="_blank"
           rel="sponsored nofollow noopener"
-          className="inline-flex items-center gap-2 px-5 py-3 bg-[#C95D3F] text-[#FFFEF9] hover:bg-[#2C2C2C] transition-colors font-medium text-[15px] rounded"
+          className="affiliate-cta-button inline-flex items-center gap-2 px-5 py-3 bg-[#C95D3F] text-[#FFFEF9] hover:bg-[#2C2C2C] transition-colors font-medium text-[15px] rounded"
         >
           {ctaText}
           <ExternalLink className="w-4 h-4" />
