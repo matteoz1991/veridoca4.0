@@ -14,6 +14,7 @@ export interface AffiliatePartner {
   active: boolean
   category: 'insurance' | 'mobile' | 'broadband'
   trackingUrl?: string
+  goPath?: string
   description?: string
   pages?: string[]
 }
@@ -27,6 +28,7 @@ export const affiliatePartners: AffiliatePartner[] = [
     active: true,
     category: 'insurance',
     trackingUrl: 'https://addrevenue.io/t?a=984856&c=3469711',
+    goPath: '/go/gofido-hemforsakring/',
     description: 'Jämför och teckna hemförsäkring via Gofido',
     pages: ['/forsakring/hemforsakring'],
   },

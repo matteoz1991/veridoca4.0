@@ -33,7 +33,6 @@ export default function HemforsakringPage() {
               title="Jämför hemförsäkringar med Gofido"
               description="Gofido är en försäkringstjänst där du kan jämföra och teckna hemförsäkring från flera olika försäkringsbolag på en plats. Få en överblick över olika alternativ och villkor."
               ctaText="Jämför på Gofido"
-              deepLink="https://addrevenue.io/t?a=984856&c=3469711&u=https%3A%2F%2Fwww.gofido.se%2Fhemforsakring%2F"
             />
           )}
 

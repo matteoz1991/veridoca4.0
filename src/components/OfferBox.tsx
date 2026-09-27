@@ -7,21 +7,17 @@ interface OfferBoxProps {
   title: string
   description: string
   ctaText?: string
-  deepLink?: string
 }
 
 export default function OfferBox({ 
   partner, 
   title, 
   description, 
-  ctaText = 'Besök hemsidan',
-  deepLink 
+  ctaText = 'Besök hemsidan'
 }: OfferBoxProps) {
-  if (!partner.active || !partner.trackingUrl) {
+  if (!partner.active || !partner.trackingUrl || !partner.goPath) {
     return null
   }
-
-  const targetUrl = deepLink || partner.trackingUrl
 
   return (
     <div className="my-8 border-2 border-[#E5E5E5] bg-white rounded-lg p-6 shadow-sm">
@@ -38,7 +34,7 @@ export default function OfferBox({
       
       <div className="flex items-center gap-4">
         <Link
-          href={`/go/${partner.id}-hemforsakring/`}
+          href={partner.goPath}
           target="_blank"
           rel="sponsored nofollow noopener"
           className="inline-flex items-center gap-2 px-5 py-3 bg-[#C95D3F] text-white hover:bg-[#2C2C2C] transition-colors font-medium text-[15px] rounded"
